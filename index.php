@@ -25,7 +25,7 @@ require_once './css-crush/CssCrush.php';
 			<li class="widget widget-search">
 				<h2 class="widget-title">Recherche</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
-					<input type="search" name="q" value="post(author:viki53)" placeholder="Rechercher">
+					<input type="search" name="q" value="post(author_id=(user(pseudo=viki53):id))" placeholder="Rechercher">
 				</form>
 			</li>
 			<li class="menu">
