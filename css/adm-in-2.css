@@ -1,0 +1,134 @@
+
+@define {
+	color-white: #fff;
+	color-gray-extra-light: #f5f5f5;
+	color-gray-light: #d8dae0;
+	color-gray-semi-light: #696f83;
+	color-gray-medium-light: #434754;
+	color-gray-medium: #25272e;
+	color-gray-dark: #1c2026;
+	color-black: #000;
+	color-red: #ff104d;
+	color-orange: #ff4917;
+	color-yellow: #f4e100;
+	color-green: #4ab953;
+	color-blue: #0385d0;
+	color-blue-light: #3288be;
+	color-blue-dark: #2471a5;
+
+	size-topbar-height: 4em;
+	size-sidebar-width: 15em;
+
+	breakpoint-xs: 25em;
+	breakpoint-sm: 40em;
+	breakpoint-md: 60em;
+	breakpoint-md: 75em;
+}
+@selector-splat input input[type="#(text)"];
+
+@import url('reset.css');
+@import url('font-roboto.css');
+
+html{
+	font-family: 'Roboto', Helvetica, "Liberation Sans", FreeSans, Sans-serif;
+	line-height: 1.5;
+	min-height: 100%;
+	background-color: $(color-gray-extra-light);
+	color: $(color-black);
+}
+
+body{
+	min-height: 100%;
+}
+
+a{
+	color: inherit;
+}
+strong, .bold{
+	font-weight: bold;
+}
+em, .italic{
+	font-style: italic;
+}
+del, .strike{
+	text-decoration: line-through;
+}
+small, .small{
+	font-size: .8em;
+	line-height: 1.25em;
+}
+
+:any(input, textarea, select, button, [role="button"], a, [tabindex]):focus{
+	outline-color: $(color-blue-light);
+}
+:input(text, password, url, email, number, search, date, time, datetime), textarea, select, button, [role="button"]{
+	display: inline-block;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-webkit-input-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-moz-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-ms-input-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-moz-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+
+.sr-only{
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+.clearfix{
+	clear: both;
+}
+.row::after{
+	content: '';
+	display: block;
+	@extend .clearfix;
+}
+
+.badge{
+	display: inline-block;
+	font-size: .8em;
+	padding: .125em .25em;
+	min-width: .7em;
+	text-align: center;
+	border-radius: .25em;
+	background-color: $(color-gray-medium);
+	color: $(color-white);
+}
+.badge:empty{
+	display: none;
+}
+.badge.badge-error{
+	background-color: $(color-red);
+}
+.badge.badge-warning{
+	background-color: $(color-orange);
+}
+.badge.badge-success{
+	background-color: $(color-green);
+}
+.badge.badge-info{
+	background-color: $(color-blue);
+}
+
+
+@import url('adm-in-2_topbar.css');
+@import url('adm-in-2_sidebar.css');
+@import url('adm-in-2_main.css');

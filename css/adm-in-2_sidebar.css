@@ -1,0 +1,128 @@
+
+#sidebar{
+}
+.js-enabled #sidebar-header{
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	left: $(size-sidebar-width);
+	padding: .5em;
+	width: $(size-topbar-height);
+	height: $(size-topbar-height);
+	background-color: $(color-gray-extra-light);
+	opacity: .6;
+	cursor: pointer;
+}
+@media (max-width: $(breakpoint-sm)){
+	.js-enabled #sidebar-header{
+		left: 0;
+	}
+}
+#sidebar-header:any(:hover, :focus){
+	opacity: 1;
+}
+#sidebar-header>h1{
+	@extend .sr-only;
+}
+#sidebar ul{
+	list-style-type: none;
+}
+#sidebar-content{
+	position: fixed;
+	z-index: 50;
+	top: $(size-topbar-height);
+	bottom: 0;
+	left: 0;
+	width: $(size-sidebar-width);
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: $(color-gray-dark);
+	color: $(color-white);
+	transition: all .2s linear;
+}
+.js-enabled #sidebar[hidden]>#sidebar-content{
+	transform: translateX(-100%);
+}
+#sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
+	box-sizing: border-box;
+	padding: .25em;
+	width: 100%;
+	background-color: $(color-gray-medium);
+	color: $(color-gray-extra-light);
+}
+
+#sidebar .widget{
+	padding: 1em;
+	max-height: none;
+}
+#sidebar .widget .widget-title{
+	@extend .sr-only;
+}
+
+
+#sidebar .menu-title{
+	position: relative;
+	background-color: $(color-blue-light);
+	color: $(color-white);
+	overflow: hidden;
+}
+#sidebar .menu-title>a:any(:hover, :focus){
+	color: $(color-gray-dark);
+}
+#sidebar .menu-title>.menu-toggle{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: .5em;
+	width: 2.5em;
+	-webkit-appearance: none;
+	background-color: $(color-blue-light);
+	color: $(color-gray-medium);
+	border: none;
+}
+#sidebar .menu-title>.menu-toggle+a{
+	margin-right: 2.5em;
+}
+#sidebar .menu>.menu-title>.menu-toggle:any(:hover, :focus){
+	background-color: $(color-blue-dark);
+	color: $(color-white);
+	cursor: pointer;
+}
+#sidebar .menu>.menu-content{
+	max-height: 100%;
+	/*transition: height .25s linear;*/
+}
+#sidebar .menu>.menu-content[hidden]{
+	max-height: 0;
+	overflow: hidden;
+	background-color: $(color-gray-medium);
+}
+#sidebar .submenu{
+	color: $(color-gray-semi-light);
+}
+#sidebar .menu-title>a, #sidebar .submenu>a{
+	display: block;
+	padding: .75em 1em;
+	text-decoration: none;
+}
+#sidebar .submenu>a:any(:hover, :focus){
+	color: $(color-blue-light);
+}
+#sidebar .submenu>a>.submenu-description{
+	display: block;
+	@extend .italic;
+	color: $(color-gray-medium-light);
+}
+#sidebar .menu.current{
+	background-color: $(color-gray-dark);
+}
+#sidebar .menu.current .submenu>a:any(:hover, :focus){
+	background-color: $(color-black);
+}
+
+#sidebar .menu .badge{
+	float: right;
+}

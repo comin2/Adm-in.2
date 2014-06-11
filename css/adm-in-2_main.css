@@ -1,0 +1,133 @@
+
+
+#main{
+	position: relative;
+	z-index: 10;
+	margin-top: $(size-topbar-height);
+	margin-left: $(size-sidebar-width);
+	padding: 2em;
+	transition: all .2s linear;
+}
+@media (max-width: $(breakpoint-sm)){
+	#main{
+		padding: 1em;
+	}
+	#sidebar+#main{
+		transform: translateX($(size-sidebar-width));
+		margin-left: 0;
+		/*pointer-events: none;*/
+		-webkit-overflow-scrolling: touch;
+	}
+	#sidebar[hidden]+#main{
+		transform: none;
+	}
+	.js-enabled #sidebar+#main::before{
+		content: '';
+		display: block;
+		position: fixed;
+		z-index: 49;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: $(color-black);
+		opacity: .5;
+		transition: all .2s linear;
+	}
+	.js-enabled #sidebar[hidden]+#main::before{
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+#sidebar[hidden]+#main{
+	margin-left: 0;
+}
+.js-enabled #sidebar[hidden]+#main{
+	overflow: hidden;
+}
+
+#main h1{
+	font-size: 3em;
+}
+#main h2{
+	font-size: 2em;
+}
+#main h3{
+	font-size: 1.6em;
+}
+
+#main .row{
+	margin-left: -1em;
+	margin-right: -1em;
+}
+#main :not(.row)+.row, #main .row+*{
+	margin-top: 2em;
+}
+#main :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+	box-sizing: border-box;
+	float: left;
+	padding: 0 1em;
+}
+#main .column-tiny{
+	width: 25%;
+}
+#main .column-small{
+	width: 33.333%;
+}
+#main .column-medium{
+	width: 50%;
+}
+#main .column-large{
+	width: 66.666%;
+}
+#main .column-big{
+	width: 75%;
+}
+
+@media (max-width: $(breakpoint-sm)){
+	#main :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+		width: 100%;
+	}
+}
+@media (max-width: $(breakpoint-xs)){
+	#main :any(.column-tiny, .column-small){
+		width: 50%;
+	}
+}
+
+
+#main .widget{
+	margin-bottom: 2em;
+	background-color: $(color-white);
+	border: 1px solid $(color-gray-light);
+}
+#main .widget>.widget-header{
+	padding: 1em;
+}
+#main .widget>.widget-header:empty{
+	display: none;
+}
+#main .widget>.widget-content{
+	padding: 1em;
+}
+#main .widget>.widget-content:empty{
+	display: none;
+}
+#main .widget>.widget-header+.widget-content{
+	margin: 0 1em;
+	padding: 1em 0;
+	border-top: 1px solid $(color-gray-light);
+}
+
+
+#footer{
+	@extend .clearfix;
+	padding: 1em 1em 0;
+	margin-top: 2em;
+	font-style: italic;
+	color: $(color-gray-semi-light);
+	border-top: 1px solid $(color-blue-dark);
+}
+#footer p+p{
+	margin-top: 1em;
+}
