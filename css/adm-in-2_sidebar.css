@@ -15,7 +15,7 @@
 	cursor: pointer;
 }
 .js-enabled #sidebar[hidden] #sidebar-header{
-	background: data-uri('../img/icon-sidebar-open.svg') no-repeat center;
+	background-image: data-uri('../img/icon-sidebar-open.svg');
 }
 @media (max-width: $(breakpoint-sm)){
 	.js-enabled #sidebar-header{
