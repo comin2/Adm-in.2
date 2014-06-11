@@ -10,9 +10,12 @@
 	padding: .5em;
 	width: $(size-topbar-height);
 	height: $(size-topbar-height);
-	background-color: $(color-gray-extra-light);
-	opacity: .6;
+	background: data-uri('../img/icon-sidebar-close.svg') no-repeat center;
+	background-size: contain;
 	cursor: pointer;
+}
+.js-enabled #sidebar[hidden] #sidebar-header{
+	background: data-uri('../img/icon-sidebar-open.svg') no-repeat center;
 }
 @media (max-width: $(breakpoint-sm)){
 	.js-enabled #sidebar-header{
@@ -20,7 +23,7 @@
 	}
 }
 #sidebar-header:any(:hover, :focus){
-	opacity: 1;
+	background-color: $(color-blue-dark);
 }
 #sidebar-header>h1{
 	@extend .sr-only;

@@ -3,6 +3,8 @@ var sidebar_menu_titles = document.querySelectorAll('#sidebar .menu>.menu-title'
 
 document.body.classList.add('js-enabled');
 
+document.getElementById('sidebar-header').title = 'Afficher/Cacher le menu latéral';
+
 for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
 	var toggle_btn = document.createElement('button');
 	toggle_btn.type = 'button';

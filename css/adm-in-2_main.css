@@ -89,11 +89,6 @@
 		width: 100%;
 	}
 }
-@media (max-width: $(breakpoint-xs)){
-	#main :any(.column-tiny, .column-small){
-		width: 50%;
-	}
-}
 
 
 #main .widget{
