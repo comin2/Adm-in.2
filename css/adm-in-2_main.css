@@ -63,9 +63,6 @@
 	margin-left: -1em;
 	margin-right: -1em;
 }
-#main :not(.row)+.row, #main .row+*{
-	margin-top: 2em;
-}
 #main :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
 	box-sizing: border-box;
 	float: left;
