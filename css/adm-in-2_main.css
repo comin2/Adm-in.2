@@ -48,12 +48,15 @@
 
 #main h1{
 	font-size: 3em;
+	margin-bottom: 1em;
 }
 #main h2{
 	font-size: 2em;
+	margin-bottom: 1em;
 }
 #main h3{
 	font-size: 1.6em;
+	margin-bottom: 1em;
 }
 
 #main .row{
@@ -109,7 +112,7 @@
 	display: none;
 }
 #main .widget>.widget-header+.widget-content{
-	margin: 0 1em;
+	margin: -2em 1em 0;
 	padding: 1em 0;
 	border-top: 1px solid $(color-gray-light);
 }
@@ -125,4 +128,7 @@
 }
 #footer p+p{
 	margin-top: 1em;
+}
+#admin2-copyright{
+	@extend .text-right;
 }

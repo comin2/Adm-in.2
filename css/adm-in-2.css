@@ -58,6 +58,39 @@ small, .small{
 	line-height: 1.25em;
 }
 
+hr{
+	height: 1px;
+	padding: 0;
+	margin: 1em 0;
+	background-color: $(color-gray-medium);
+	border: none;
+}
+hr.spaced{
+	margin: 2em 0;
+}
+pre{
+	font-family: monospace;
+	padding: 1em;
+	margin-bottom: 2em;
+	white-space: pre;
+	background-color: $(color-white);
+	border: 1px solid $(color-gray-light);
+	overflow: auto;
+}
+
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.text-center{
+	text-align: center;
+}
+.text-justify{
+	text-align: justify;
+}
+
 :any(input, textarea, select, button, [role="button"], a, [tabindex]):focus{
 	outline-color: $(color-blue-light);
 }
