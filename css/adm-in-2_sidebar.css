@@ -119,6 +119,9 @@
 	@extend .italic;
 	color: $(color-gray-medium-light);
 }
+#sidebar .submenu>a:any(:hover, :focus)>.submenu-description{
+	color: $(color-gray-semi-light);
+}
 #sidebar .menu.current{
 	background-color: $(color-gray-dark);
 }
