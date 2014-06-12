@@ -6,7 +6,8 @@
 	margin-top: $(size-topbar-height);
 	margin-left: $(size-sidebar-width);
 	padding: 2em;
-	transition: all .2s linear;
+	-webkit-transition: -webkit-transform .2s linear, margin-left .2s linear;
+	transition: transform .2s linear, margin-left .2s linear;
 }
 @media (max-width: $(breakpoint-sm)){
 	#main{
@@ -32,11 +33,12 @@
 		left: 0;
 		background-color: $(color-black);
 		opacity: .5;
-		transition: all .2s linear;
+		transition: opacity .2s linear;
 	}
 	.js-enabled #sidebar[hidden]+#main::before{
 		visibility: hidden;
 		opacity: 0;
+		transition: opacity .2s linear, visibility 0 .2s;
 	}
 }
 #sidebar[hidden]+#main{
