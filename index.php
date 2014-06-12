@@ -1,5 +1,13 @@
 <?php
-require_once './css-crush/CssCrush.php';
+require_once 'css-crush/CssCrush.php';
+
+if(!empty($_GET['q'])) {
+	require_once 'css2sql/php/Css2Sql.class.php';
+
+	$selector = Css2Sql::parse_selector(trim($_GET['q']));
+
+	$search_SQL = Css2Sql::selector_to_sql($selector, 'meet_');
+}
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +33,7 @@ require_once './css-crush/CssCrush.php';
 			<li class="widget widget-search">
 				<h2 class="widget-title">Recherche</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
-					<input type="search" name="q" value="post(author_id=(user(pseudo=viki53):id))" placeholder="Rechercher">
+					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher">
 				</form>
 			</li>
 			<li class="menu">
@@ -96,6 +104,12 @@ require_once './css-crush/CssCrush.php';
 	</nav>
 	<div id="main">
 		<h1>Tableau de bord</h1>
+		
+		<?php
+		if(isset($search_SQL)) {
+			echo '<pre>'.$search_SQL.'</pre>';
+		}
+		?>
 		<div class="row">
 			<div class="column-large widgets-column">
 				<section class="widget">
@@ -228,6 +242,8 @@ require_once './css-crush/CssCrush.php';
 		</div>
 		<div id="footer">
 			<p>Nom du site — <?php echo date('Y'); ?></p>
+			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
+			<p id="admin2-copyright">Adm'in.2 interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
 	</div>
 	<script src="js/adm-in-2.js"></script>
