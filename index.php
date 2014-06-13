@@ -22,8 +22,8 @@ if(!empty($_GET['q'])) {
 		<a href="./" id="logo"><span>Adm'in.2</span></a>
 
 		<nav id="quick-links">
-			<a href="#0"><span>Mon profil</span></a>
-			<a href="#0"><span>Déconnexion</span></a>
+			<a href="#0"><span>My profile</span></a>
+			<a href="#0"><span>Log out</span></a>
 		</nav>
 	</div>
 	<nav id="sidebar" hidden="true" aria-hidden="true">
@@ -31,79 +31,79 @@ if(!empty($_GET['q'])) {
 
 		<ul id="sidebar-content">
 			<li class="widget widget-search">
-				<h2 class="widget-title">Recherche</h2>
+				<h2 class="widget-title">Search</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
 					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher">
 				</form>
 			</li>
 			<li class="menu">
-				<h2 class="menu-title"><a href="#0">Articles</a></h2>
+				<h2 class="menu-title"><a href="#0">Blog posts</a></h2>
 				<ul class="menu-content">
 					<li class="submenu">
-						<a href="#0">Liste <span class="badge badge-warning">1</span></a>
+						<a href="#0">List <span class="badge badge-warning">1</span></a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Ajouter</a>
+						<a href="#0">Write new</a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Catégories <small class="submenu-description">Une description par ici</small></a>
+						<a href="#0">Categories <small class="submenu-description">A short description here</small></a>
 					</li>
 				</ul>
 			</li>
 			<li class="menu">
-				<h2 class="menu-title"><a href="#0">Médias <span class="badge">2</span></a></h2>
+				<h2 class="menu-title"><a href="#0">Medias <span class="badge">2</span></a></h2>
 				<ul class="menu-content">
 					<li class="submenu">
-						<a href="#0">Liste <span class="badge badge-info">2</span></a>
+						<a href="#0">List <span class="badge badge-info">2</span></a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Ajouter</a>
+						<a href="#0">Upload</a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Catégories</a>
+						<a href="#0">Categories</a>
 					</li>
 				</ul>
 			</li>
 			<li class="menu">
-				<h2 class="menu-title"><a href="#0">Utilisateurs</a></h2>
+				<h2 class="menu-title"><a href="#0">Users</a></h2>
 				<ul class="menu-content">
 					<li class="submenu">
-						<a href="#0">Liste <span class="badge badge-success">5</span></a>
+						<a href="#0">List <span class="badge badge-success">5</span></a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Membres premium</a>
+						<a href="#0">Premium users</a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Ajouter</a>
+						<a href="#0">Add</a>
 					</li>
 				</ul>
 			</li>
 			<li class="menu">
-				<h2 class="menu-title"><a href="#0">Défis</a></h2>
+				<h2 class="menu-title"><a href="#0">Games</a></h2>
 				<ul class="menu-content">
 					<li class="submenu">
-						<a href="#0">Liste</a>
+						<a href="#0">List</a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Ajouter</a>
+						<a href="#0">Add</a>
 					</li>
 				</ul>
 			</li>
 			<li class="menu">
-				<h2 class="menu-title"><a href="#0">Paramètres</a></h2>
+				<h2 class="menu-title"><a href="#0">Settings</a></h2>
 				<ul class="menu-content">
 					<li class="submenu">
 						<a href="#0">API <span class="badge badge-error">2</span></a>
 					</li>
 					<li class="submenu">
-						<a href="#0">Administrateurs</a>
+						<a href="#0">Administrators</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 	<div id="main">
-		<h1>Tableau de bord</h1>
+		<h1>Dashboard</h1>
 		
 		<?php
 		if(isset($search_SQL)) {
@@ -179,7 +179,7 @@ if(!empty($_GET['q'])) {
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Derniers inscrit</h2>
+						<h2>Latest registrations</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>
@@ -189,7 +189,7 @@ if(!empty($_GET['q'])) {
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Derniers articles</h2>
+						<h2>Lastest articles</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>
@@ -262,7 +262,7 @@ if(!empty($_GET['q'])) {
 			</div>
 		</div>
 		<div id="footer">
-			<p>Nom du site — <?php echo date('Y'); ?></p>
+			<p>Your website name — <?php echo date('Y'); ?></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
 			<p id="admin2-copyright">Adm'in.2 interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
