@@ -1,5 +1,5 @@
 
-
+/* Global block + Sidebar related stuff */
 #main{
 	position: relative;
 	z-index: 10;
@@ -48,19 +48,44 @@
 	overflow: hidden;
 }
 
-#main h1{
+/* Typography */
+#main :any(h1, .h1){
 	font-size: 3em;
 	margin-bottom: 1em;
 }
-#main h2{
+#main :any(h2, .h2){
 	font-size: 2em;
 	margin-bottom: 1em;
 }
-#main h3{
+#main :any(h3, .h3){
 	font-size: 1.6em;
 	margin-bottom: 1em;
 }
+#main :any(h4, .h4){
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
 
+/* Lists */
+#main :any(ul, ol){
+	margin-left: 2em;
+}
+#main ul{
+	list-style-type: disc;
+}
+#main ol{
+	list-style-type: decimal;
+}
+#main :any(ul, ol).unstyled-list{
+	margin-left: 0;
+	list-style-type: none;
+}
+#main :any(ul, ol)>li{
+	margin-bottom: .5em;
+}
+
+
+/* Grid system */
 #main .row{
 	margin-left: -1em;
 	margin-right: -1em;
@@ -93,6 +118,7 @@
 }
 
 
+/* Widgets */
 #main .widget{
 	margin-bottom: 2em;
 	background-color: $(color-white);
@@ -117,6 +143,89 @@
 }
 
 
+
+/* Forms */
+#main :any(label, .label){
+	margin-bottom: 1em;
+}
+#main :any(label, .label).full{
+	font-size: 1.6em;
+	margin-bottom: .625em;
+}
+#main :input(text, password, url, email, number, search, date, time, datetime), textarea, select{
+	padding: .5em;
+	margin-bottom: 1em;
+	background-color: $(color-white);
+	color: $(color-black);
+	border: 1px solid $(color-gray-light);
+	border-radius: .25em;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-small{
+	width: 25%;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-medium{
+	width: 50%;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-large{
+	width: 75%;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-full{
+	width: 100%;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-xs{
+	padding: .25em;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-xl{
+	padding: 1em;
+}
+#main :any(button, .button, :input(submit, button)){
+	padding: .25em .5em;
+	background-color: $(color-gray-light);
+	color: $(color-black);
+	border-radius: .25em;
+}
+#main :any(button, .button, :input(submit, reset, button)):any(:hover, :focus){
+	background-color: l-adjust($(color-gray-light), -10);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-xs{
+	padding: .125em .25em;
+}
+#main :any(button, .button, :input(submit, reset, button)).button-xl{
+	padding: .5em 1em;
+}
+#main :any(button, .button, :input(submit, reset, button)).button-full{
+	width: 100%;
+}
+#main :any(button, .button, :input(submit, reset, button)):any(.button-info, .button-success, .button-error, .button-warning){
+	color: $(color-white);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-info{
+	background-color: $(color-blue);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-info:any(:hover, :focus){
+	background-color: l-adjust($(color-blue), -10);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-success{
+	background-color: $(color-green);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-success:any(:hover, :focus){
+	background-color: l-adjust($(color-green), -10);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-error{
+	background-color: $(color-red);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-error:any(:hover, :focus){
+	background-color: l-adjust($(color-red), -10);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-warning{
+	background-color: $(color-orange);
+}
+#main :any(button, .button, :input(submit, reset, button)).button-warning:any(:hover, :focus){
+	background-color: l-adjust($(color-orange), -10);
+}
+
+
+/* Footer */
 #footer{
 	@extend .clearfix;
 	padding: 1em 1em 0;

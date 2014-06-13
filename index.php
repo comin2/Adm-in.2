@@ -114,20 +114,26 @@ if(!empty($_GET['q'])) {
 			<div class="column-large widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Statistiques</h2>
+						<h2>Statistics</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>En ligne</h2>
+						<h2>Online</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Personne</p>
+						<ul>
+							<li>User #1</li>
+							<li>User #2</li>
+							<li>User #3</li>
+							<li>User #4</li>
+							<li>User #5</li>
+						</ul>
 					</div>
 				</section>
 			</div>
@@ -136,21 +142,36 @@ if(!empty($_GET['q'])) {
 			<div class="column-tiny widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Accès rapides</h2>
+						<h2>Fast links</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-big widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Brouillon rapide</h2>
+						<h2>Quick draft</h2>
 					</header>
-					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
-					</div>
+					<form action="" method="post" class="widget-content">
+						<div>
+							<label for="demo-form-title" class="full">Title</label>
+							<input type="text" name="title" placeholder="A big input" class="input-full input-xl" id="demo-form-title">
+						</div>
+						<div>
+							<label for="demo-form-textarea" class="full">Content</label>
+							<textarea name="content" cols="30" rows="10" placeholder="A normal textarea" class="input-full" id="demo-form-textarea"></textarea>
+						</div>
+						<div>
+							<label for="demo-form-select" class="full">Category</label>
+							<select name="category_id" class="input-full input-xs" id="demo-form-select"><?php for($i=1; $i<=5; $i++) {echo '<option value="'.$i.'">Category #'.$i.'</option>'; } ?></select>
+						</div>
+						<div class="text-right">
+							<button type="reset" class="button-error">Cancel</button>
+							<button type="button" class="button-xl button-success">Save</button>
+						</div>
+					</form>
 				</section>
 			</div>
 		</div>
@@ -161,7 +182,7 @@ if(!empty($_GET['q'])) {
 						<h2>Derniers inscrit</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
@@ -171,7 +192,7 @@ if(!empty($_GET['q'])) {
 						<h2>Derniers articles</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
@@ -180,30 +201,30 @@ if(!empty($_GET['q'])) {
 			<div class="column-tiny widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-tiny widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
@@ -212,30 +233,30 @@ if(!empty($_GET['q'])) {
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Titre</h2>
+						<h2>Title</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">Pas de contenu</p>
+						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>

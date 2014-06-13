@@ -78,6 +78,7 @@ pre{
 	overflow: auto;
 }
 
+/* Typography */
 .text-left{
 	text-align: left;
 }
@@ -91,10 +92,21 @@ pre{
 	text-align: justify;
 }
 
-:any(input, textarea, select, button, [role="button"], a, [tabindex]):focus{
+/* Forms */
+label, .label-like{
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+:any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
 	outline-color: $(color-blue-light);
 }
-:input(text, password, url, email, number, search, date, time, datetime), textarea, select, button, [role="button"]{
+:any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
+	cursor: pointer;
+}
+:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, select, button, .button, [role="button"]{
+	box-sizing: border-box;
 	display: inline-block;
 	font-family: inherit;
 	font-size: inherit;
@@ -120,12 +132,14 @@ pre{
 	opacity: .3;
 }
 
+/* Screen readers */
 .sr-only{
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
 }
 
+/* Floats */
 .clearfix{
 	clear: both;
 }
@@ -135,6 +149,7 @@ pre{
 	@extend .clearfix;
 }
 
+/* Badges */
 .badge{
 	display: inline-block;
 	font-size: .8em;

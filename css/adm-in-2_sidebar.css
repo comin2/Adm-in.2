@@ -48,11 +48,11 @@
 	transform: translateX(-100%);
 }
 #sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
-	box-sizing: border-box;
 	padding: .25em;
 	width: 100%;
 	background-color: $(color-gray-medium);
 	color: $(color-gray-extra-light);
+	border-radius: 0;
 }
 
 #sidebar .widget{
