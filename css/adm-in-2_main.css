@@ -16,7 +16,6 @@
 	#sidebar+#main{
 		transform: translateX($(size-sidebar-width));
 		margin-left: 0;
-		/*pointer-events: none;*/
 		-webkit-overflow-scrolling: touch;
 	}
 	#sidebar[hidden]+#main{

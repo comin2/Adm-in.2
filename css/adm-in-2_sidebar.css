@@ -7,6 +7,7 @@
 	z-index: 50;
 	top: 0;
 	left: $(size-sidebar-width);
+	left: math($(size-sidebar-width)-$(size-topbar-height), em);
 	padding: .5em;
 	width: $(size-topbar-height);
 	height: $(size-topbar-height);

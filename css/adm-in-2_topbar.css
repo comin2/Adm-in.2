@@ -14,6 +14,7 @@
 	float: left;
 	height: $(size-topbar-height);
 	width: $(size-sidebar-width);
+	width: math($(size-sidebar-width)-$(size-topbar-height), em);
 	text-decoration: none;
 	text-align: center;
 	background-color: $(color-blue-dark);
@@ -37,7 +38,7 @@
 #logo>span{
 	display: block;
 	font-size: math($(size-topbar-height)/2, em);
-	padding: math($(size-topbar-height)/6, em) 1em;
+	padding: math($(size-topbar-height)/6, em);
 }
 
 
