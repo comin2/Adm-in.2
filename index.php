@@ -189,7 +189,7 @@ if(!empty($_GET['q'])) {
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Lastest articles</h2>
+						<h2>Latest articles</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>
