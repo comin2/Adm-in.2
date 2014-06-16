@@ -203,44 +203,47 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 		</div>
-		<div class="container row">
-			<div class="column-tiny widgets-column">
-				<section class="widget">
-					<header class="widget-header">
-						<h2>Custom select</h2>
-					</header>
-					<div class="widget-content">
-						<form action="#0" method="get" accept-charset="utf-8">
-							<select class="input-full input-xl custom-select">
-								<option value="1">Option #1</option>
-								<option value="2">Option #2</option>
-								<option value="3">Option #3</option>
-								<option value="4">Option #4</option>
-								<option value="5">Option #5</option>
-							</select>
-						</form>
-					</div>
-				</section>
-			</div>
-			<div class="column-medium widgets-column">
-				<section class="widget">
-					<header class="widget-header">
-						<h2>Text editor</h2>
-					</header>
-					<div class="widget-content">
-						<p class="italic">No content yet</p>
-					</div>
-				</section>
-			</div>
-			<div class="column-tiny widgets-column">
-				<section class="widget">
-					<header class="widget-header">
-						<h2>Modals</h2>
-					</header>
-					<div class="widget-content">
-						<p class="italic">No content yet</p>
-					</div>
-				</section>
+		<div class="container">
+			<h2>This next row is in a container</h2>
+			<div class="row">
+				<div class="column-tiny widgets-column">
+					<section class="widget">
+						<header class="widget-header">
+							<h2>Custom select</h2>
+						</header>
+						<div class="widget-content">
+							<form action="#0" method="get" accept-charset="utf-8">
+								<select class="input-full input-xl custom-select">
+									<option value="1">Option #1</option>
+									<option value="2">Option #2</option>
+									<option value="3">Option #3</option>
+									<option value="4">Option #4</option>
+									<option value="5">Option #5</option>
+								</select>
+							</form>
+						</div>
+					</section>
+				</div>
+				<div class="column-medium widgets-column">
+					<section class="widget">
+						<header class="widget-header">
+							<h2>Text editor</h2>
+						</header>
+						<div class="widget-content">
+							<p class="italic">No content yet</p>
+						</div>
+					</section>
+				</div>
+				<div class="column-tiny widgets-column">
+					<section class="widget">
+						<header class="widget-header">
+							<h2>Modals</h2>
+						</header>
+						<div class="widget-content">
+							<p class="italic">No content yet</p>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 		<div class="row">
