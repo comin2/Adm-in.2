@@ -80,7 +80,7 @@ if(!empty($_GET['q'])) {
 			</li>
 			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Games</a></h2>
-				<ul role="menu" class="menu-content">
+				<ul role="menu" class="menu-content" hidden="true" aria-hidden="true">
 					<li role="menuitem" class="submenu">
 						<a href="#0">List</a>
 					</li>

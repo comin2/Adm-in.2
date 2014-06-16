@@ -23,6 +23,10 @@ for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
 	toggle_btn.type = 'button';
 	toggle_btn.className = 'menu-toggle';
 
+	var elem = sidebar_menu_titles[i];
+	while ((!elem.classList || !elem.classList.contains('menu-content')) && elem.nextSibling) {
+		elem = elem.nextSibling;
+	}
 	if (elem.getAttribute('hidden')) {
 		toggle_btn.textContent = '+';
 		toggle_btn.title = 'Show the content of this menu';
