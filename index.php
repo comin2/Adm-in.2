@@ -22,80 +22,80 @@ if(!empty($_GET['q'])) {
 		<a href="./" id="logo"><span>Adm'in.2</span></a>
 
 		<nav id="quick-links">
-			<a href="#0"><span>My profile</span></a>
-			<a href="#0"><span>Log out</span></a>
+			<a href="#0"><span role="tooltip">My profile</span></a>
+			<a href="#0"><span role="tooltip">Log out</span></a>
 		</nav>
 	</div>
-	<nav id="sidebar" hidden="true" aria-hidden="true">
-		<header id="sidebar-header" role="button" tabindex="0"><h1>Menu</h1></header>
+	<nav id="sidebar">
+		<header id="sidebar-header"><h1>Menu</h1></header>
 
-		<ul id="sidebar-content">
+		<ul role="menu" aria-labelledby="sidebar-header" id="sidebar-content">
 			<li class="widget widget-search">
 				<h2 class="widget-title">Search</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
 					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher">
 				</form>
 			</li>
-			<li class="menu">
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Blog posts</a></h2>
-				<ul class="menu-content">
-					<li class="submenu">
+				<ul role="menu" class="menu-content">
+					<li role="menuitem" class="submenu">
 						<a href="#0">List <span class="badge badge-warning">1</span></a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Write new</a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Categories <small class="submenu-description">A short description here</small></a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu">
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Medias <span class="badge">2</span></a></h2>
-				<ul class="menu-content">
-					<li class="submenu">
+				<ul role="menu" class="menu-content">
+					<li role="menuitem" class="submenu">
 						<a href="#0">List <span class="badge badge-info">2</span></a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Upload</a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Categories</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu">
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Users</a></h2>
-				<ul class="menu-content">
-					<li class="submenu">
+				<ul role="menu" class="menu-content">
+					<li role="menuitem" class="submenu">
 						<a href="#0">List <span class="badge badge-success">5</span></a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Premium users</a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Add</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu">
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Games</a></h2>
-				<ul class="menu-content">
-					<li class="submenu">
+				<ul role="menu" class="menu-content">
+					<li role="menuitem" class="submenu">
 						<a href="#0">List</a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Add</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu">
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="#0">Settings</a></h2>
-				<ul class="menu-content">
-					<li class="submenu">
+				<ul role="menu" class="menu-content">
+					<li role="menuitem" class="submenu">
 						<a href="#0">API <span class="badge badge-error">2</span></a>
 					</li>
-					<li class="submenu">
+					<li role="menuitem" class="submenu">
 						<a href="#0">Administrators</a>
 					</li>
 				</ul>
@@ -154,7 +154,7 @@ if(!empty($_GET['q'])) {
 					<header class="widget-header">
 						<h2>Quick draft</h2>
 					</header>
-					<form action="" method="post" class="widget-content">
+					<form action="#demo-widget-form" method="post" class="widget-content">
 						<div>
 							<label for="demo-form-title" class="full">Title</label>
 							<input type="text" name="title" placeholder="A big input" class="input-full input-xl" id="demo-form-title">

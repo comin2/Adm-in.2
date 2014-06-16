@@ -1,7 +1,28 @@
 
 #sidebar{
+	position: fixed;
+	z-index: 50;
+	top: $(size-topbar-height);
+	bottom: 0;
+	left: 0;
+	width: $(size-sidebar-width);
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: $(color-gray-dark);
+	color: $(color-white);
+	-webkit-transition: -webkit-transform .2s linear;
+	transition: transform .2s linear;
 }
-.js-enabled #sidebar-header{
+.js-enabled #sidebar[hidden]{
+	transform: translateX(-100%);
+	-webkit-transition: -webkit-transform .2s linear, visibility 0 .2s;
+	transition: transform .2s linear, visibility 0 .2s;
+	visibility: hidden;
+}
+.js-enabled #sidebar-toggle{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	box-sizing: border-box;
 	position: fixed;
 	z-index: 50;
@@ -15,15 +36,15 @@
 	background-size: contain;
 	cursor: pointer;
 }
-.js-enabled #sidebar[hidden] #sidebar-header{
+.js-enabled #sidebar-toggle.sidebar-hidden{
 	background-image: data-uri('../img/icon-sidebar-open.svg');
 }
 @media (max-width: $(breakpoint-sm)){
-	.js-enabled #sidebar-header{
+	.js-enabled #sidebar-toggle{
 		left: 0;
 	}
 }
-#sidebar-header:any(:hover, :focus){
+#sidebar-toggle:any(:hover, :focus){
 	background-color: $(color-blue-dark);
 }
 #sidebar-header>h1{
@@ -31,22 +52,6 @@
 }
 #sidebar ul{
 	list-style-type: none;
-}
-#sidebar-content{
-	position: fixed;
-	z-index: 50;
-	top: $(size-topbar-height);
-	bottom: 0;
-	left: 0;
-	width: $(size-sidebar-width);
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: $(color-gray-dark);
-	color: $(color-white);
-	transition: all .2s linear;
-}
-.js-enabled #sidebar[hidden]>#sidebar-content{
-	transform: translateX(-100%);
 }
 #sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
 	padding: .25em;
