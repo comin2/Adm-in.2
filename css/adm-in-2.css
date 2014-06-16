@@ -22,7 +22,7 @@
 	breakpoint-xs: 25em;
 	breakpoint-sm: 40em;
 	breakpoint-md: 60em;
-	breakpoint-md: 75em;
+	breakpoint-lg: 75em;
 }
 @selector-splat input input[type="#(text)"];
 

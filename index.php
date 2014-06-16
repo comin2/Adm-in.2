@@ -145,7 +145,13 @@ if(!empty($_GET['q'])) {
 						<h2>Fast links</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<ul>
+						    <li><a href="#0">User #1</a></li>
+						    <li><a href="#0">User #2</a></li>
+						    <li><a href="#0">User #3</a></li>
+						    <li><a href="#0">User #4</a></li>
+						    <li><a href="#0">User #5</a></li>
+						</ul>
 					</div>
 				</section>
 			</div>
@@ -197,21 +203,29 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 		</div>
-		<div class="row">
+		<div class="container row">
 			<div class="column-tiny widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Custom select</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<form action="#0" method="get" accept-charset="utf-8">
+							<select class="input-full input-xl custom-select">
+								<option value="1">Option #1</option>
+								<option value="2">Option #2</option>
+								<option value="3">Option #3</option>
+								<option value="4">Option #4</option>
+								<option value="5">Option #5</option>
+							</select>
+						</form>
 					</div>
 				</section>
 			</div>
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Text editor</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>
@@ -221,7 +235,7 @@ if(!empty($_GET['q'])) {
 			<div class="column-tiny widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Modals</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>

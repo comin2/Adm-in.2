@@ -117,6 +117,23 @@
 }
 
 
+/* Container */
+#main .container{
+	max-width: $(breakpoint-md);
+	margin-left: auto;
+	margin-right: auto;
+}
+#main .container.container-tiny{
+	max-width: $(breakpoint-xs);
+}
+#main .container.container-small{
+	max-width: $(breakpoint-sm);
+}
+#main .container.container-large{
+	max-width: $(breakpoint-lg);
+}
+
+
 /* Widgets */
 #main .widget{
 	margin-bottom: 2em;
