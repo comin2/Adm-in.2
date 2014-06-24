@@ -1,4 +1,4 @@
-var sidebar = document.querySelector('#sidebar');
+var sidebar = document.getElementById('sidebar');
 
 var sidebar_toogle_btn = document.createElement('button');
 sidebar_toogle_btn.setAttribute('type', 'button');
@@ -10,6 +10,79 @@ if(document.body.insertBefore(sidebar_toogle_btn, sidebar)){
 
 	sidebar_toogle_btn.title = 'Show the sidebar';
 	sidebar_toogle_btn.classList.add('sidebar-hidden');
+}
+
+var sidebar_search_form = document.getElementById('sidebar-search-form');
+var sidebar_search_input = document.getElementById('sidebar-search-input');
+if (!('webkitSpeechRecognition' in window)) {
+	console.log('Your browser doesn\'t support speech recognition. That\‘s too bad…');
+}
+else {
+	var recognition = new webkitSpeechRecognition();
+	recognition.continuous = true;
+	recognition.interimResults = true;
+	recognition.lang = document.documentElement.lang || navigator.language;
+
+	recognition.onstart = function(event) {
+		console.log(event);
+	}
+	recognition.onresult = function(event) {
+		console.log(event);
+
+		interim_transcript = '';
+
+		for (var i = event.resultIndex, nb = event.results.length; i < nb; ++i) {
+			interim_transcript += event.results[i][0].transcript;
+			if (event.results[i] && event.results[i].isFinal) {
+				console.log('Final');
+				processSpeech(interim_transcript);
+			}
+		}
+	}
+	recognition.onerror = function(event) {
+		console.log(event);
+	}
+	recognition.onend = function(event) {
+		console.log(event);
+		recognition.start();
+	}
+
+	recognition.start();
+}
+
+if(typeof SPEECH_KEYWORDS !== "object") {
+	SPEECH_KEYWORDS = {};
+}
+if(typeof SPEECH_PROCESSES !== "object") {
+	SPEECH_PROCESSES = {};
+}
+
+SPEECH_KEYWORDS.search = new RegExp(/^(je )?(re)?cherche /gi);
+
+SPEECH_PROCESSES.search = function(searchStr, keyword, regexp) {
+	console.log('Search: "'+searchStr+'"');
+
+	if (!searchStr) {
+		return false;
+	}
+	sidebar_search_input.value = '';
+	sidebar_search_input.value = searchStr;
+
+	sidebar_search_form.submit();
+};
+
+function processSpeech (speechStr) {
+	var results;
+	speechStr = speechStr.trim();
+	console.log('Process speech : '+speechStr);
+
+	for (var i in SPEECH_KEYWORDS) {
+		results = speechStr.match(SPEECH_KEYWORDS[i]);
+		console.dir(results);
+		if(results) {
+			SPEECH_PROCESSES[i](speechStr.replace(results[0], '').trim(), results[0], SPEECH_KEYWORDS[i]);
+		}
+	}
 }
 
 var sidebar_menu_titles = document.querySelectorAll('#sidebar .menu>.menu-title');
@@ -40,8 +113,8 @@ for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
 	sidebar_menu_titles[i].appendChild(toggle_btn);
 }
 
-function admin2DocumentClick(e){
-	if (e.target.id === 'sidebar-toggle') {
+function admin2DocumentClick(event){
+	if (event.target.id === 'sidebar-toggle') {
 		if (sidebar.getAttribute('hidden')) {
 			sidebar.removeAttribute('hidden');
 			sidebar.removeAttribute('aria-hidden');
@@ -54,12 +127,12 @@ function admin2DocumentClick(e){
 			sidebar_toogle_btn.title = 'Show the sidebar';
 			sidebar_toogle_btn.classList.add('sidebar-hidden');
 		}
-		// e.target.blur();
+		// event.target.blur();
 		return true;
 	}
-	if (e.target.classList.contains('menu-toggle')) {
-		e.stopPropagation();
-		var elem = e.target.parentNode;
+	if (event.target.classList.contains('menu-toggle')) {
+		event.stopPropagation();
+		var elem = event.target.parentNode;
 
 		// console.dir(e);
 
@@ -74,14 +147,14 @@ function admin2DocumentClick(e){
 		if (elem.getAttribute('hidden')) {
 			elem.removeAttribute('hidden');
 			elem.removeAttribute('aria-hidden');
-			e.target.textContent = '-';
-			e.target.title = 'Hide the content of this menu';
+			event.target.textContent = '-';
+			event.target.title = 'Hide the content of this menu';
 		}
 		else {
 			elem.setAttribute('hidden', true);
 			elem.setAttribute('aria-hidden', true);
-			e.target.textContent = '+';
-			e.target.title = 'Show the content of this menu';
+			event.target.textContent = '+';
+			event.target.title = 'Show the content of this menu';
 		}
 		return true;
 	}
