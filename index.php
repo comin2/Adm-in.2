@@ -18,22 +18,22 @@ if(!empty($_GET['q'])) {
 	<?php echo csscrush_tag('css/adm-in-2.css'); ?>
 </head>
 <body>
-	<div id="topbar">
+	<div role="banner" id="topbar">
 		<a href="./" id="logo"><span>Adm'in.2</span></a>
 
-		<nav id="quick-links">
+		<nav role="navigation" id="quick-links">
 			<a href="#0"><span role="tooltip">My profile</span></a>
 			<a href="#0"><span role="tooltip">Log out</span></a>
 		</nav>
 	</div>
-	<nav id="sidebar">
+	<nav role="navigation" id="sidebar">
 		<header id="sidebar-header"><h1>Menu</h1></header>
 
 		<ul role="menu" aria-labelledby="sidebar-header" id="sidebar-content">
 			<li class="widget widget-search">
 				<h2 class="widget-title">Search</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
-					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher">
+					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher" id="sidebar-search-input">
 				</form>
 			</li>
 			<li role="menuitem" class="menu">
@@ -102,7 +102,7 @@ if(!empty($_GET['q'])) {
 			</li>
 		</ul>
 	</nav>
-	<div id="main">
+	<div role="main" id="main">
 		<h1>Dashboard</h1>
 		
 		<?php
