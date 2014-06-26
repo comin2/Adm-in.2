@@ -16,10 +16,12 @@
 	#sidebar+#main{
 		transform: translateX($(size-sidebar-width));
 		margin-left: 0;
-		-webkit-overflow-scrolling: touch;
+		pointer-events: none;
+		-webkit-overflow-scrolling: none;
 	}
 	#sidebar[hidden]+#main{
 		transform: none;
+		-webkit-overflow-scrolling: touch;
 	}
 	.js-enabled #sidebar+#main::before{
 		content: '';
@@ -136,7 +138,7 @@
 #main .widget{
 	margin-bottom: 2em;
 	background-color: $(color-white);
-	border: 1px solid $(color-gray-light);
+	box-shadow: 0 0 .25em l-adjust($(color-gray-light), -15);
 }
 #main .widget>.widget-header{
 	padding: 1em;
@@ -153,7 +155,7 @@
 #main .widget>.widget-header+.widget-content{
 	margin: -2em 1em 0;
 	padding: 1em 0;
-	border-top: 1px solid $(color-gray-light);
+	/*border-top: 1px solid l-adjust($(color-gray-light), -15);*/
 }
 
 
@@ -171,8 +173,8 @@
 	margin-bottom: 1em;
 	background-color: $(color-white);
 	color: $(color-black);
-	border: 1px solid $(color-gray-light);
-	border-radius: .25em;
+	border-bottom: 1px solid l-adjust($(color-gray-light), -15);
+	border-radius: 0;
 }
 #main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-small{
 	width: 25%;
@@ -194,12 +196,12 @@
 }
 #main :any(button, .button, :input(submit, button)){
 	padding: .25em .5em;
-	background-color: $(color-gray-light);
-	color: $(color-black);
+	background-color: $(color-gray);
+	color: $(color-white);
 	border-radius: .25em;
 }
 #main :any(button, .button, :input(submit, reset, button)):any(:hover, :focus){
-	background-color: l-adjust($(color-gray-light), -10);
+	background-color: l-adjust($(color-gray), -15);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-xs{
 	padding: .125em .25em;
@@ -210,32 +212,29 @@
 #main :any(button, .button, :input(submit, reset, button)).button-full{
 	width: 100%;
 }
-#main :any(button, .button, :input(submit, reset, button)):any(.button-info, .button-success, .button-error, .button-warning){
-	color: $(color-white);
-}
 #main :any(button, .button, :input(submit, reset, button)).button-info{
-	background-color: $(color-blue);
+	background-color: $(color-info);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-info:any(:hover, :focus){
-	background-color: l-adjust($(color-blue), -10);
+	background-color: l-adjust($(color-info), -15);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-success{
-	background-color: $(color-green);
+	background-color: $(color-success);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-success:any(:hover, :focus){
-	background-color: l-adjust($(color-green), -10);
+	background-color: l-adjust($(color-success), -15);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-error{
-	background-color: $(color-red);
+	background-color: $(color-error);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-error:any(:hover, :focus){
-	background-color: l-adjust($(color-red), -10);
+	background-color: l-adjust($(color-error), -15);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-warning{
-	background-color: $(color-orange);
+	background-color: $(color-danger);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-warning:any(:hover, :focus){
-	background-color: l-adjust($(color-orange), -10);
+	background-color: l-adjust($(color-danger), -15);
 }
 
 
@@ -246,7 +245,7 @@
 	margin-top: 2em;
 	font-style: italic;
 	color: $(color-gray-semi-light);
-	border-top: 1px solid $(color-blue-dark);
+	border-top: 1px solid $(color-main);
 }
 #footer p+p{
 	margin-top: 1em;

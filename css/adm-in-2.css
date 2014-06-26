@@ -1,20 +1,24 @@
 
 @define {
 	color-white: #fff;
-	color-gray-extra-light: #f5f5f5;
-	color-gray-light: #d8dae0;
-	color-gray-semi-light: #696f83;
-	color-gray-medium-light: #434754;
-	color-gray-medium: #25272e;
-	color-gray-dark: #1c2026;
 	color-black: #000;
-	color-red: #ff104d;
-	color-orange: #ff4917;
-	color-yellow: #f4e100;
-	color-green: #4ab953;
-	color-blue: #0385d0;
-	color-blue-light: #3288be;
-	color-blue-dark: #2471a5;
+
+	color-error: #ff9800;
+	color-danger: #ff9800;
+	color-success: #259b24;
+	color-info: #5677fc;
+
+	color-main-light: #9fa8da;
+	color-main: #303f9f;
+	color-main-dark: #1a237e;
+
+	color-secondary-light: #ffecb3;
+	color-secondary: #ffc107;
+	color-secondary-dark: #ff6f00;
+
+	color-gray-light: #f5f5f5;
+	color-gray: #9e9e9e;
+	color-gray-dark: #212121;
 
 	size-topbar-height: 3em;
 	size-sidebar-width: 15em;
@@ -33,7 +37,7 @@ html{
 	font-family: 'Roboto', Helvetica, "Liberation Sans", FreeSans, Sans-serif;
 	line-height: 1.5;
 	min-height: 100%;
-	background-color: $(color-gray-extra-light);
+	background-color: $(color-gray-light);
 	color: $(color-black);
 }
 
@@ -42,7 +46,11 @@ body{
 }
 
 a{
+	text-decoration: underline;
 	color: inherit;
+}
+a:any(:hover, :focus){
+	text-decoration: none;
 }
 strong, .bold{
 	font-weight: bold;
@@ -62,7 +70,7 @@ hr{
 	height: 1px;
 	padding: 0;
 	margin: 1em 0;
-	background-color: $(color-gray-medium);
+	background-color: $(color-gray);
 	border: none;
 }
 hr.spaced{
@@ -100,7 +108,7 @@ label, .label-like{
 	padding: 0;
 }
 :any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
-	outline-color: $(color-blue-light);
+	outline-color: $(color-main-light);
 }
 :any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
 	cursor: pointer;
@@ -157,23 +165,23 @@ label, .label-like{
 	min-width: .7em;
 	text-align: center;
 	border-radius: .25em;
-	background-color: $(color-gray-medium);
+	background-color: $(color-gray);
 	color: $(color-white);
 }
 .badge:empty{
 	display: none;
 }
 .badge.badge-error{
-	background-color: $(color-red);
+	background-color: $(color-error);
 }
 .badge.badge-warning{
-	background-color: $(color-orange);
+	background-color: $(color-danger);
 }
 .badge.badge-success{
-	background-color: $(color-green);
+	background-color: $(color-success);
 }
 .badge.badge-info{
-	background-color: $(color-blue);
+	background-color: $(color-info);
 }
 
 

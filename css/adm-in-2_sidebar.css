@@ -42,7 +42,9 @@
 	background-image: data-uri('../img/icon-sidebar-open.svg');
 }
 #sidebar-toggle:any(:hover, :focus){
-	background-color: $(color-blue-dark);
+	background-color: $(color-main-dark);
+	box-shadow: 0 0 .5em $(color-main-dark);
+	outline: none;
 }
 #sidebar-header>h1{
 	@extend .sr-only;
@@ -53,8 +55,8 @@
 #sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
 	padding: .25em;
 	width: 100%;
-	background-color: $(color-gray-medium);
-	color: $(color-gray-extra-light);
+	background-color: l-adjust($(color-gray-dark), +5);
+	color: $(color-gray-light);
 	border-radius: 0;
 }
 
@@ -69,12 +71,11 @@
 
 #sidebar .menu-title{
 	position: relative;
-	background-color: $(color-blue-light);
+	background-color: $(color-main);
 	color: $(color-white);
-	overflow: hidden;
 }
 #sidebar .menu-title>a:any(:hover, :focus){
-	color: $(color-gray-dark);
+	color: l-adjust($(color-white), -20);
 }
 #sidebar .menu-title>.menu-toggle{
 	position: absolute;
@@ -85,29 +86,30 @@
 	padding: .5em;
 	width: 2.5em;
 	-webkit-appearance: none;
-	background-color: $(color-blue-light);
-	color: $(color-gray-medium);
+	background-color: $(color-main);
+	color: l-adjust($(color-white), -20);
 	border: none;
 }
 #sidebar .menu-title>.menu-toggle+a{
 	margin-right: 2.5em;
 }
 #sidebar .menu>.menu-title>.menu-toggle:any(:hover, :focus){
-	background-color: $(color-blue-dark);
+	background-color: $(color-main-dark);
 	color: $(color-white);
+	box-shadow: 0 0 .5em $(color-main-dark);
+	outline: none;
 	cursor: pointer;
 }
 #sidebar .menu>.menu-content{
 	max-height: 100%;
-	/*transition: height .25s ease-in-out;*/
 }
 #sidebar .menu>.menu-content[hidden]{
 	max-height: 0;
 	overflow: hidden;
-	background-color: $(color-gray-medium);
+	background-color: $(color-gray);
 }
 #sidebar .submenu{
-	color: $(color-gray-semi-light);
+	color: $(color-gray);
 }
 #sidebar .menu-title>a, #sidebar .submenu>a{
 	display: block;
@@ -115,15 +117,15 @@
 	text-decoration: none;
 }
 #sidebar .submenu>a:any(:hover, :focus){
-	color: $(color-blue-light);
+	color: l-adjust($(color-gray), +20);
 }
 #sidebar .submenu>a>.submenu-description{
 	display: block;
 	@extend .italic;
-	color: $(color-gray-medium-light);
+	color: l-adjust($(color-gray), -20);
 }
 #sidebar .submenu>a:any(:hover, :focus)>.submenu-description{
-	color: $(color-gray-semi-light);
+	color: $(color-gray);
 }
 #sidebar .menu.current{
 	background-color: $(color-gray-dark);
