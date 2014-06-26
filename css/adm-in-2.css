@@ -33,6 +33,13 @@
 @import url('reset.css');
 @import url('font-roboto.css');
 
+::-moz-selection {
+	background: $(color-secondary-light);
+}
+::selection {
+	background: $(color-secondary-light);
+}
+
 html{
 	font-family: 'Roboto', Helvetica, "Liberation Sans", FreeSans, Sans-serif;
 	line-height: 1.5;

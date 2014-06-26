@@ -9,6 +9,7 @@
 	height: $(size-topbar-height);
 	background-color: $(color-main);
 	color: $(color-white);
+	user-select: none;
 }
 .js-enabled>#topbar{
 	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
