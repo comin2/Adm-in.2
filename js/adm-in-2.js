@@ -9,7 +9,8 @@ if(document.body.insertBefore(sidebar_toogle_btn, sidebar)){
 	sidebar.setAttribute('aria-hidden', true);
 
 	sidebar_toogle_btn.title = 'Show the sidebar';
-	sidebar_toogle_btn.classList.add('sidebar-hidden');
+	
+	document.body.classList.add('sidebar-hidden');
 }
 
 var sidebar_search_form = document.getElementById('sidebar-search-form');
@@ -24,27 +25,30 @@ else {
 	recognition.lang = document.documentElement.lang || navigator.language;
 
 	recognition.onstart = function(event) {
-		console.log(event);
-	}
-	recognition.onresult = function(event) {
-		console.log(event);
+		// console.log(event);
+		console.log('Je vous écoute…');
 
-		interim_transcript = '';
+		recognition.onresult = function(event) {
+			// console.log(event);
 
-		for (var i = event.resultIndex, nb = event.results.length; i < nb; ++i) {
-			interim_transcript += event.results[i][0].transcript;
-			if (event.results[i] && event.results[i].isFinal) {
-				console.log('Final');
-				processSpeech(interim_transcript);
+			interim_transcript = '';
+
+			for (var i = event.resultIndex, nb = event.results.length; i < nb; ++i) {
+				interim_transcript += event.results[i][0].transcript;
+				if (event.results[i] && event.results[i].isFinal) {
+					console.log('Final');
+					processSpeech(interim_transcript);
+				}
 			}
 		}
-	}
-	recognition.onerror = function(event) {
-		console.log(event);
+		recognition.onerror = function(event) {
+			// console.log(event);
+		}
 	}
 	recognition.onend = function(event) {
 		console.log(event);
-		recognition.start();
+		console.log('Au revoir');
+		// recognition.start();
 	}
 
 	recognition.start();
@@ -119,13 +123,13 @@ function admin2DocumentClick(event){
 			sidebar.removeAttribute('hidden');
 			sidebar.removeAttribute('aria-hidden');
 			sidebar_toogle_btn.title = 'Hide the sidebar';
-			sidebar_toogle_btn.classList.remove('sidebar-hidden');
+			document.body.classList.remove('sidebar-hidden');
 		}
 		else {
 			sidebar.setAttribute('hidden', true);
 			sidebar.setAttribute('aria-hidden', true);
 			sidebar_toogle_btn.title = 'Show the sidebar';
-			sidebar_toogle_btn.classList.add('sidebar-hidden');
+			document.body.classList.add('sidebar-hidden');
 		}
 		// event.target.blur();
 		return true;

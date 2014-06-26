@@ -2,7 +2,7 @@
 #sidebar{
 	position: fixed;
 	z-index: 50;
-	top: $(size-topbar-height);
+	top: 0;
 	bottom: 0;
 	left: 0;
 	width: $(size-sidebar-width);
@@ -10,13 +10,13 @@
 	overflow-y: auto;
 	background-color: $(color-gray-dark);
 	color: $(color-white);
-	-webkit-transition: -webkit-transform .2s linear;
-	transition: transform .2s linear;
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+	transition: transform .2s ease-in-out;
 }
 .js-enabled #sidebar[hidden]{
 	transform: translateX(-100%);
-	-webkit-transition: -webkit-transform .2s linear, visibility 0 .2s;
-	transition: transform .2s linear, visibility 0 .2s;
+	-webkit-transition: -webkit-transform .2s ease-in-out, visibility 0 .2s;
+	transition: transform .2s ease-in-out, visibility 0 .2s;
 	visibility: hidden;
 }
 .js-enabled #sidebar-toggle{
@@ -28,21 +28,18 @@
 	z-index: 50;
 	top: 0;
 	left: $(size-sidebar-width);
-	left: math($(size-sidebar-width)-$(size-topbar-height), em);
 	padding: .5em;
 	width: $(size-topbar-height);
 	height: $(size-topbar-height);
 	background: data-uri('../img/icon-sidebar-close.svg') no-repeat center;
 	background-size: contain;
 	cursor: pointer;
+	-webkit-transition: left .2s ease-in-out;
+	transition: left .2s ease-in-out;
 }
-.js-enabled #sidebar-toggle.sidebar-hidden{
+.js-enabled.sidebar-hidden #sidebar-toggle{
+	left: 0;
 	background-image: data-uri('../img/icon-sidebar-open.svg');
-}
-@media (max-width: $(breakpoint-sm)){
-	.js-enabled #sidebar-toggle{
-		left: 0;
-	}
 }
 #sidebar-toggle:any(:hover, :focus){
 	background-color: $(color-blue-dark);
@@ -102,7 +99,7 @@
 }
 #sidebar .menu>.menu-content{
 	max-height: 100%;
-	/*transition: height .25s linear;*/
+	/*transition: height .25s ease-in-out;*/
 }
 #sidebar .menu>.menu-content[hidden]{
 	max-height: 0;

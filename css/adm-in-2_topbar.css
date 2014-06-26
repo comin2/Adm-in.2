@@ -5,9 +5,27 @@
 	top: 0;
 	right: 0;
 	left: 0;
+	margin-left: $(size-sidebar-width);
 	height: $(size-topbar-height);
 	background-color: $(color-blue-light);
 	color: $(color-white);
+}
+.js-enabled>#topbar{
+	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
+	transition: transform .2s ease-in-out, margin-left .2s ease-in-out;
+}
+.js-enabled.sidebar-hidden>#topbar{
+	margin-left: 0;
+}
+@media (max-width: $(breakpoint-sm)){
+	#topbar{
+		transform: translateX($(size-sidebar-width));
+		margin-left: 0;
+		-webkit-overflow-scrolling: touch;
+	}
+	.js-enabled.sidebar-hidden>#topbar{
+		transform: none;
+	}
 }
 #logo{
 	display: block;
@@ -18,6 +36,9 @@
 	text-decoration: none;
 	text-align: center;
 	background-color: $(color-blue-dark);
+}
+.js-enabled #logo{
+	margin-left: $(size-topbar-height);
 }
 @media (max-width: $(breakpoint-sm)){
 	#logo{

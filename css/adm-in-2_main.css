@@ -6,8 +6,8 @@
 	margin-top: $(size-topbar-height);
 	margin-left: $(size-sidebar-width);
 	padding: 2em;
-	-webkit-transition: -webkit-transform .2s linear, margin-left .2s linear;
-	transition: transform .2s linear, margin-left .2s linear;
+	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
+	transition: transform .2s ease-in-out, margin-left .2s ease-in-out;
 }
 @media (max-width: $(breakpoint-sm)){
 	#main{
@@ -32,18 +32,16 @@
 		left: 0;
 		background-color: $(color-black);
 		opacity: .5;
-		transition: opacity .2s linear;
+		transition: opacity .2s ease-in-out;
 	}
 	.js-enabled #sidebar[hidden]+#main::before{
 		visibility: hidden;
 		opacity: 0;
-		transition: opacity .2s linear, visibility 0 .2s;
+		transition: opacity .2s ease-in-out, visibility 0 .2s;
 	}
 }
-#sidebar[hidden]+#main{
-	margin-left: 0;
-}
 .js-enabled #sidebar[hidden]+#main{
+	margin-left: 0;
 	overflow: hidden;
 }
 
