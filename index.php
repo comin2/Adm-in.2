@@ -267,19 +267,19 @@ if(!empty($_GET['q'])) {
 							<div>
 								<label>
 									<input type="checkbox" name="custom-checkboxes[]" value="normal" class="custom-checkbox">
-									Normal
+									<span>Normal</span>
 								</label>
 							</div>
 							<div>
 								<label>
 									<input type="checkbox" name="custom-checkboxes[]" value="checked" checked="checked" class="custom-checkbox">
-									Checked
+									<span>Checked</span>
 								</label>
 							</div>
 							<div>
 								<label>
 									<input type="checkbox" name="custom-checkboxes[]" value="disabled" class="custom-checkbox" disabled>
-									Disabled
+									<span>Disabled</span>
 								</label>
 							</div>
 						</form>
@@ -296,19 +296,19 @@ if(!empty($_GET['q'])) {
 							<div>
 								<label>
 									<input type="radio" name="custom-radio" value="normal" class="custom-radio">
-									Normal
+									<span>Normal</span>
 								</label>
 							</div>
 							<div>
 								<label>
 									<input type="radio" name="custom-radio" value="checked" checked="checked" class="custom-radio">
-									Checked
+									<span>Checked</span>
 								</label>
 							</div>
 							<div>
 								<label>
 									<input type="radio" name="custom-radio" value="disabled" class="custom-radio" disabled>
-									Disabled
+									<span>Disabled</span>
 								</label>
 							</div>
 						</form>

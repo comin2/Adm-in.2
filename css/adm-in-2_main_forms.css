@@ -77,13 +77,36 @@
 }
 
 
-input[type="checkbox"].custom-checkbox:any(:not(:checked), :checked){
-	width: 1em;
-	height: 1em;
+:any(input[type="checkbox"].custom-checkbox, input[type="radio"].custom-radio):any(:not(:checked), :checked){
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 1.5em;
+	height: 1.5em;
 	-webkit-appearance: none;
 	appearance: none;
-	background: $(color-danger);
+	border: 2px solid l-adjust($(color-gray-dark), +15);
+	outline: none;
+}
+:any(input[type="checkbox"].custom-checkbox, input[type="radio"].custom-radio):any(:not(:checked), :checked):any([disabled], [readonly]){
+	background: l-adjust($(color-gray-dark), +30);
+}
+input[type="checkbox"].custom-checkbox:any(:not(:checked), :checked){
+	border-radius: .25em;
 }
 input[type="checkbox"].custom-checkbox:checked{
 	background: $(color-success);
+	border-color: $(color-success);
+}
+input[type="radio"].custom-radio:any(:not(:checked), :checked){
+	border-radius: 50%;
+}
+input[type="radio"].custom-radio:not(:checked){
+	background-image: radial-gradient(center, circle cover, $(color-success) 0, transparent 0, transparent 100%);
+	transition: background-image .2s ease-in-out, border-color .1s linear .2s;
+}
+input[type="radio"].custom-radio:checked{
+	/*background: $(color-success);*/
+	background-image: radial-gradient(center, circle cover, $(color-success) 0, $(color-success) 100%);
+	border-color: $(color-success);
 }
