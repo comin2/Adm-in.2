@@ -38,7 +38,7 @@ html{
 	line-height: 1.5;
 	min-height: 100%;
 	background-color: $(color-gray-light);
-	color: $(color-black);
+	color: $(color-gray-dark);
 }
 
 body{
