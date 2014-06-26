@@ -131,14 +131,16 @@ function admin2DocumentClick(event){
 			sidebar_toogle_btn.title = 'Show the sidebar';
 			document.body.classList.add('sidebar-hidden');
 		}
-		// event.target.blur();
+
+		if(event.x || event.y) {
+			event.target.blur();
+		}
+
 		return true;
 	}
 	if (event.target.classList.contains('menu-toggle')) {
 		event.stopPropagation();
 		var elem = event.target.parentNode;
-
-		// console.dir(e);
 
 		while ((!elem.classList || !elem.classList.contains('menu-content')) && elem.nextSibling) {
 			elem = elem.nextSibling;
@@ -160,6 +162,11 @@ function admin2DocumentClick(event){
 			event.target.textContent = '+';
 			event.target.title = 'Show the content of this menu';
 		}
+		
+		if(event.x || event.y) {
+			event.target.blur();
+		}
+		
 		return true;
 	}
 }
