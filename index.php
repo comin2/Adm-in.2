@@ -209,18 +209,10 @@ if(!empty($_GET['q'])) {
 				<div class="column-tiny widgets-column">
 					<section class="widget">
 						<header class="widget-header">
-							<h2>Custom select</h2>
+							<h2>Title</h2>
 						</header>
 						<div class="widget-content">
-							<form action="#0" method="get" accept-charset="utf-8">
-								<select class="input-full input-xl custom-select">
-									<option value="1">Option #1</option>
-									<option value="2">Option #2</option>
-									<option value="3">Option #3</option>
-									<option value="4">Option #4</option>
-									<option value="5">Option #5</option>
-								</select>
-							</form>
+							<p class="italic">No content yet</p>
 						</div>
 					</section>
 				</div>
@@ -250,30 +242,76 @@ if(!empty($_GET['q'])) {
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Custom select</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<form action="#0" method="get" accept-charset="utf-8">
+							<select name="custom-select" class="input-full input-xl custom-select">
+								<option value="1">Option #1</option>
+								<option value="2">Option #2</option>
+								<option value="3">Option #3</option>
+								<option value="4">Option #4</option>
+								<option value="5">Option #5</option>
+							</select>
+						</form>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Custom checkboxes</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<form action="#0" method="get" accept-charset="utf-8">
+							<div>
+								<label>
+									<input type="checkbox" name="custom-checkboxes[]" value="normal" class="custom-checkbox">
+									Normal
+								</label>
+							</div>
+							<div>
+								<label>
+									<input type="checkbox" name="custom-checkboxes[]" value="selected" class="custom-checkbox">
+									Selected
+								</label>
+							</div>
+							<div>
+								<label>
+									<input type="checkbox" name="custom-checkboxes[]" value="disabled" class="custom-checkbox">
+									Disabled
+								</label>
+							</div>
+						</form>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Title</h2>
+						<h2>Custom radio buttons</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<form action="#0" method="get" accept-charset="utf-8">
+							<div>
+								<label>
+									<input type="radio" name="custom-radio" value="normal" class="custom-radio">
+									Normal
+								</label>
+							</div>
+							<div>
+								<label>
+									<input type="radio" name="custom-radio" value="selected" class="custom-radio">
+									Selected
+								</label>
+							</div>
+							<div>
+								<label>
+									<input type="radio" name="custom-radio" value="disabled" class="custom-radio">
+									Disabled
+								</label>
+							</div>
+						</form>
 					</div>
 				</section>
 			</div>
