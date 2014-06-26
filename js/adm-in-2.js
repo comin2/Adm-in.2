@@ -148,7 +148,7 @@ function admin2DocumentClick(event){
 			return false;
 		}
 
-		if (elem.getAttribute('hidden')) {
+		if (elem.getAttribute('hidden') || elem.getAttribute('aria-hidden')) {
 			elem.removeAttribute('hidden');
 			elem.removeAttribute('aria-hidden');
 			event.target.textContent = '-';

@@ -108,7 +108,7 @@ label, .label-like{
 	padding: 0;
 }
 :any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
-	outline-color: $(color-main-light);
+	outline-color: $(color-main);
 }
 :any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
 	cursor: pointer;
