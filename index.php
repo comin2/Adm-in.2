@@ -216,7 +216,7 @@ if(!empty($_GET['q'])) {
 				<div class="column-tiny widgets-column">
 					<section class="card">
 						<header class="card-header">
-							<h2>Title</h2>
+							<h2>Modals</h2>
 						</header>
 						<div class="card-content">
 							<p class="italic">No content yet</p>
@@ -236,10 +236,14 @@ if(!empty($_GET['q'])) {
 				<div class="column-tiny widgets-column">
 					<section class="card">
 						<header class="card-header">
-							<h2>Modals</h2>
+							<h2>Toasts</h2>
 						</header>
 						<div class="card-content">
-							<p class="italic">No content yet</p>
+							<p><button type="button" class="button-xs button-full" onclick="new Admin2.Toast('I\'m a short toast', Admin2.Toast.DURATION_SHORT);">Short</button></p>
+
+							<p><button type="button" class="button-full" onclick="new Admin2.Toast('I\'m a normal toast');">Medium</button></p>
+
+							<p><button type="button" class="button-xl button-full" onclick="new Admin2.Toast('I\'m a long toast', Admin2.Toast.DURATION_LONG);">Long</button></p>
 						</div>
 					</section>
 				</div>

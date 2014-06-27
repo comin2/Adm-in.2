@@ -43,6 +43,9 @@
 	font-size: 1.2em;
 	margin-bottom: 1em;
 }
+#main p+p{
+	margin-top: 1em;
+}
 
 /* Lists */
 #main :any(ul, ol){
