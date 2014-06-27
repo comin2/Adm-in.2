@@ -41,7 +41,7 @@
 	padding: 1em;
 }
 #main :any(button, .button, :input(submit, button)){
-	padding: .25em .5em;
+	padding: .5em 1em;
 	background-color: $(color-secondary);
 	color: $(color-white);
 	border-radius: .125em;
@@ -54,10 +54,10 @@
 	box-shadow: 0 .25em .5em $(color-gray);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-xs{
-	padding: .125em .25em;
+	padding: .25em .5em;
 }
 #main :any(button, .button, :input(submit, reset, button)).button-xl{
-	padding: .5em 1em;
+	padding: 1em 2em;
 }
 #main :any(button, .button, :input(submit, reset, button)).button-full{
 	width: 100%;
