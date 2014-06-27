@@ -166,6 +166,10 @@ if(!empty($_GET['q'])) {
 							<input type="text" name="title" placeholder="A big input" class="input-full input-xl" id="demo-form-title">
 						</div>
 						<div>
+							<label for="demo-form-disabled" class="full">Disabled</label>
+							<input type="text" name="disabled" placeholder="You can't write here" disabled class="input-full input-xl" id="demo-form-disabled">
+						</div>
+						<div>
 							<label for="demo-form-textarea" class="full">Content</label>
 							<textarea name="content" cols="30" rows="10" placeholder="A normal textarea" class="input-full" id="demo-form-textarea"></textarea>
 						</div>
@@ -185,17 +189,19 @@ if(!empty($_GET['q'])) {
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Latest registrations</h2>
+						<h2>Progress</h2>
 					</header>
 					<div class="widget-content">
-						<p class="italic">No content yet</p>
+						<div>
+							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full">
+						</div>
 					</div>
 				</section>
 			</div>
 			<div class="column-medium widgets-column">
 				<section class="widget">
 					<header class="widget-header">
-						<h2>Latest articles</h2>
+						<h2>Others bars</h2>
 					</header>
 					<div class="widget-content">
 						<p class="italic">No content yet</p>
@@ -295,19 +301,19 @@ if(!empty($_GET['q'])) {
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
 								<label>
-									<input type="radio" name="custom-radio" value="normal" class="custom-radio">
+									<input type="radio" name="custom-radio" value="normal">
 									<span>Normal</span>
 								</label>
 							</div>
 							<div>
 								<label>
-									<input type="radio" name="custom-radio" value="checked" checked="checked" class="custom-radio">
+									<input type="radio" name="custom-radio" value="checked" checked="checked">
 									<span>Checked</span>
 								</label>
 							</div>
 							<div>
 								<label>
-									<input type="radio" name="custom-radio" value="disabled" class="custom-radio" disabled>
+									<input type="radio" name="custom-radio" value="disabled" disabled>
 									<span>Disabled</span>
 								</label>
 							</div>

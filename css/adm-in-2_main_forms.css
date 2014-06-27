@@ -7,7 +7,7 @@
 	font-size: 1.6em;
 	margin-bottom: .625em;
 }
-#main :input(text, password, url, email, number, search, date, time, datetime), textarea, select{
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
 	padding: .5em;
 	margin-bottom: 1em;
 	background-color: $(color-white);
@@ -15,16 +15,23 @@
 	border-bottom: 1px solid l-adjust($(color-gray-light), -15);
 	border-radius: 0;
 }
-#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-small{
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select):focus{
+	outline: 0;
+	border-color: $(color-main);
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select):any([disabled], [readonly]){
+	border-bottom-style: dashed;
+}
+#main :any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-small{
 	width: 25%;
 }
-#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-medium{
+#main :any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-medium{
 	width: 50%;
 }
-#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-large{
+#main :any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-large{
 	width: 75%;
 }
-#main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-full{
+#main :any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-full{
 	width: 100%;
 }
 #main :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-xs{
@@ -37,10 +44,18 @@
 	padding: .25em .5em;
 	background-color: $(color-gray);
 	color: $(color-white);
-	border-radius: .25em;
+	border-radius: .125em;
+	box-shadow: 0 .125em .25em $(color-gray);
 }
 #main :any(button, .button, :input(submit, reset, button)):any(:hover, :focus){
-	background-color: l-adjust($(color-gray), -15);
+	background-color: l-adjust($(color-gray), -5);
+}
+#main :any(button, .button, :input(submit, reset, button)):hover{
+	box-shadow: 0 .25em .25em $(color-gray);
+}
+#main :any(button, .button, :input(submit, reset, button)):focus{
+	outline: 0;
+	box-shadow: 0 .25em .5em $(color-gray);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-xs{
 	padding: .125em .25em;
@@ -55,57 +70,127 @@
 	background-color: $(color-info);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-info:any(:hover, :focus){
-	background-color: l-adjust($(color-info), -15);
+	background-color: l-adjust($(color-info), -5);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-success{
 	background-color: $(color-success);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-success:any(:hover, :focus){
-	background-color: l-adjust($(color-success), -15);
+	background-color: l-adjust($(color-success), -5);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-error{
 	background-color: $(color-error);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-error:any(:hover, :focus){
-	background-color: l-adjust($(color-error), -15);
+	background-color: l-adjust($(color-error), -5);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-warning{
 	background-color: $(color-danger);
 }
 #main :any(button, .button, :input(submit, reset, button)).button-warning:any(:hover, :focus){
-	background-color: l-adjust($(color-danger), -15);
+	background-color: l-adjust($(color-danger), -5);
 }
 
 
-:any(input[type="checkbox"].custom-checkbox, input[type="radio"].custom-radio):any(:not(:checked), :checked){
+input[type="range"]{
+	position: relative;
+	margin: 0;
+	margin-bottom: 1.25em;
+	padding: 0;
+	height: .5em;
+	appearance: none;
+	background: $(color-main);
+	border-radius: .5em;
+}
+input[type="range"]::-moz-range-track{
+	position: relative;
+	margin: 0;
+	margin-bottom: 1.25em;
+	padding: 0;
+	height: .5em;
+	-moz-appearance: none;
+	background: $(color-main);
+	border-radius: .5em;
+}
+input[type="range"]:focus{
+	outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb{
+	width: 1em;
+	height: 1em;
+	-webkit-appearance: none;
+	background: $(color-main-dark);
+	border: none;
+	border-radius: .5em;
+	box-shadow: 0 0 .25em $(color-main-dark);
+	transition: all .2s ease-in-out;
+}
+input[type="range"]:active::-webkit-slider-thumb{
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	box-shadow: 0 0 .5em $(color-main-dark);
+}
+input[type="range"]::-moz-range-thumb{
+	width: 1em;
+	height: 1em;
+	-moz-appearance: none;
+	background: $(color-main-dark);
+	border: none;
+	border-radius: .5em;
+	box-shadow: 0 0 .25em $(color-main-dark);
+	transition: all .2s ease-in-out;
+}
+input[type="range"]:active::-moz-range-thumb{
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	box-shadow: 0 0 .5em $(color-main-dark);
+}
+input[type="range"][min]::before,
+input[type="range"][max]::after {
+	position: absolute;
+	top: 1.25em;
+	color: $(color-gray);
+}
+input[type="range"][min]:before {
+	left: .5em;
+	content: attr(min);
+}
+input[type="range"][max]:after {
+	right: .5em;
+	content: attr(max);
+}
+
+:any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked){
 	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 0;
 	width: 1.5em;
 	height: 1.5em;
-	-webkit-appearance: none;
 	appearance: none;
+	vertical-align: middle;
 	border: 2px solid l-adjust($(color-gray-dark), +15);
 	outline: none;
 }
-:any(input[type="checkbox"].custom-checkbox, input[type="radio"].custom-radio):any(:not(:checked), :checked):any([disabled], [readonly]){
+:any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked):any([disabled], [readonly]){
 	background: l-adjust($(color-gray-dark), +30);
 }
-input[type="checkbox"].custom-checkbox:any(:not(:checked), :checked){
+input[type="checkbox"]:any(:not(:checked), :checked){
 	border-radius: .25em;
 }
-input[type="checkbox"].custom-checkbox:checked{
+input[type="checkbox"]:checked{
 	background: $(color-success);
 	border-color: $(color-success);
 }
-input[type="radio"].custom-radio:any(:not(:checked), :checked){
+input[type="radio"]:any(:not(:checked), :checked){
 	border-radius: 50%;
 }
-input[type="radio"].custom-radio:not(:checked){
+input[type="radio"]:not(:checked){
 	background-image: radial-gradient(center, circle cover, $(color-success) 0, transparent 0, transparent 100%);
 	transition: background-image .2s ease-in-out, border-color .1s linear .2s;
 }
-input[type="radio"].custom-radio:checked{
+input[type="radio"]:checked{
 	/*background: $(color-success);*/
 	background-image: radial-gradient(center, circle cover, $(color-success) 0, $(color-success) 100%);
 	border-color: $(color-success);
