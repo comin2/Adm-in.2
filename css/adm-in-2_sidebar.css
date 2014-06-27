@@ -11,14 +11,17 @@
 	background-color: $(color-gray-dark);
 	color: $(color-white);
 	user-select: none;
+	box-shadow: 0 0 .5em $(color-gray-dark);
 	-webkit-transition: -webkit-transform .2s ease-in-out;
 	transition: transform .2s ease-in-out;
 }
 .js-enabled #sidebar[hidden]{
-	transform: translateX(-100%);
-	-webkit-transition: -webkit-transform .2s ease-in-out, visibility 0 .2s;
-	transition: transform .2s ease-in-out, visibility 0 .2s;
+	box-shadow: none;
 	visibility: hidden;
+	transform: translateX(-100%);
+	-webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out, visibility 0 .2s;
+	-moz-transition: -moz-transform .2s ease-in-out, -moz-box-shadow .2s ease-in-out, visibility 0 .2s;
+	transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, visibility 0 .2s;
 }
 .js-enabled #sidebar-toggle{
 	-webkit-appearance: none;

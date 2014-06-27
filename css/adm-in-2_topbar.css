@@ -11,11 +11,11 @@
 	color: $(color-white);
 	user-select: none;
 }
-.js-enabled>#topbar{
+.js-enabled #topbar{
 	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
 	transition: transform .2s ease-in-out, margin-left .2s ease-in-out;
 }
-.js-enabled.sidebar-hidden>#topbar{
+.js-enabled.sidebar-hidden #topbar{
 	margin-left: 0;
 }
 @media (max-width: $(breakpoint-sm)){
@@ -24,7 +24,7 @@
 		margin-left: 0;
 		-webkit-overflow-scrolling: touch;
 	}
-	.js-enabled.sidebar-hidden>#topbar{
+	.js-enabled.sidebar-hidden #topbar{
 		transform: none;
 	}
 }

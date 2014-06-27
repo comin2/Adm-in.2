@@ -16,29 +16,9 @@
 	#sidebar+#main{
 		transform: translateX($(size-sidebar-width));
 		margin-left: 0;
-		-webkit-overflow-scrolling: none;
 	}
 	#sidebar[hidden]+#main{
 		transform: none;
-		-webkit-overflow-scrolling: touch;
-	}
-	.js-enabled #sidebar+#main::before{
-		content: '';
-		display: block;
-		position: fixed;
-		z-index: 49;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		background-color: $(color-black);
-		opacity: .5;
-		transition: opacity .2s ease-in-out;
-	}
-	.js-enabled #sidebar[hidden]+#main::before{
-		visibility: hidden;
-		opacity: 0;
-		transition: opacity .2s ease-in-out, visibility 0 .2s;
 	}
 }
 .js-enabled #sidebar[hidden]+#main{

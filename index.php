@@ -2,6 +2,7 @@
 require_once 'css-crush/CssCrush.php';
 
 if(!empty($_GET['q'])) {
+	$_GET['q'] = 'post[author_id=user[pseudo=viki53]::id]';
 	require_once 'css2sql/php/Css2Sql.class.php';
 
 	$selector = Css2Sql::parse_selector(trim($_GET['q']));
@@ -33,7 +34,7 @@ if(!empty($_GET['q'])) {
 			<li class="widget widget-search">
 				<h2 class="widget-title">Search</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
-					<input type="search" name="q" value="post[author_id=user[pseudo=viki53]::id]" placeholder="Rechercher" id="sidebar-search-input">
+					<input type="search" name="q" value="" placeholder="Search" id="sidebar-search-input">
 				</form>
 			</li>
 			<li role="menuitem" class="menu">

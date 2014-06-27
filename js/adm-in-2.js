@@ -1,4 +1,6 @@
+var topbar = document.getElementById('topbar');
 var sidebar = document.getElementById('sidebar');
+var main = document.getElementById('main');
 
 var sidebar_toogle_btn = document.createElement('button');
 sidebar_toogle_btn.setAttribute('type', 'button');
@@ -9,8 +11,8 @@ if(document.body.insertBefore(sidebar_toogle_btn, sidebar)){
 	sidebar.setAttribute('aria-hidden', true);
 
 	sidebar_toogle_btn.title = 'Show the sidebar';
-	
-	document.body.classList.add('sidebar-hidden');
+
+	document.documentElement.classList.add('sidebar-hidden');
 }
 
 var sidebar_search_form = document.getElementById('sidebar-search-form');
@@ -91,7 +93,7 @@ function processSpeech (speechStr) {
 
 var sidebar_menu_titles = document.querySelectorAll('#sidebar .menu>.menu-title');
 
-document.body.classList.add('js-enabled');
+document.documentElement.classList.add('js-enabled');
 
 document.getElementById('sidebar-header').title = 'Afficher/Cacher le menu latéral';
 
@@ -119,17 +121,18 @@ for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
 
 function admin2DocumentClick(event){
 	if (event.target.id === 'sidebar-toggle') {
+		event.stopPropagation();
 		if (sidebar.getAttribute('hidden')) {
 			sidebar.removeAttribute('hidden');
 			sidebar.removeAttribute('aria-hidden');
 			sidebar_toogle_btn.title = 'Hide the sidebar';
-			document.body.classList.remove('sidebar-hidden');
+			document.documentElement.classList.remove('sidebar-hidden');
 		}
 		else {
 			sidebar.setAttribute('hidden', true);
 			sidebar.setAttribute('aria-hidden', true);
 			sidebar_toogle_btn.title = 'Show the sidebar';
-			document.body.classList.add('sidebar-hidden');
+			document.documentElement.classList.add('sidebar-hidden');
 		}
 
 		if(event.x || event.y) {
@@ -171,4 +174,4 @@ function admin2DocumentClick(event){
 	}
 }
 
-document.addEventListener('click', admin2DocumentClick, true);
+document.addEventListener('click', admin2DocumentClick, false);
