@@ -1,22 +1,31 @@
-var topbar = document.getElementById('topbar');
-var sidebar = document.getElementById('sidebar');
-var main = document.getElementById('main');
-
-var sidebar_toogle_btn = document.createElement('button');
-sidebar_toogle_btn.setAttribute('type', 'button');
-sidebar_toogle_btn.id = 'sidebar-toggle';
-
-if(document.body.insertBefore(sidebar_toogle_btn, sidebar)){
-	sidebar.setAttribute('hidden', true);
-	sidebar.setAttribute('aria-hidden', true);
-
-	sidebar_toogle_btn.title = 'Show the sidebar';
-
-	document.documentElement.classList.add('sidebar-hidden');
+var Admin2 = {
+	html: document.documentElement,
+	body: document.body,
+	topbar: document.getElementById('topbar'),
+	sidebar: document.getElementById('sidebar'),
+	sidebar_toogle_btn: document.createElement('button'),
+	main: document.getElementById('main'),
+	config: {
+		max_toasts_number: 5
+	}
 }
 
-var sidebar_search_form = document.getElementById('sidebar-search-form');
-var sidebar_search_input = document.getElementById('sidebar-search-input');
+
+Admin2.sidebar_toogle_btn.setAttribute('type', 'button');
+Admin2.sidebar_toogle_btn.id = 'sidebar-toggle';
+
+if(Admin2.body.insertBefore(Admin2.sidebar_toogle_btn, Admin2.sidebar)){
+	Admin2.sidebar.setAttribute('hidden', true);
+	Admin2.sidebar.setAttribute('aria-hidden', true);
+
+	Admin2.sidebar_toogle_btn.title = 'Show the sidebar';
+
+	Admin2.html.classList.add('sidebar-hidden');
+}
+
+Admin2.sidebar_search_form = document.getElementById('sidebar-search-form');
+Admin2.sidebar_search_input = document.getElementById('sidebar-search-input');
+
 if (!('webkitSpeechRecognition' in window)) {
 	console.log('Your browser doesn\'t support speech recognition. That\‘s too bad…');
 }
@@ -24,7 +33,7 @@ else {
 	var recognition = new webkitSpeechRecognition();
 	recognition.continuous = true;
 	recognition.interimResults = true;
-	recognition.lang = document.documentElement.lang || navigator.language;
+	recognition.lang = Admin2.html.lang || navigator.language;
 
 	recognition.onstart = function(event) {
 		// console.log(event);
@@ -56,16 +65,16 @@ else {
 	recognition.start();
 }
 
-if(typeof SPEECH_KEYWORDS !== "object") {
-	SPEECH_KEYWORDS = {};
+if(typeof Admin2.SPEECH_KEYWORDS !== "object") {
+	Admin2.SPEECH_KEYWORDS = {};
 }
 if(typeof SPEECH_PROCESSES !== "object") {
-	SPEECH_PROCESSES = {};
+	Admin2.SPEECH_PROCESSES = {};
 }
 
-SPEECH_KEYWORDS.search = new RegExp(/^(je )?(re)?cherche /gi);
+Admin2.SPEECH_KEYWORDS.search = new RegExp(/^(je )?(re)?cherche /gi);
 
-SPEECH_PROCESSES.search = function(searchStr, keyword, regexp) {
+Admin2.SPEECH_PROCESSES.search = function(searchStr, keyword, regexp) {
 	console.log('Search: "'+searchStr+'"');
 
 	if (!searchStr) {
@@ -77,32 +86,35 @@ SPEECH_PROCESSES.search = function(searchStr, keyword, regexp) {
 	sidebar_search_form.submit();
 };
 
-function processSpeech (speechStr) {
+Admin2.processSpeech = function (speechStr) {
 	var results;
 	speechStr = speechStr.trim();
 	console.log('Process speech : '+speechStr);
 
-	for (var i in SPEECH_KEYWORDS) {
-		results = speechStr.match(SPEECH_KEYWORDS[i]);
+	for (var i in Admin2.SPEECH_KEYWORDS) {
+		results = speechStr.match(Admin2.SPEECH_KEYWORDS[i]);
 		console.dir(results);
 		if(results) {
-			SPEECH_PROCESSES[i](speechStr.replace(results[0], '').trim(), results[0], SPEECH_KEYWORDS[i]);
+			Admin2.SPEECH_PROCESSES[i](speechStr.replace(results[0], '').trim(), results[0], Admin2.SPEECH_KEYWORDS[i]);
 		}
 	}
 }
 
-var sidebar_menu_titles = document.querySelectorAll('#sidebar .menu>.menu-title');
+Admin2.sidebar_menu_titles = Admin2.sidebar.getElementsByClassName('menu-title');
 
-document.documentElement.classList.add('js-enabled');
+Admin2.html.classList.add('js-enabled');
 
-document.getElementById('sidebar-header').title = 'Afficher/Cacher le menu latéral';
 
-for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
+Admin2.sidebar_header = document.getElementById('sidebar-header');
+
+Admin2.sidebar_header.title = 'Afficher/Cacher le menu latéral';
+
+for (var i=0, nb=Admin2.sidebar_menu_titles.length; i<nb; i++) {
 	var toggle_btn = document.createElement('button');
 	toggle_btn.type = 'button';
 	toggle_btn.className = 'menu-toggle';
 
-	var elem = sidebar_menu_titles[i];
+	var elem = Admin2.sidebar_menu_titles[i];
 	while ((!elem.classList || !elem.classList.contains('menu-content')) && elem.nextSibling) {
 		elem = elem.nextSibling;
 	}
@@ -115,24 +127,24 @@ for (var i=0, nb=sidebar_menu_titles.length; i<nb; i++) {
 		toggle_btn.title = 'Hide the content of this menu';
 	}
 
-	sidebar_menu_titles[i].insertBefore(toggle_btn, sidebar_menu_titles[i].firstElementChild);
-	sidebar_menu_titles[i].appendChild(toggle_btn);
+	Admin2.sidebar_menu_titles[i].insertBefore(toggle_btn, Admin2.sidebar_menu_titles[i].firstElementChild);
+	Admin2.sidebar_menu_titles[i].appendChild(toggle_btn);
 }
 
-function admin2DocumentClick(event){
+Admin2.onDocumentClick = function (event){
 	if (event.target.id === 'sidebar-toggle') {
 		event.stopPropagation();
-		if (sidebar.getAttribute('hidden')) {
-			sidebar.removeAttribute('hidden');
-			sidebar.removeAttribute('aria-hidden');
-			sidebar_toogle_btn.title = 'Hide the sidebar';
-			document.documentElement.classList.remove('sidebar-hidden');
+		if (Admin2.sidebar.getAttribute('hidden')) {
+			Admin2.sidebar.removeAttribute('hidden');
+			Admin2.sidebar.removeAttribute('aria-hidden');
+			Admin2.sidebar_toogle_btn.title = 'Hide the sidebar';
+			Admin2.html.classList.remove('sidebar-hidden');
 		}
 		else {
-			sidebar.setAttribute('hidden', true);
-			sidebar.setAttribute('aria-hidden', true);
-			sidebar_toogle_btn.title = 'Show the sidebar';
-			document.documentElement.classList.add('sidebar-hidden');
+			Admin2.sidebar.setAttribute('hidden', true);
+			Admin2.sidebar.setAttribute('aria-hidden', true);
+			Admin2.sidebar_toogle_btn.title = 'Show the sidebar';
+			Admin2.html.classList.add('sidebar-hidden');
 		}
 
 		if(event.x || event.y) {
@@ -174,4 +186,6 @@ function admin2DocumentClick(event){
 	}
 }
 
-document.addEventListener('click', admin2DocumentClick, false);
+document.addEventListener('click', Admin2.onDocumentClick, false);
+
+
