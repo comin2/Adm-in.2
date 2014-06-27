@@ -16,7 +16,6 @@
 	#sidebar+#main{
 		transform: translateX($(size-sidebar-width));
 		margin-left: 0;
-		pointer-events: none;
 		-webkit-overflow-scrolling: none;
 	}
 	#sidebar[hidden]+#main{
@@ -138,7 +137,7 @@
 #main .widget{
 	margin-bottom: 2em;
 	background-color: $(color-white);
-	box-shadow: 0 0 .25em l-adjust($(color-gray-light), -15);
+	box-shadow: 0 .125em .25em l-adjust($(color-gray-light), -15);
 }
 #main .widget>.widget-header{
 	padding: 1em;
