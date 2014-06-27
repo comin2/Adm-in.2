@@ -155,6 +155,10 @@ if(!empty($_GET['q'])) {
 						</ul>
 					</div>
 				</section>
+				<p class="alert-error">Error alert</p>
+				<p class="alert-success">Success alert</p>
+				<p class="alert-info">Info alert</p>
+				<p class="alert-warning">Danger alert</p>
 			</div>
 			<div class="column-big">
 				<section class="card">

@@ -4,7 +4,7 @@
 	color-black: #000;
 
 	color-error: #e51c23;
-	color-danger: #ff9800;
+	color-warning: #ff9800;
 	color-success: #42bd41;
 	color-info: #03a9f4;
 
@@ -215,7 +215,7 @@ textarea, [contenteditable]{
 	background-color: $(color-error);
 }
 .badge.badge-warning{
-	background-color: $(color-danger);
+	background-color: $(color-warning);
 }
 .badge.badge-success{
 	background-color: $(color-success);
@@ -231,11 +231,29 @@ textarea, [contenteditable]{
 	background-color: $(color-error);
 }
 .bg-warning{
-	background-color: $(color-danger);
+	background-color: $(color-warning);
 }
 .bg-success{
 	background-color: $(color-success);
 }
 .bg-info{
 	background-color: $(color-info);
+}
+
+:any(.alert-error, .alert-warning, .alert-success, .alert-info){
+	padding: 1em;
+	color: $(color-white);
+	border-radius: .25em;
+}
+.alert-error{
+	background-color: l-adjust($(color-error), +15);
+}
+.alert-warning{
+	background-color: l-adjust($(color-warning), +15);
+}
+.alert-success{
+	background-color: l-adjust($(color-success), +15);
+}
+.alert-info{
+	background-color: l-adjust($(color-info), +15);
 }
