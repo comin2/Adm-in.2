@@ -27,115 +27,115 @@
 }
 
 /* Typography */
-#main :any(h1, .h1){
+:any(h1, .h1){
 	font-size: 3em;
 	margin-bottom: 1em;
 }
-#main :any(h2, .h2){
+:any(h2, .h2){
 	font-size: 2em;
 	margin-bottom: 1em;
 }
-#main :any(h3, .h3){
+:any(h3, .h3){
 	font-size: 1.6em;
 	margin-bottom: 1em;
 }
-#main :any(h4, .h4){
+:any(h4, .h4){
 	font-size: 1.2em;
 	margin-bottom: 1em;
 }
-#main p+p{
+p+p{
 	margin-top: 1em;
 }
 
 /* Lists */
-#main :any(ul, ol){
+:any(ul, ol){
 	margin-left: 2em;
 }
-#main ul{
+ul{
 	list-style-type: disc;
 }
-#main ol{
+ol{
 	list-style-type: decimal;
 }
-#main :any(ul, ol).unstyled-list{
+:any(ul, ol).unstyled-list{
 	margin-left: 0;
 	list-style-type: none;
 }
-#main :any(ul, ol)>li{
+:any(ul, ol)>li{
 	margin-bottom: .5em;
 }
 
 
 /* Grid system */
-#main .row{
+.row{
 	margin-left: -1em;
 	margin-right: -1em;
 }
-#main :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
 	box-sizing: border-box;
 	float: left;
 	padding: 0 1em;
 }
-#main .column-tiny{
+.column-tiny{
 	width: 25%;
 }
-#main .column-small{
+.column-small{
 	width: 33.333%;
 }
-#main .column-medium{
+.column-medium{
 	width: 50%;
 }
-#main .column-large{
+.column-large{
 	width: 66.666%;
 }
-#main .column-big{
+.column-big{
 	width: 75%;
 }
 
 @media (max-width: $(breakpoint-sm)){
-	#main :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+	:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
 		width: 100%;
 	}
 }
 
 
 /* Container */
-#main .container{
+.container{
 	max-width: $(breakpoint-md);
 	margin-left: auto;
 	margin-right: auto;
 }
-#main .container.container-tiny{
+.container.container-tiny{
 	max-width: $(breakpoint-xs);
 }
-#main .container.container-small{
+.container.container-small{
 	max-width: $(breakpoint-sm);
 }
-#main .container.container-large{
+.container.container-large{
 	max-width: $(breakpoint-lg);
 }
 
 
-/* Widgets */
-#main .card{
+/* Cards */
+.card{
 	margin-bottom: 2em;
 	background-color: $(color-white);
 	box-shadow: 0 .125em .25em l-adjust($(color-gray-light), -15);
 	border-radius: .25em;
 }
-#main .card>.card-header{
+.card>.card-header{
 	padding: 1em;
 }
-#main .card>.card-header:empty{
+.card>.card-header:empty{
 	display: none;
 }
-#main .card>.card-content{
+.card>.card-content{
 	padding: 1em;
 }
-#main .card>.card-content:empty{
+.card>.card-content:empty{
 	display: none;
 }
-#main .card>.card-header+.card-content{
+.card>.card-header+.card-content{
 	margin: -2em 1em 0;
 	padding: 1em 0;
 	/*border-top: 1px solid l-adjust($(color-gray-light), -15);*/

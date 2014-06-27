@@ -112,7 +112,7 @@ if(!empty($_GET['q'])) {
 		}
 		?>
 		<div class="row">
-			<div class="column-large widgets-column">
+			<div class="column-large">
 				<section class="card">
 					<header class="card-header">
 						<h2>Statistics</h2>
@@ -122,7 +122,7 @@ if(!empty($_GET['q'])) {
 					</div>
 				</section>
 			</div>
-			<div class="column-small widgets-column">
+			<div class="column-small">
 				<section class="card">
 					<header class="card-header">
 						<h2>Online</h2>
@@ -140,7 +140,7 @@ if(!empty($_GET['q'])) {
 			</div>
 		</div>
 		<div class="row">
-			<div class="column-tiny widgets-column">
+			<div class="column-tiny">
 				<section class="card">
 					<header class="card-header">
 						<h2>Fast links</h2>
@@ -156,7 +156,7 @@ if(!empty($_GET['q'])) {
 					</div>
 				</section>
 			</div>
-			<div class="column-big widgets-column">
+			<div class="column-big">
 				<section class="card">
 					<header class="card-header">
 						<h2>Quick draft</h2>
@@ -187,7 +187,7 @@ if(!empty($_GET['q'])) {
 			</div>
 		</div>
 		<div class="row">
-			<div class="column-medium widgets-column">
+			<div class="column-medium">
 				<section class="card">
 					<header class="card-header">
 						<h2>Progress</h2>
@@ -199,7 +199,7 @@ if(!empty($_GET['q'])) {
 					</div>
 				</section>
 			</div>
-			<div class="column-medium widgets-column">
+			<div class="column-medium">
 				<section class="card">
 					<header class="card-header">
 						<h2>Others bars</h2>
@@ -213,44 +213,40 @@ if(!empty($_GET['q'])) {
 		<div class="container">
 			<h2>This next row is in a container</h2>
 			<div class="row">
-				<div class="column-tiny widgets-column">
-					<section class="card">
+				<div class="column-small">
+					<section class="card bg-error">
 						<header class="card-header">
-							<h2>Modals</h2>
+							<h2>Custom background</h2>
 						</header>
 						<div class="card-content">
-							<p class="italic">No content yet</p>
+							<p>Some content</p>
 						</div>
 					</section>
 				</div>
-				<div class="column-medium widgets-column">
-					<section class="card">
+				<div class="column-small">
+					<section class="card bg-info">
 						<header class="card-header">
-							<h2>Text editor</h2>
+							<h2>Custom background</h2>
 						</header>
 						<div class="card-content">
-							<p class="italic">No content yet</p>
+							<p>Some content</p>
 						</div>
 					</section>
 				</div>
-				<div class="column-tiny widgets-column">
-					<section class="card">
+				<div class="column-small">
+					<section class="card bg-success">
 						<header class="card-header">
-							<h2>Toasts</h2>
+							<h2>Custom background</h2>
 						</header>
 						<div class="card-content">
-							<p><button type="button" class="button-xs button-full" onclick="new Admin2.Toast('I\'m a short toast', Admin2.Toast.DURATION_SHORT);">Short</button></p>
-
-							<p><button type="button" class="button-full" onclick="new Admin2.Toast('I\'m a normal toast');">Medium</button></p>
-
-							<p><button type="button" class="button-xl button-full" onclick="new Admin2.Toast('I\'m a long toast', Admin2.Toast.DURATION_LONG);">Long</button></p>
+							<p>Some content</p>
 						</div>
 					</section>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="column-small widgets-column">
+			<div class="column-small">
 				<section class="card">
 					<header class="card-header">
 						<h2>Custom select</h2>
@@ -268,7 +264,7 @@ if(!empty($_GET['q'])) {
 					</div>
 				</section>
 			</div>
-			<div class="column-small widgets-column">
+			<div class="column-small">
 				<section class="card">
 					<header class="card-header">
 						<h2>Custom checkboxes</h2>
@@ -297,7 +293,7 @@ if(!empty($_GET['q'])) {
 					</div>
 				</section>
 			</div>
-			<div class="column-small widgets-column">
+			<div class="column-small">
 				<section class="card">
 					<header class="card-header">
 						<h2>Custom radio buttons</h2>
@@ -323,6 +319,42 @@ if(!empty($_GET['q'])) {
 								</label>
 							</div>
 						</form>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column-tiny">
+				<section class="card">
+					<header class="card-header">
+						<h2>Modals</h2>
+					</header>
+					<div class="card-content">
+						<p class="italic">No content yet</p>
+					</div>
+				</section>
+			</div>
+			<div class="column-medium">
+				<section class="card">
+					<header class="card-header">
+						<h2>Text editor</h2>
+					</header>
+					<div class="card-content">
+						<p class="italic">No content yet</p>
+					</div>
+				</section>
+			</div>
+			<div class="column-tiny">
+				<section class="card">
+					<header class="card-header">
+						<h2>Toasts</h2>
+					</header>
+					<div class="card-content">
+						<p><button type="button" class="button-xs button-full" onclick="new Admin2.Toast('I\'m a short toast', Admin2.Toast.DURATION_SHORT);">Short</button></p>
+
+						<p><button type="button" class="button-full" onclick="new Admin2.Toast('I\'m a normal toast');">Medium</button></p>
+
+						<p><button type="button" class="button-xl button-full" onclick="new Admin2.Toast('I\'m a long toast', Admin2.Toast.DURATION_LONG);">Long</button></p>
 					</div>
 				</section>
 			</div>

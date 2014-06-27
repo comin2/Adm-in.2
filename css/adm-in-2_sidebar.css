@@ -54,6 +54,7 @@
 	@extend .sr-only;
 }
 #sidebar ul{
+	margin: 0;
 	list-style-type: none;
 }
 #sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
@@ -73,8 +74,13 @@
 }
 
 
+#sidebar .menu{
+	margin: 0;
+}
 #sidebar .menu-title{
 	position: relative;
+	margin: 0;
+	font-size: 1em;
 	background-color: $(color-main);
 	color: $(color-white);
 }

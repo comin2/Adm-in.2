@@ -189,6 +189,14 @@ textarea, [contenteditable]{
 	@extend .clearfix;
 }
 
+@import url('adm-in-2_main.css');
+
+@import url('adm-in-2_topbar.css');
+@import url('adm-in-2_sidebar.css');
+
+@import url('adm-in-2_plugin_toasts.css');
+
+
 /* Badges */
 .badge{
 	display: inline-block;
@@ -216,9 +224,18 @@ textarea, [contenteditable]{
 	background-color: $(color-info);
 }
 
-
-@import url('adm-in-2_topbar.css');
-@import url('adm-in-2_sidebar.css');
-@import url('adm-in-2_main.css');
-
-@import url('adm-in-2_plugin_toasts.css');
+:any(.bg-error, .bg-warning, .bg-success, .bg-info){
+	color: $(color-white);
+}
+.bg-error{
+	background-color: $(color-error);
+}
+.bg-warning{
+	background-color: $(color-danger);
+}
+.bg-success{
+	background-color: $(color-success);
+}
+.bg-info{
+	background-color: $(color-info);
+}
