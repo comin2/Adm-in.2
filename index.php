@@ -167,7 +167,7 @@ if(!empty($_GET['q'])) {
 						</div>
 						<div>
 							<label for="demo-form-disabled" class="full">Disabled</label>
-							<input type="text" name="disabled" placeholder="You can't write here" disabled class="input-full input-xl" id="demo-form-disabled">
+							<input type="text" name="disabled" placeholder="You can't write here" disabled class="input-full input-xs" id="demo-form-disabled">
 						</div>
 						<div>
 							<label for="demo-form-textarea" class="full">Content</label>
