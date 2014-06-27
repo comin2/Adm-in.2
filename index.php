@@ -330,5 +330,6 @@ if(!empty($_GET['q'])) {
 		</div>
 	</div>
 	<script src="js/adm-in-2.js"></script>
+	<script src="js/adm-in-2_plugin_toasts.js"></script>
 </body>
 </html>

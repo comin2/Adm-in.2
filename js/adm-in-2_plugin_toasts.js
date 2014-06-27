@@ -1,0 +1,80 @@
+
+
+Admin2.toasts_container = document.createElement('div');
+Admin2.toasts_container.id = 'toasts-container';
+Admin2.body.appendChild(Admin2.toasts_container);
+
+Admin2.toasts = [];
+
+Admin2.Toast = function(message, duration) {
+	if (!message) {
+		return;
+	}
+
+	this.message = message;
+	this.duration = duration || Admin2.Toast.DURATION_MEDIUM;
+
+	this._element = document.createElement('div');
+	this._element.classList.add('toast');
+
+	this._content_element = document.createElement('p');
+	this._content_element.textContent = this.message;
+
+	this._element.appendChild(this._content_element);
+
+	while (Admin2.toasts_container.children.length > Admin2.config.max_toasts_number) {
+		Admin2.toasts_container.removeChild(Admin2.toasts_container.firstChild);
+	}
+	Admin2.toasts_container.appendChild(this._element);
+
+	
+	this.dismiss = function() {
+		if (this._dismissTimeout) {
+			clearTimeout(this._dismissTimeout);
+		}
+		this._element.classList.add('dismissed');
+
+		setTimeout((function (toast) {
+			return function() {
+				Admin2.toasts_container.removeChild(toast._element);
+
+				var index = Admin2.toasts.indexOf(toast);
+				if (index !== -1) {
+					Admin2.toasts.splice(index, 1);
+				}
+			}
+		})(this), Admin2.Toast.TRANSITION_TIME);
+
+		return true;
+	}
+	
+	setTimeout((function (toast) {
+		return function() {
+			toast._element.addEventListener('click', (function (toast) {
+				return function() {
+					toast.dismiss();
+				}
+			})(toast), false);
+
+			toast._dismissTimeout = setTimeout((function (toast) {
+				return function() {
+					toast.dismiss();
+				}
+			})(toast), toast.duration);
+		}
+	})(this), Admin2.Toast.TRANSITION_TIME);
+	
+	Admin2.toasts.push(this);
+
+	return this;
+}
+
+/* Config */
+Admin2.Toast.TRANSITION_TIME = 200;
+
+Admin2.Toast.DURATION_SHORT = 500;
+Admin2.Toast.DURATION_MEDIUM = 1000;
+Admin2.Toast.DURATION_LONG = 3000;
+
+// Basic example:
+new Admin2.Toast("Test");

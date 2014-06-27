@@ -220,3 +220,5 @@ textarea, [contenteditable]{
 @import url('adm-in-2_topbar.css');
 @import url('adm-in-2_sidebar.css');
 @import url('adm-in-2_main.css');
+
+@import url('adm-in-2_plugin_toasts.css');
