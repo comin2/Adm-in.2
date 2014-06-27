@@ -166,7 +166,7 @@ input[type="range"][max]:after {
 	width: 1em;
 	height: 1em;
 	appearance: none;
-	/*vertical-align: middle;*/
+	vertical-align: middle;
 	border: 2px solid l-adjust($(color-gray-dark), +15);
 	outline: none;
 }
