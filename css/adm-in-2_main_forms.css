@@ -162,10 +162,11 @@ input[type="range"][max]:after {
 	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 0;
-	width: 1.9em;
-	height: 1.9em;
+	font-size: inherit;
+	width: 1em;
+	height: 1em;
 	appearance: none;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 	border: 2px solid l-adjust($(color-gray-dark), +15);
 	outline: none;
 }
