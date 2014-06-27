@@ -117,6 +117,9 @@ label, .label-like{
 :any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
 	outline-color: $(color-main);
 }
+textarea, [contenteditable]{
+	resize: vertical;
+}
 :any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
 	cursor: pointer;
 }
