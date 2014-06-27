@@ -113,21 +113,21 @@ if(!empty($_GET['q'])) {
 		?>
 		<div class="row">
 			<div class="column-large widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Statistics</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<p class="italic">No content yet</p>
 					</div>
 				</section>
 			</div>
 			<div class="column-small widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Online</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<ul>
 							<li>User #1</li>
 							<li>User #2</li>
@@ -141,11 +141,11 @@ if(!empty($_GET['q'])) {
 		</div>
 		<div class="row">
 			<div class="column-tiny widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Fast links</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<ul>
 						    <li><a href="#0">User #1</a></li>
 						    <li><a href="#0">User #2</a></li>
@@ -157,11 +157,11 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 			<div class="column-big widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Quick draft</h2>
 					</header>
-					<form action="#demo-widget-form" method="post" class="widget-content">
+					<form action="#demo-card-form" method="post" class="card-content" id="demo-card-form">
 						<div>
 							<label for="demo-form-title" class="full">Title</label>
 							<input type="text" name="title" placeholder="A big input" class="input-full input-xl" id="demo-form-title">
@@ -188,11 +188,11 @@ if(!empty($_GET['q'])) {
 		</div>
 		<div class="row">
 			<div class="column-medium widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Progress</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<div>
 							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full">
 						</div>
@@ -200,11 +200,11 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 			<div class="column-medium widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Others bars</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<p class="italic">No content yet</p>
 					</div>
 				</section>
@@ -214,31 +214,31 @@ if(!empty($_GET['q'])) {
 			<h2>This next row is in a container</h2>
 			<div class="row">
 				<div class="column-tiny widgets-column">
-					<section class="widget">
-						<header class="widget-header">
+					<section class="card">
+						<header class="card-header">
 							<h2>Title</h2>
 						</header>
-						<div class="widget-content">
+						<div class="card-content">
 							<p class="italic">No content yet</p>
 						</div>
 					</section>
 				</div>
 				<div class="column-medium widgets-column">
-					<section class="widget">
-						<header class="widget-header">
+					<section class="card">
+						<header class="card-header">
 							<h2>Text editor</h2>
 						</header>
-						<div class="widget-content">
+						<div class="card-content">
 							<p class="italic">No content yet</p>
 						</div>
 					</section>
 				</div>
 				<div class="column-tiny widgets-column">
-					<section class="widget">
-						<header class="widget-header">
+					<section class="card">
+						<header class="card-header">
 							<h2>Modals</h2>
 						</header>
-						<div class="widget-content">
+						<div class="card-content">
 							<p class="italic">No content yet</p>
 						</div>
 					</section>
@@ -247,11 +247,11 @@ if(!empty($_GET['q'])) {
 		</div>
 		<div class="row">
 			<div class="column-small widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Custom select</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<select name="custom-select" class="input-full input-xl custom-select">
 								<option value="1">Option #1</option>
@@ -265,11 +265,11 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 			<div class="column-small widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Custom checkboxes</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
 								<label>
@@ -294,11 +294,11 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 			<div class="column-small widgets-column">
-				<section class="widget">
-					<header class="widget-header">
+				<section class="card">
+					<header class="card-header">
 						<h2>Custom radio buttons</h2>
 					</header>
-					<div class="widget-content">
+					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
 								<label>

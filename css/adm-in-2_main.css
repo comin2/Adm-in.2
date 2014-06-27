@@ -114,24 +114,25 @@
 
 
 /* Widgets */
-#main .widget{
+#main .card{
 	margin-bottom: 2em;
 	background-color: $(color-white);
 	box-shadow: 0 .125em .25em l-adjust($(color-gray-light), -15);
+	border-radius: .25em;
 }
-#main .widget>.widget-header{
+#main .card>.card-header{
 	padding: 1em;
 }
-#main .widget>.widget-header:empty{
+#main .card>.card-header:empty{
 	display: none;
 }
-#main .widget>.widget-content{
+#main .card>.card-content{
 	padding: 1em;
 }
-#main .widget>.widget-content:empty{
+#main .card>.card-content:empty{
 	display: none;
 }
-#main .widget>.widget-header+.widget-content{
+#main .card>.card-header+.card-content{
 	margin: -2em 1em 0;
 	padding: 1em 0;
 	/*border-top: 1px solid l-adjust($(color-gray-light), -15);*/
