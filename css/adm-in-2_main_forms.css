@@ -223,6 +223,31 @@ input[type="range"][max]:after {
 	right: .5em;
 	content: attr(max);
 }
+input[type="range"]:any([disabled], [readonly]){
+	background-color: $(color-gray-light);
+	mouse-events: none;
+}
+input[type="range"]:any([disabled], [readonly])::-moz-range-track{
+	background-color: $(color-gray-light);
+}
+input[type="range"]:any([disabled], [readonly])::-webkit-slider-thumb{
+	background-color: $(color-gray);
+	box-shadow: 0 0 .5em $(color-gray);
+}
+input[type="range"]:any([disabled], [readonly])::-moz-range-thumb{
+	background-color: $(color-gray);
+	box-shadow: 0 0 .5em $(color-gray);
+}
+input[type="range"]:any([disabled], [readonly]):active::-webkit-slider-thumb{
+	box-shadow: 0 0 .5em $(color-gray);
+	width: 1em;
+	height: 1em;
+}
+input[type="range"]:any([disabled], [readonly]):active::-moz-range-thumb{
+	box-shadow: 0 0 .5em $(color-gray);
+	width: 1em;
+	height: 1em;
+}
 
 :any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked){
 	display: inline-block;
@@ -237,7 +262,8 @@ input[type="range"][max]:after {
 	outline: none;
 }
 :any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked):any([disabled], [readonly]){
-	background: l-adjust($(color-gray-dark), +30);
+	background: $(color-gray-light);
+	border-color: $(color-gray);
 }
 input[type="checkbox"]:any(:not(:checked), :checked){
 	border-radius: .25em;
