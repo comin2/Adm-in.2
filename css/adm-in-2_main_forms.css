@@ -144,6 +144,12 @@ progress{
 	border: none;
 	background: $(color-main-light);
 }
+progress.size-xs{
+	height: 1em;
+}
+progress.size-xl{
+	height: 3em;
+}
 progress[value]::-webkit-progress-bar{
 	background: $(color-main-light);
 }
@@ -157,56 +163,56 @@ progress[value]::-moz-progress-bar{
 input[type="range"]{
 	position: relative;
 	margin: 0;
-	margin-bottom: 1.25em;
+	margin-top: .5em;
+	margin-bottom: 2em;
 	padding: 0;
-	height: .5em;
+	height: 1em;
 	appearance: none;
 	background: $(color-main-light);
+	border: none;
 	border-radius: .5em;
 }
 input[type="range"]::-moz-range-track{
 	position: relative;
 	margin: 0;
-	margin-bottom: 1.25em;
+	margin-bottom: 2em;
 	padding: 0;
-	height: .5em;
+	height: 1em;
 	-moz-appearance: none;
 	background: $(color-main-light);
+	border: none;
 	border-radius: .5em;
 }
-input[type="range"]:focus{
-	/*outline: 0;*/
-}
 input[type="range"]::-webkit-slider-thumb{
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 	-webkit-appearance: none;
 	background: $(color-main-dark);
 	border: none;
-	border-radius: .5em;
+	border-radius: 1em;
 	box-shadow: 0 0 .25em $(color-main-dark);
 	transition: all .2s ease-in-out;
 }
 input[type="range"]:active::-webkit-slider-thumb{
-	width: 2em;
-	height: 2em;
-	border-radius: 1em;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
 	box-shadow: 0 0 .5em $(color-main-dark);
 }
 input[type="range"]::-moz-range-thumb{
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 	-moz-appearance: none;
 	background: $(color-main-dark);
 	border: none;
-	border-radius: .5em;
+	border-radius: 1em;
 	box-shadow: 0 0 .25em $(color-main-dark);
 	transition: all .2s ease-in-out;
 }
 input[type="range"]:active::-moz-range-thumb{
-	width: 2em;
-	height: 2em;
-	border-radius: 1em;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
 	box-shadow: 0 0 .5em $(color-main-dark);
 }
 input[type="range"][min]::before,
@@ -215,11 +221,11 @@ input[type="range"][max]::after {
 	top: 1.25em;
 	color: $(color-gray);
 }
-input[type="range"][min]:before {
+input[type="range"][min]::before {
 	left: .5em;
 	content: attr(min);
 }
-input[type="range"][max]:after {
+input[type="range"][max]::after {
 	right: .5em;
 	content: attr(max);
 }
@@ -240,13 +246,13 @@ input[type="range"]:any([disabled], [readonly])::-moz-range-thumb{
 }
 input[type="range"]:any([disabled], [readonly]):active::-webkit-slider-thumb{
 	box-shadow: 0 0 .5em $(color-gray);
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 }
 input[type="range"]:any([disabled], [readonly]):active::-moz-range-thumb{
 	box-shadow: 0 0 .5em $(color-gray);
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 }
 
 :any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked){
