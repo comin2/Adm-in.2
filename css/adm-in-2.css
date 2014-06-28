@@ -129,49 +129,6 @@ pre{
 	text-align: justify;
 }
 
-/* Forms */
-label, .label-like{
-	box-sizing: border-box;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-:any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
-	outline-color: $(color-main);
-}
-textarea, [contenteditable]{
-	resize: vertical;
-}
-:any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
-	cursor: pointer;
-}
-:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, select, button, .button, [role="button"]{
-	box-sizing: border-box;
-	display: inline-block;
-	font-family: inherit;
-	font-size: inherit;
-	margin: 0;
-	padding: 0;
-	border: none;
-	border-radius: 0;
-}
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-webkit-input-placeholder{
-	color: inherit;
-	opacity: .3;
-}
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-moz-placeholder{
-	color: inherit;
-	opacity: .3;
-}
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-ms-input-placeholder{
-	color: inherit;
-	opacity: .3;
-}
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-moz-placeholder{
-	color: inherit;
-	opacity: .3;
-}
-
 /* Screen readers */
 .sr-only{
 	font: 0/0 a;

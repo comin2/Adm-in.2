@@ -1,12 +1,54 @@
 
 /* Forms */
-:any(label, .label){
+
+
+label, .label{
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
 	margin-bottom: 1em;
+	padding: 0;
 }
 :any(label, .label).full{
 	font-size: 1.6em;
 	margin-bottom: .625em;
 }
+:any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
+	outline-color: $(color-main);
+}
+textarea, [contenteditable]{
+	resize: vertical;
+}
+:any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
+	cursor: pointer;
+}
+:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, select, button, .button, [role="button"]{
+	box-sizing: border-box;
+	display: inline-block;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-webkit-input-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-moz-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea)::-moz-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea):-ms-input-placeholder{
+	color: inherit;
+	opacity: .3;
+}
+
 :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
 	padding: .5em;
 	margin-bottom: 1em;
@@ -91,7 +133,6 @@
 select{
 	background: data-uri('../img/icon-arrow-drop-down.svg') no-repeat right center;
 	background-size: contain;
-	/*border-bottom: none;*/
 }
 
 input[type="range"]{
