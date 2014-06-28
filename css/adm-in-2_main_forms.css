@@ -172,7 +172,7 @@ input[type="range"]::-moz-range-track{
 	border-radius: .5em;
 }
 input[type="range"]:focus{
-	outline: 0;
+	/*outline: 0;*/
 }
 input[type="range"]::-webkit-slider-thumb{
 	width: 1em;

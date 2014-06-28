@@ -210,7 +210,8 @@ if(!empty($_GET['q'])) {
 					</header>
 					<div class="card-content">
 						<div>
-							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full">
+							<label for="demo-input-range" class="full">Range input</label>
+							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full" id="demo-input-range">
 						</div>
 					</div>
 				</section>
@@ -278,19 +279,19 @@ if(!empty($_GET['q'])) {
 					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
-								<label>
+								<label class="full">
 									<input type="checkbox" name="custom-checkboxes[]" value="normal">
 									<span>Normal</span>
 								</label>
 							</div>
 							<div>
-								<label>
+								<label class="full">
 									<input type="checkbox" name="custom-checkboxes[]" value="checked" checked="checked">
 									<span>Checked</span>
 								</label>
 							</div>
 							<div>
-								<label>
+								<label class="full">
 									<input type="checkbox" name="custom-checkboxes[]" value="disabled" disabled>
 									<span>Disabled</span>
 								</label>
