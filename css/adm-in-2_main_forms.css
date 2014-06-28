@@ -176,19 +176,20 @@ input[type="range"][max]:after {
 input[type="checkbox"]:any(:not(:checked), :checked){
 	border-radius: .25em;
 }
-input[type="checkbox"]:checked{
-	background: $(color-success);
-	border-color: $(color-success);
-}
 input[type="radio"]:any(:not(:checked), :checked){
 	border-radius: 50%;
 }
-input[type="radio"]:not(:checked){
-	background-image: radial-gradient(center, circle cover, $(color-success) 0, transparent 0, transparent 100%);
-	transition: background-image .2s ease-in-out, border-color .1s linear .2s;
+:any(input[type="checkbox"], input[type="radio"]):not(:checked){
+	background: transparent;
 }
-input[type="radio"]:checked{
-	/*background: $(color-success);*/
-	background-image: radial-gradient(center, circle cover, $(color-success) 0, $(color-success) 100%);
+:any(input[type="checkbox"], input[type="radio"]):checked{
+	background: $(color-success);
 	border-color: $(color-success);
+}
+:any(input[type="checkbox"], input[type="radio"]):active{
+	animation: touchWave .2s ease-in;
+}
+@keyframes touchWave {
+	0% { box-shadow: 0 0 0 0 $(color-main-light); }
+	100% { box-shadow: 0 0 0 1em $(color-main-light); }
 }
