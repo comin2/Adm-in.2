@@ -76,5 +76,5 @@ Admin2.Toast.DURATION_SHORT = 500;
 Admin2.Toast.DURATION_MEDIUM = 1000;
 Admin2.Toast.DURATION_LONG = 3000;
 
-// Basic example:
-new Admin2.Toast("Test");
+// Basic use:
+// new Admin2.Toast("Test");
