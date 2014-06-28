@@ -9,6 +9,9 @@ label, .label{
 	margin-bottom: 1em;
 	padding: 0;
 }
+:any(label, .label):any(.full, .checkbox, .radio){
+	display: block;
+}
 :any(label, .label).full{
 	font-size: 1.6em;
 	margin-bottom: .625em;

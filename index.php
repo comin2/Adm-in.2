@@ -279,19 +279,19 @@ if(!empty($_GET['q'])) {
 					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
-								<label class="full">
+								<label class="checkbox">
 									<input type="checkbox" name="custom-checkboxes[]" value="normal">
 									<span>Normal</span>
 								</label>
 							</div>
 							<div>
-								<label class="full">
+								<label class="checkbox">
 									<input type="checkbox" name="custom-checkboxes[]" value="checked" checked="checked">
 									<span>Checked</span>
 								</label>
 							</div>
 							<div>
-								<label class="full">
+								<label class="checkbox">
 									<input type="checkbox" name="custom-checkboxes[]" value="disabled" disabled>
 									<span>Disabled</span>
 								</label>
@@ -308,19 +308,19 @@ if(!empty($_GET['q'])) {
 					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
-								<label>
+								<label class="radio">
 									<input type="radio" name="custom-radio" value="normal">
 									<span>Normal</span>
 								</label>
 							</div>
 							<div>
-								<label>
+								<label class="radio">
 									<input type="radio" name="custom-radio" value="checked" checked="checked">
 									<span>Checked</span>
 								</label>
 							</div>
 							<div>
-								<label>
+								<label class="radio">
 									<input type="radio" name="custom-radio" value="disabled" disabled>
 									<span>Disabled</span>
 								</label>
