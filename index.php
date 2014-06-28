@@ -257,7 +257,7 @@ if(!empty($_GET['q'])) {
 					</header>
 					<div class="card-content">
 						<form action="#0" method="get" accept-charset="utf-8">
-							<select name="custom-select" class="input-full input-xl custom-select">
+							<select name="custom-select" class="input-full">
 								<option value="1">Option #1</option>
 								<option value="2">Option #2</option>
 								<option value="3">Option #3</option>
@@ -277,19 +277,19 @@ if(!empty($_GET['q'])) {
 						<form action="#0" method="get" accept-charset="utf-8">
 							<div>
 								<label>
-									<input type="checkbox" name="custom-checkboxes[]" value="normal" class="custom-checkbox">
+									<input type="checkbox" name="custom-checkboxes[]" value="normal">
 									<span>Normal</span>
 								</label>
 							</div>
 							<div>
 								<label>
-									<input type="checkbox" name="custom-checkboxes[]" value="checked" checked="checked" class="custom-checkbox">
+									<input type="checkbox" name="custom-checkboxes[]" value="checked" checked="checked">
 									<span>Checked</span>
 								</label>
 							</div>
 							<div>
 								<label>
-									<input type="checkbox" name="custom-checkboxes[]" value="disabled" class="custom-checkbox" disabled>
+									<input type="checkbox" name="custom-checkboxes[]" value="disabled" disabled>
 									<span>Disabled</span>
 								</label>
 							</div>

@@ -38,6 +38,7 @@
 	background: data-uri('../img/icon-sidebar-close.svg') no-repeat center;
 	background-size: contain;
 	cursor: pointer;
+	box-shadow: none;
 	-webkit-transition: left .2s ease-in-out;
 	transition: left .2s ease-in-out;
 }
@@ -62,6 +63,7 @@
 	width: 100%;
 	background-color: l-adjust($(color-gray-dark), +5);
 	color: $(color-gray-light);
+	border: none;
 	border-radius: 0;
 }
 
@@ -99,6 +101,7 @@
 	background-color: $(color-main);
 	color: l-adjust($(color-white), -20);
 	border: none;
+	box-shadow: none;
 }
 #sidebar .menu-title>.menu-toggle+a{
 	margin-right: 2.5em;
