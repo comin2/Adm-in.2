@@ -114,6 +114,11 @@ pre{
 	border: 1px solid $(color-gray-light);
 	overflow: auto;
 }
+.block{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
 
 /* Typography */
 .text-left{

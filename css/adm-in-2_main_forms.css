@@ -135,6 +135,22 @@ select{
 	background-size: contain;
 }
 
+progress{
+	height: 1em;
+	appearance: none;
+	border: none;
+	background: $(color-main-light);
+}
+progress[value]::-webkit-progress-bar{
+	background: $(color-main-light);
+}
+progress[value]::-webkit-progress-value{
+	background: $(color-main-dark);
+}
+progress[value]::-moz-progress-bar{
+	background: $(color-main-dark);
+}
+
 input[type="range"]{
 	position: relative;
 	margin: 0;
@@ -142,7 +158,7 @@ input[type="range"]{
 	padding: 0;
 	height: .5em;
 	appearance: none;
-	background: $(color-main);
+	background: $(color-main-light);
 	border-radius: .5em;
 }
 input[type="range"]::-moz-range-track{
@@ -152,7 +168,7 @@ input[type="range"]::-moz-range-track{
 	padding: 0;
 	height: .5em;
 	-moz-appearance: none;
-	background: $(color-main);
+	background: $(color-main-light);
 	border-radius: .5em;
 }
 input[type="range"]:focus{

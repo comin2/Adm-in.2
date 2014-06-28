@@ -198,7 +198,7 @@ if(!empty($_GET['q'])) {
 					</header>
 					<div class="card-content">
 						<div>
-							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full">
+							<progress class="block" value="70" max="100"></progress>
 						</div>
 					</div>
 				</section>
@@ -209,7 +209,9 @@ if(!empty($_GET['q'])) {
 						<h2>Others bars</h2>
 					</header>
 					<div class="card-content">
-						<p class="italic">No content yet</p>
+						<div>
+							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full">
+						</div>
 					</div>
 				</section>
 			</div>
