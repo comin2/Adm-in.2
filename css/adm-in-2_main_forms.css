@@ -234,7 +234,7 @@ input[type="radio"]:any(:not(:checked), :checked){
 	border-color: $(color-success);
 }
 :any(input[type="checkbox"], input[type="radio"]):active{
-	animation: touchWave .2s ease-in;
+	animation: touchWave .2s ease-in-out;
 }
 @keyframes touchWave {
 	0% { box-shadow: 0 0 0 0 $(color-main-light); }
