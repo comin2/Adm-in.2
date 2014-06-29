@@ -266,10 +266,6 @@ input[type="range"]:any([disabled], [readonly]):active::-moz-range-thumb{
 	border: 2px solid l-adjust($(color-gray-dark), +15);
 	outline: none;
 }
-:any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked):any([disabled], [readonly]){
-	background: $(color-gray-light);
-	border-color: $(color-gray);
-}
 input[type="checkbox"]:any(:not(:checked), :checked){
 	border-radius: .25em;
 }
@@ -289,4 +285,11 @@ input[type="radio"]:any(:not(:checked), :checked){
 @keyframes touchWave {
 	0% { box-shadow: 0 0 0 0 $(color-main-light); }
 	100% { box-shadow: 0 0 0 1em $(color-main-light); }
+}
+:any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked):any([disabled], [readonly]){
+	background: $(color-gray-light);
+	border-color: $(color-gray);
+}
+:any(input[type="checkbox"], input[type="radio"]):any(:not(:checked), :checked):any([disabled], [readonly]):active{
+	animation: none;
 }
