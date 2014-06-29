@@ -16,7 +16,7 @@ label, .label{
 	font-size: 1.6em;
 	margin-bottom: .625em;
 }
-:any(input, textarea, select, button, .button, [role="button"], a, [tabindex]):focus{
+:any(input, textarea, [contenteditable], select, button, .button, [role="button"], a, [tabindex]):focus{
 	outline-color: $(color-main);
 }
 textarea, [contenteditable]{
@@ -25,9 +25,8 @@ textarea, [contenteditable]{
 :any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
 	cursor: pointer;
 }
-:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, select, button, .button, [role="button"]{
+:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, [contenteditable], select, button, .button, [role="button"]{
 	box-sizing: border-box;
-	display: inline-block;
 	font-family: inherit;
 	font-size: inherit;
 	margin: 0;
@@ -52,7 +51,7 @@ textarea, [contenteditable]{
 	opacity: .3;
 }
 
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select){
 	padding: .5em;
 	margin-bottom: 1em;
 	appearance: none;
@@ -61,29 +60,29 @@ textarea, [contenteditable]{
 	border-bottom: 1px solid l-adjust($(color-gray-light), -15);
 	border-radius: 0;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select):focus{
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select):focus{
 	outline: 0;
 	border-color: $(color-main);
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select):any([disabled], [readonly]){
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select):any([disabled], [readonly]){
 	border-bottom-style: dashed;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-small{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-small{
 	width: 25%;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-medium{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-medium{
 	width: 50%;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-large{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-large{
 	width: 75%;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, select).input-full{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-full{
 	width: 100%;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-xs{
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select).input-xs{
 	padding: .25em;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select).input-xl{
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select).input-xl{
 	padding: 1em;
 }
 :any(button, .button, :input(submit, button)){

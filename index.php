@@ -349,7 +349,9 @@ if(!empty($_GET['q'])) {
 						<h2>Text editor</h2>
 					</header>
 					<div class="card-content">
-						<p class="italic">No content yet</p>
+						<div contenteditable>
+							<p>Some <strong>dummy</strong> editable <em>text</em>.</p>
+						</div>
 					</div>
 				</section>
 			</div>
