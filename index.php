@@ -349,7 +349,7 @@ if(!empty($_GET['q'])) {
 						<h2>Text editor</h2>
 					</header>
 					<div class="card-content">
-						<div contenteditable>
+						<div contenteditable id="demo-text-editor">
 							<p>Some <strong>dummy</strong> editable <em>text</em>.</p>
 						</div>
 					</div>
@@ -373,7 +373,7 @@ if(!empty($_GET['q'])) {
 		<div id="footer">
 			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
-			<p id="admin2-copyright">Adm'in.2 interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
+			<p id="admin2-copyright"><a href="https://github.com/comin2/Adm-in.2" target="_blank">Adm'in.2</a> interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
 	</div>
 	<script src="js/adm-in-2.js"></script>
