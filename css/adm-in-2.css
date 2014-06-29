@@ -43,35 +43,14 @@
 html{
 	font-family: 'Roboto', Helvetica, "Liberation Sans", FreeSans, Sans-serif;
 	line-height: 1.5;
-	min-height: 100%;
+	height: 100%;
 	background-color: $(color-gray-light);
 	color: $(color-gray-dark);
 }
-@media (max-width: $(breakpoint-sm)){
-	html.js-enabled::before {
-		content: '';
-		display: block;
-		position: fixed;
-		top: $(size-topbar-height);
-		right: 0;
-		bottom: 0;
-		left: $(size-sidebar-width);
-		z-index: 40;
-		background: #000;
-		opacity: .5;
-		transition: opacity .2s ease-in-out, left .2s ease-in-out;
-		touch-action: none;
-	}
-	html.js-enabled.sidebar-hidden::before {
-		visibility: hidden;
-		opacity: 0;
-		left: 0;
-		transition: opacity .2s ease-in-out, left .2s ease-in-out, visibility 0 .2s;
-	}
-}
 
 body{
-	min-height: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
 }
 
 a{

@@ -3,7 +3,6 @@ var Admin2 = {
 	body: document.body,
 	topbar: document.getElementById('topbar'),
 	sidebar: document.getElementById('sidebar'),
-	sidebar_toogle_btn: document.createElement('button'),
 	main: document.getElementById('main'),
 	config: {
 		max_toasts_number: 5
@@ -11,8 +10,18 @@ var Admin2 = {
 }
 
 
+Admin2.sidebar_toogle_btn = document.createElement('button');
 Admin2.sidebar_toogle_btn.setAttribute('type', 'button');
 Admin2.sidebar_toogle_btn.id = 'sidebar-toggle';
+
+Admin2.main_overlay = document.createElement('div');
+Admin2.main_overlay.id = 'main-overlay';
+if (Admin2.main.nextSibling) {
+	Admin2.main.parentNode.insertBefore(Admin2.main_overlay, Admin2.main.nextSibling);
+}
+else {
+	Admin2.main.parentNode.appendChild(Admin2.main_overlay);
+}
 
 if(Admin2.body.insertBefore(Admin2.sidebar_toogle_btn, Admin2.sidebar)){
 	Admin2.sidebar.setAttribute('hidden', true);
