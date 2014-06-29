@@ -10,7 +10,7 @@
 	background-color: $(color-main);
 	color: $(color-white);
 	user-select: none;
-	box-shadow: 0 0 .5em $(color-gray-dark);
+	box-shadow: 0 0 2px $(color-gray-dark);
 }
 .js-enabled #topbar{
 	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;

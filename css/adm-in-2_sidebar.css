@@ -11,7 +11,7 @@
 	background-color: $(color-gray-dark);
 	color: $(color-white);
 	user-select: none;
-	box-shadow: 0 0 .5em $(color-gray-dark);
+	box-shadow: 0 0 2px $(color-gray-dark);
 	-webkit-transition: -webkit-transform .2s ease-in-out;
 	transition: transform .2s ease-in-out;
 }
