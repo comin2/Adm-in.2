@@ -1,0 +1,20 @@
+[draggable="true"]{
+	-webkit-user-drag: element;
+}
+[draggable="true"]:hover{
+	cursor: move;
+}
+.dragged[draggable="true"]{
+	opacity: .5;
+}
+
+/* Draggable cards */
+.card[draggable="true"]{
+	transition: box-shadow .2s ease-in-out;
+}
+.card[draggable="true"]:hover{
+	box-shadow: 0 .25em .5em l-adjust($(color-gray-light), -15);
+}
+.card.dragged[draggable="true"]{
+	box-shadow: 0 .5em 1em l-adjust($(color-gray-light), -15);
+}

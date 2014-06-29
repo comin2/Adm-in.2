@@ -113,12 +113,12 @@ if(!empty($_GET['q'])) {
 		?>
 		<div class="row">
 			<div class="column-large">
-				<section class="card">
+				<section class="card" draggable="true">
 					<header class="card-header">
 						<h2>Statistics</h2>
 					</header>
 					<div class="card-content">
-						<p class="italic">No content yet</p>
+						<p class="italic">I can be dragged around!</p>
 					</div>
 				</section>
 			</div>
@@ -128,13 +128,13 @@ if(!empty($_GET['q'])) {
 						<h2>Online</h2>
 					</header>
 					<div class="card-content">
-						<ul>
+						<ol>
 							<li>User #1</li>
 							<li>User #2</li>
 							<li>User #3</li>
 							<li>User #4</li>
 							<li>User #5</li>
-						</ul>
+						</ol>
 					</div>
 				</section>
 			</div>
@@ -378,5 +378,6 @@ if(!empty($_GET['q'])) {
 	</div>
 	<script src="js/adm-in-2.js"></script>
 	<script src="js/adm-in-2_plugin_toasts.js"></script>
+	<script src="js/adm-in-2_plugin_draggables.js"></script>
 </body>
 </html>
