@@ -88,8 +88,7 @@ ol{
 
 /* Grid system */
 .row{
-	margin-left: -1em;
-	margin-right: -1em;
+	margin: 0 -1em 2em -1em;
 }
 :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
 	box-sizing: border-box;
@@ -116,6 +115,9 @@ ol{
 	:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
 		width: 100%;
 	}
+	:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big)+:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+		margin-top: 2em;
+	}
 }
 
 
@@ -123,6 +125,7 @@ ol{
 .container{
 	max-width: $(breakpoint-md);
 	margin-left: auto;
+	margin-bottom: 2em;
 	margin-right: auto;
 }
 .container.container-tiny{
@@ -138,10 +141,12 @@ ol{
 
 /* Cards */
 .card{
-	margin-bottom: 2em;
 	background-color: $(color-white);
 	box-shadow: 0 .125em .25em l-adjust($(color-gray-light), -15);
 	border-radius: .25em;
+}
+.card+.card{
+	margin-top: 2em;
 }
 .card>.card-header{
 	padding: 1em;
