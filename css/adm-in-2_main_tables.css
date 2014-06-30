@@ -1,0 +1,26 @@
+table{
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-collapse: collapse;
+}
+caption{
+	@include h2;
+	text-align: center;
+}
+th{
+	@include h4;
+	margin-bottom: 0;
+	padding: 1em .5em;
+	text-align: inherit;
+	background-color: $(color-gray-light);
+}
+td{
+	padding: .5em;
+}
+td, tfoot th{
+	border-top: 2px solid $(color-gray-light);
+}
+table.striped>tbody>tr:nth-child(2n)>td{
+	background-color: $(color-gray-light);
+}

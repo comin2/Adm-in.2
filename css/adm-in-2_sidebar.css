@@ -24,8 +24,6 @@
 	transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, visibility 0 .2s;
 }
 .js-enabled #sidebar-toggle{
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 	box-sizing: border-box;
 	position: fixed;

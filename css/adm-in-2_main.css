@@ -48,18 +48,22 @@
 
 /* Typography */
 :any(h1, .h1){
+	@name h1;
 	font-size: 3em;
 	margin-bottom: 1em;
 }
 :any(h2, .h2){
+	@name h2;
 	font-size: 2em;
 	margin-bottom: 1em;
 }
 :any(h3, .h3){
+	@name h3;
 	font-size: 1.6em;
 	margin-bottom: 1em;
 }
 :any(h4, .h4){
+	@name h4;
 	font-size: 1.2em;
 	margin-bottom: 1em;
 }
@@ -169,6 +173,7 @@ ol{
 
 
 @import url('adm-in-2_main_forms.css');
+@import url('adm-in-2_main_tables.css');
 
 
 /* Footer */

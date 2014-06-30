@@ -22,9 +22,6 @@ label, .label{
 textarea, [contenteditable]{
 	resize: vertical;
 }
-:any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
-	cursor: pointer;
-}
 :input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, [contenteditable], select, button, .button, [role="button"]{
 	box-sizing: border-box;
 	font-family: inherit;
@@ -85,8 +82,13 @@ textarea, [contenteditable]{
 :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select).input-xl{
 	padding: 1em;
 }
+:any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
+	cursor: pointer;
+}
 :any(button, .button, :input(submit, button)){
+	display: inline-block;
 	padding: .5em 1em;
+	text-decoration: none;
 	background-color: $(color-secondary);
 	color: $(color-white);
 	border-radius: .125em;
@@ -106,6 +108,9 @@ textarea, [contenteditable]{
 }
 :any(button, .button, :input(submit, reset, button)).button-full{
 	width: 100%;
+}
+.button-full+.button-full{
+	margin-top: 1em;
 }
 :any(button, .button, :input(submit, reset, button)).button-info{
 	background-color: $(color-info);
@@ -264,7 +269,7 @@ input[type="range"]:any([disabled], [readonly]):active::-moz-range-thumb{
 	appearance: none;
 	vertical-align: middle;
 	border: 2px solid l-adjust($(color-gray-dark), +15);
-	outline: none;
+	cursor: pointer;
 }
 input[type="checkbox"]:any(:not(:checked), :checked){
 	border-radius: .25em;

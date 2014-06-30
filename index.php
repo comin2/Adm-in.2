@@ -372,6 +372,45 @@ if(!empty($_GET['q'])) {
 				</section>
 			</div>
 		</div>
+		<div class="container">
+			<div class="card">
+				<div class="card-content">
+					<table class="striped" id="demo-table">
+						<caption>Here's a table</caption>
+						<thead>
+							<tr>
+								<th width="10%" class="text-center">
+									<input type="checkbox" class="check-all" title="Check all lines" onchange="var check_all=this.checked; [].forEach.call(this.parentNode.parentNode.parentNode.parentNode.tBodies[0].querySelectorAll('input[type=checkbox]'), function(c){ c.checked = check_all;});">
+								</th>
+								<th width="50%">Title</th>
+								<th width="20%">Date</th>
+								<th width="20%" class="text-center"><span class="sr-only">Options</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$date = new DateTime();
+
+							for($i=0; $i<10; $i++) {
+								$date->sub(DateInterval::createFromDateString($i.' days, '.$i.' hours, '.$i.' minutes, '.$i.' seconds'));
+								echo '
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #'.$i.'</td>
+								<td><time datetime=""><strong>'.$date->format('F dS, Y').'</strong> <span class="sr-only">at</span> <em>'.$date->format('h:i').'</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>';
+							}
+							?>
+						</tbody>
+					</table>
+					<p class="text-right"><button type="button" onclick="document.getElementById('demo-table').classList.toggle('striped');">Toggle table stripes</button></p>
+				</div>
+			</div>
+		</div>
 		<div id="footer">
 			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
