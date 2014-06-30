@@ -397,7 +397,7 @@ if(!empty($_GET['q'])) {
 							<tr>
 								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
 								<td>Post #'.$i.'</td>
-								<td><time datetime=""><strong>'.$date->format('F dS, Y').'</strong> <span class="sr-only">at</span> <em>'.$date->format('h:i').'</em></time></td>
+								<td><time datetime="'.$date->format('Y-m-d\TH:i:s').'"><strong>'.$date->format('F dS, Y').'</strong> <span class="sr-only">at</span> <em>'.$date->format('h:i').'</em></time></td>
 								<td class="text-center">
 									<a href="#0" class="button button-info">Edit</a>
 									<a href="#0" class="button button-error">Delete</a>
