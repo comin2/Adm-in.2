@@ -3,6 +3,7 @@ table{
 	margin-top: 2em;
 	margin-bottom: 2em;
 	border-collapse: collapse;
+	table-layout: fixed;
 }
 caption{
 	@include h2;

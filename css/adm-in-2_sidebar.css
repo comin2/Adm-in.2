@@ -58,6 +58,7 @@
 }
 #sidebar :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, select){
 	padding: .25em;
+	margin: 0;
 	width: 100%;
 	background-color: l-adjust($(color-gray-dark), +5);
 	color: $(color-gray-light);
