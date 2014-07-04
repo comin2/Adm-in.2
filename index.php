@@ -103,7 +103,7 @@ if(!empty($_GET['q'])) {
 			</li>
 		</ul>
 	</nav>
-	<div role="main" id="main">
+	<main role="main" id="main">
 		<h1>Dashboard</h1>
 		
 		<?php
@@ -416,7 +416,7 @@ if(!empty($_GET['q'])) {
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
 			<p id="admin2-copyright"><a href="https://github.com/comin2/Adm-in.2" target="_blank">Adm'in.2</a> interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
-	</div>
+	</main>
 	<script src="js/adm-in-2.js"></script>
 	<script src="js/adm-in-2_plugin_toasts.js"></script>
 	<script src="js/adm-in-2_plugin_draggables.js"></script>
