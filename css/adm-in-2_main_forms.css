@@ -93,6 +93,7 @@ textarea, [contenteditable]{
 	color: $(color-white);
 	border-radius: .125em;
 	box-shadow: 0 .125em .25em $(color-gray);
+	white-space: nowrap;
 }
 :any(button, .button, :input(submit, reset, button)):any(:hover, :focus){
 	background-color: l-adjust($(color-secondary), -5);
