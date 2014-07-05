@@ -22,7 +22,7 @@ label, .label{
 textarea, [contenteditable]{
 	resize: vertical;
 }
-:input(text, password, url, email, number, search, date, time, datetime, submit, reset, button), textarea, [contenteditable], select, button, .button, [role="button"]{
+:input(text, password, url, email, number, search, date, time, datetime, file, submit, reset, button), textarea, [contenteditable], select, button, .button, [role="button"]{
 	box-sizing: border-box;
 	font-family: inherit;
 	font-size: inherit;
@@ -48,14 +48,16 @@ textarea, [contenteditable]{
 	opacity: .3;
 }
 
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select){
+:any(:input(text, password, url, email, number, search, date, time, datetime, file), textarea, [contenteditable], select){
 	padding: .5em;
 	margin-bottom: 1em;
 	appearance: none;
 	background-color: $(color-white);
 	color: $(color-black);
-	border-bottom: 1px solid l-adjust($(color-gray-light), -15);
 	border-radius: 0;
+}
+:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select){
+	border-bottom: 1px solid l-adjust($(color-gray-light), -15);
 }
 :any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select):focus{
 	outline: 0;
@@ -76,10 +78,10 @@ textarea, [contenteditable]{
 :any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-full{
 	width: 100%;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select).input-xs{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-xs{
 	padding: .25em;
 }
-:any(:input(text, password, url, email, number, search, date, time, datetime), textarea, [contenteditable], select).input-xl{
+:any(:input(text, password, url, email, number, search, date, time, datetime, range, file), textarea, [contenteditable], select).input-xl{
 	padding: 1em;
 }
 :any(button, .button, [role="button"], a, [tabindex], :input(submit, reset, button)):any(:hover, :focus){
