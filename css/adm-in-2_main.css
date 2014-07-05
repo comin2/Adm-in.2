@@ -67,6 +67,12 @@
 	font-size: 1.2em;
 	margin-bottom: 1em;
 }
+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4)>a{
+	text-decoration: none;
+}
+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4)>a:any(:hover, :focus){
+	text-decoration: underline;
+}
 p+p{
 	margin-top: 1em;
 }

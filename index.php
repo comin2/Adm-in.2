@@ -418,6 +418,28 @@ require_once 'css-crush/CssCrush.php';
 					</div>
 				</div>
 			</div>
+			<div class="column-tiny">
+				<div class="card">
+					<div class="card-header"><h2>Headings</h2></div>
+
+					<div class="card-content">
+						<!-- You should use real h1/h2/h3/h4/h5 tags for accessibility and SEO, but classes provide the same visual result -->
+						<div class="h1">I'm a level-1 heading</div>
+						<div class="h2">I'm a level-2 heading</div>
+						<div class="h3">I'm a level-3 heading</div>
+						<div class="h4">I'm a level-4 heading</div>
+						<div class="h5">I'm a level-5 heading</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header"><h2>Headings with links</h2></div>
+
+					<div class="card-content">
+						<h3><a href="#0">I'm a level-3 fully-linked heading</a></h3>
+						<h3>I'm a level-3 heading <a href="#0">with a link</a></h3>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="footer">
 			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
