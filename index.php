@@ -1,14 +1,5 @@
 <?php
 require_once 'css-crush/CssCrush.php';
-
-if(!empty($_GET['q'])) {
-	$_GET['q'] = 'post[author_id=user[pseudo=viki53]::id]';
-	require_once 'css2sql/php/Css2Sql.class.php';
-
-	$selector = Css2Sql::parse_selector(trim($_GET['q']));
-
-	$search_SQL = Css2Sql::selector_to_sql($selector, 'meet_');
-}
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -106,11 +97,6 @@ if(!empty($_GET['q'])) {
 	<main role="main" id="main">
 		<h1>Dashboard</h1>
 		
-		<?php
-		if(isset($search_SQL)) {
-			echo '<pre>'.$search_SQL.'</pre>';
-		}
-		?>
 		<div class="row">
 			<div class="column-large">
 				<section class="card" draggable="true">
