@@ -96,7 +96,7 @@ require_once 'css-crush/CssCrush.php';
 	</nav>
 	<main role="main" id="main">
 		<h1>Dashboard</h1>
-		
+
 		<div class="row">
 			<div class="column-large">
 				<section class="card" draggable="true">
@@ -394,6 +394,28 @@ require_once 'css-crush/CssCrush.php';
 						</tbody>
 					</table>
 					<p class="text-right"><button type="button" onclick="document.getElementById('demo-table').classList.toggle('striped');">Toggle table stripes</button></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column-medium">
+				<div class="card">
+					<div class="card-header"><h2>Image picker</h2></div>
+
+					<div class="card-content image-picker-container">
+						<label class="image-picker">
+							<input type="checkbox" name="image_picker[]" value="1" class="image-picker-checkbox">
+							<span class="image-picker-img"><img src="http://lorempixel.com/200/150/city" alt="Image" class="fill-w" /></span>
+						</label>
+						<label class="image-picker">
+							<input type="checkbox" name="image_picker[]" value="2" class="image-picker-checkbox">
+							<span class="image-picker-img"><img src="http://lorempixel.com/200/150/people" alt="Image" class="fill-w" /></span>
+						</label>
+						<label class="image-picker">
+							<input type="checkbox" name="image_picker[]" value="3" class="image-picker-checkbox">
+							<span class="image-picker-img"><img src="http://lorempixel.com/200/150/nature" alt="Image" class="fill-w" /></span>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>

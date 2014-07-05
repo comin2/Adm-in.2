@@ -146,6 +146,28 @@ ol{
 }
 
 
+/* Responsive objects */
+.responsive-box{
+	@name: responsive-box;
+	position: relative;
+	padding-top: 100%;
+}
+.responsive-box.ratio-4-3{
+	padding-top: 75%;
+}
+.responsive-box.ratio-2-1{
+	padding-top: 50%;
+}
+.responsive-box.ratio-16-9{
+	padding-top: 56.25%;
+}
+.responsive-box>:any(div,iframe,object,embed,video){
+	@name: responsive-box-content;
+	position: absolute;
+	padding-top: 100%;
+}
+
+
 /* Cards */
 .card{
 	background-color: $(color-white);
