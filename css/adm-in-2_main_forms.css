@@ -138,7 +138,7 @@ textarea, [contenteditable]{
 	background-color: l-adjust($(color-warning), -5);
 }
 
-select{
+select:not([multiple]):not([size]){
 	background: data-uri('../img/icon-arrow-drop-down.svg') no-repeat right center;
 	background-size: contain;
 }
