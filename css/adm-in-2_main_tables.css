@@ -13,7 +13,7 @@ th{
 	@include h4;
 	margin-bottom: 0;
 	padding: 1em .5em;
-	text-align: inherit;
+	text-align: left;
 	background-color: $(color-gray-light);
 }
 td{
@@ -24,4 +24,8 @@ td, tfoot th{
 }
 table.striped>tbody>tr:nth-child(2n)>td{
 	background-color: $(color-gray-light);
+}
+
+:any(tr, td)>:any(h1, h2, h3, h4, h5, h6):last-child{
+	margin-bottom: 0;
 }
