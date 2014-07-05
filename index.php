@@ -431,6 +431,8 @@ require_once 'css-crush/CssCrush.php';
 						<div class="h5">I'm a level-5 heading</div>
 					</div>
 				</div>
+			</div>
+			<div class="column-tiny">
 				<div class="card">
 					<div class="card-header"><h2>Headings with links</h2></div>
 
