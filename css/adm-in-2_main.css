@@ -94,7 +94,7 @@ ol{
 .row{
 	margin: 0 -1em 2em -1em;
 }
-:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big){
+:any(.column-tiny, .column-small, .column-medium, .column-large, .column-big, .column-full){
 	box-sizing: border-box;
 	float: left;
 	padding: 0 1em;
@@ -113,6 +113,9 @@ ol{
 }
 .column-big{
 	width: 75%;
+}
+.column-full{
+	width: 100%;
 }
 
 @media (max-width: $(breakpoint-sm)){
