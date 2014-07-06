@@ -72,9 +72,9 @@ Admin2.Toast = function(message, duration) {
 /* Config */
 Admin2.Toast.TRANSITION_TIME = 200;
 
-Admin2.Toast.DURATION_SHORT = 500;
-Admin2.Toast.DURATION_MEDIUM = 1000;
-Admin2.Toast.DURATION_LONG = 3000;
+Admin2.Toast.DURATION_SHORT = 1000;
+Admin2.Toast.DURATION_MEDIUM = 3000;
+Admin2.Toast.DURATION_LONG = 5000;
 
 // Basic use:
 // new Admin2.Toast("Test");
