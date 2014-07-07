@@ -1,12 +1,15 @@
 table{
 	width: 100%;
-	margin-top: 2em;
 	margin-bottom: 2em;
 	border-collapse: collapse;
 	table-layout: fixed;
 }
+*+table{
+	margin-top: 2em;
+}
 caption{
 	@include h2;
+	padding: .5em;
 	text-align: center;
 }
 th{
