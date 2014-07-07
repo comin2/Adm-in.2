@@ -4,10 +4,12 @@
 	position: relative;
 	z-index: 10;
 	margin-top: $(size-topbar-height);
-	margin-left: $(size-sidebar-width);
 	padding: 2em;
 	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
 	transition: transform .2s ease-in-out, margin-left .2s ease-in-out;
+}
+#sidebar+#main{
+	margin-left: $(size-sidebar-width);
 }
 @media (max-width: $(breakpoint-sm)){
 	#main{
