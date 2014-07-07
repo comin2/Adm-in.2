@@ -50,30 +50,32 @@
 :any(h1, .h1){
 	@name h1;
 	font-size: 3em;
-	margin-bottom: 1em;
 }
 :any(h2, .h2){
 	@name h2;
 	font-size: 2em;
-	margin-bottom: 1em;
 }
 :any(h3, .h3){
 	@name h3;
 	font-size: 1.6em;
-	margin-bottom: 1em;
 }
 :any(h4, .h4){
 	@name h4;
 	font-size: 1.2em;
+}
+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6){
 	margin-bottom: 1em;
 }
-:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4)>a{
+*+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6){
+	margin-top: 1em;
+}
+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6)>a{
 	text-decoration: none;
 }
-:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4)>a:any(:hover, :focus){
+:any(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6)>a:any(:hover, :focus){
 	text-decoration: underline;
 }
-p+p{
+*+p{
 	margin-top: 1em;
 }
 
@@ -99,6 +101,9 @@ ol{
 /* Grid system */
 .row{
 	margin: 0 -1em 2em -1em;
+}
+*+.row{
+	margin-top: 2em;
 }
 :any(.column-tiny, .column-small, .column-medium, .column-large, .column-big, .column-full){
 	box-sizing: border-box;
@@ -180,7 +185,7 @@ ol{
 	box-shadow: 0 .125em .25em l-adjust($(color-gray-light), -15);
 	border-radius: .25em;
 }
-.card+.card{
+*+.card{
 	margin-top: 2em;
 }
 .card>.card-header{
