@@ -4,7 +4,7 @@ require_once 'css-crush/CssCrush.php';
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Adm'in.2</title>
+	<title>Adm'in.2 — Demo</title>
 	
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
 	<?php echo csscrush_tag('css/adm-in-2.css'); ?>
@@ -95,7 +95,7 @@ require_once 'css-crush/CssCrush.php';
 		</ul>
 	</nav>
 	<main role="main" id="main">
-		<h1>Dashboard</h1>
+		<h1>Adm'in.2 — The demo</h1>
 
 		<div class="row">
 			<div class="column-large">
