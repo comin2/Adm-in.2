@@ -6,7 +6,7 @@ Admin2.body.appendChild(Admin2.toasts_container);
 
 Admin2.toasts = [];
 
-Admin2.Toast = function(message, duration) {
+Admin2.Toast = function(message, duration, options) {
 	if (!message) {
 		return;
 	}
@@ -16,6 +16,22 @@ Admin2.Toast = function(message, duration) {
 
 	this._element = document.createElement('div');
 	this._element.classList.add('toast');
+
+	this.options = options || {};
+
+	if (this.options.className) {
+		this._element.classList.add(options.className);
+	}
+	if (this.options.style) {
+		if (typeof this.options.style === 'string') {
+			this._element.style.cssText = this.options.style;
+		}
+		else {
+			for (var prop in this.options.style) {
+				this._element.style[prop] = this.options.style[prop];
+			}
+		}
+	}
 
 	this._content_element = document.createElement('p');
 	this._content_element.textContent = this.message;
@@ -37,6 +53,10 @@ Admin2.Toast = function(message, duration) {
 		setTimeout((function (toast) {
 			return function() {
 				Admin2.toasts_container.removeChild(toast._element);
+
+				if (toast.options.callback) {
+					toast.options.callback();
+				}
 
 				var index = Admin2.toasts.indexOf(toast);
 				if (index !== -1) {
