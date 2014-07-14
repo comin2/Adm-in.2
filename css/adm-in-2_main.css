@@ -11,7 +11,7 @@
 #sidebar+#main{
 	margin-left: $(size-sidebar-width);
 }
-@media (max-width: $(breakpoint-sm)){
+@media (max-width: $(breakpoint-md)){
 	#main{
 		padding: 1em;
 	}
@@ -27,7 +27,7 @@
 	margin-left: 0;
 	overflow: hidden;
 }
-@media (max-width: $(breakpoint-sm)){
+@media (max-width: $(breakpoint-md)){
 	.js-enabled #sidebar+#main+#main-overlay{
 		position: fixed;
 		top: $(size-topbar-height);

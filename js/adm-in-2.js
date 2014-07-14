@@ -26,7 +26,7 @@ if (Admin2.sidebar) {
 	}
 
 	if (Admin2.body.insertBefore(Admin2.sidebar_toogle_btn, Admin2.sidebar)){
-		if (window.matchMedia("(max-width: 40em)").matches) {
+		if (window.matchMedia("(max-width: 60em)").matches) {
 			Admin2.sidebar.setAttribute('hidden', true);
 			Admin2.sidebar.setAttribute('aria-hidden', true);
 

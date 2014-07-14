@@ -21,7 +21,7 @@
 .js-enabled.sidebar-hidden #topbar{
 	margin-left: 0;
 }
-@media (max-width: $(breakpoint-sm)){
+@media (max-width: $(breakpoint-md)){
 	.has-sidebar #topbar{
 		transform: translateX($(size-sidebar-width));
 		margin-left: 0;
