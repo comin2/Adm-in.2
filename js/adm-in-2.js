@@ -25,13 +25,18 @@ if (Admin2.sidebar) {
 		Admin2.main.parentNode.appendChild(Admin2.main_overlay);
 	}
 
-	if(Admin2.body.insertBefore(Admin2.sidebar_toogle_btn, Admin2.sidebar)){
-		Admin2.sidebar.setAttribute('hidden', true);
-		Admin2.sidebar.setAttribute('aria-hidden', true);
+	if (Admin2.body.insertBefore(Admin2.sidebar_toogle_btn, Admin2.sidebar)){
+		if (window.matchMedia("(max-width: 40em)").matches) {
+			Admin2.sidebar.setAttribute('hidden', true);
+			Admin2.sidebar.setAttribute('aria-hidden', true);
 
-		Admin2.sidebar_toogle_btn.title = 'Show the sidebar';
+			Admin2.sidebar_toogle_btn.title = 'Show the sidebar';
 
-		Admin2.html.classList.add('sidebar-hidden');
+			Admin2.html.classList.add('sidebar-hidden');
+		}
+		else {
+			Admin2.sidebar_toogle_btn.title = 'Hide the sidebar';
+		}
 	}
 
 	Admin2.sidebar_search_form = document.getElementById('sidebar-search-form');
