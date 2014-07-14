@@ -144,6 +144,9 @@ select:not([multiple]):not([size]){
 	background: data-uri('../img/icon-arrow-drop-down.svg') no-repeat right center;
 	background-size: contain;
 }
+select:not([multiple]):not([size])::-ms-expand{
+	display: none;
+}
 
 progress{
 	height: 1em;
