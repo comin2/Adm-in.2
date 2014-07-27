@@ -1,13 +1,11 @@
-<?php
-require_once 'css-crush/CssCrush.php';
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Adm'in.2 — Demo</title>
 	
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
-	<?php echo csscrush_tag('css/adm-in-2.css'); ?>
+	<link rel="stylesheet" media="screen" href="css/adm-in-2.css" />
 </head>
 <body>
 	<div role="banner" id="topbar">

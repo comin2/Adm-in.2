@@ -7,15 +7,15 @@
 .toast{
 	margin: 0 1em 1em;
 	padding: 1em;
-	background: $(color-gray-dark);
-	color: $(color-white);
-	box-shadow: 0 0 .25em $(color-gray-dark);
+	background: @color-gray-dark;
+	color: @color-white;
+	box-shadow: 0 0 .25em @color-gray-dark;
 	animation: fadeIn .2s ease-in-out;
 }
 .toast.dismissed{
 	animation: fadeIn .2s ease-in-out reverse;
 }
-@media (max-width: $(breakpoint-sm)){
+@media (max-width: @breakpoint-sm){
 	#toasts-container{
 		left: 0;
 	}

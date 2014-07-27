@@ -8,27 +8,31 @@ table{
 	margin-top: 2em;
 }
 caption{
-	@include h2;
+	&:extend(h2);
 	padding: .5em;
 	text-align: center;
 }
 th{
-	@include h4;
+	&:extend(h4);
 	margin-bottom: 0;
 	padding: 1em .5em;
 	text-align: left;
-	background-color: $(color-gray-light);
+	background-color: @color-gray-light;
 }
 td{
 	padding: .5em;
 }
 td, tfoot th{
-	border-top: 2px solid $(color-gray-light);
+	border-top: 2px solid @color-gray-light;
 }
 table.striped>tbody>tr:nth-child(2n)>td{
-	background-color: $(color-gray-light);
+	background-color: @color-gray-light;
 }
 
-:any(tr, td)>:any(h1, h2, h3, h4, h5, h6):last-child{
-	margin-bottom: 0;
+tr, td{
+	>h1, >h2, >h3, >h4, >h5, >h6{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
