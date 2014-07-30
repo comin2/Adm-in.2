@@ -11,21 +11,22 @@
 	background-color: @color-gray-dark;
 	color: @color-white;
 	user-select: none;
-	box-shadow: 0 0 2px @color-gray-dark;
+	.box-shadow(0 0 2px @color-gray-dark);
 	-webkit-transition: -webkit-transform .2s ease-in-out;
+	-moz-transition: -moz-transform .2s ease-in-out;
 	transition: transform .2s ease-in-out;
 }
 .js-enabled #sidebar[hidden]{
-	box-shadow: none;
+	.box-shadow(none);
 	visibility: hidden;
-	transform: translateX(-100%);
-	-webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out, visibility 0 .2s;
-	-moz-transition: -moz-transform .2s ease-in-out, -moz-box-shadow .2s ease-in-out, visibility 0 .2s;
-	transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, visibility 0 .2s;
+	.transform(translateX(-100%));
+	-webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out, visibility 0s .2s;
+	-moz-transition: -moz-transform .2s ease-in-out, -moz-box-shadow .2s ease-in-out, visibility 0s .2s;
+	transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, visibility 0s .2s;
 }
 .js-enabled #sidebar-toggle{
 	appearance: none;
-	box-sizing: border-box;
+	.box-sizing(border-box);
 	position: fixed;
 	z-index: 50;
 	top: 0;
@@ -36,9 +37,8 @@
 	background: data-uri('../img/icon-sidebar-close.svg') no-repeat center;
 	background-size: contain;
 	cursor: pointer;
-	box-shadow: none;
-	-webkit-transition: left .2s ease-in-out;
-	transition: left .2s ease-in-out;
+	.box-shadow(none);
+	.transition(left .2s ease-in-out);
 }
 .js-enabled.sidebar-hidden #sidebar-toggle{
 	left: 0;
@@ -47,7 +47,7 @@
 #sidebar-toggle{
 	&:hover, &:focus{
 		background-color: @color-main-dark;
-		box-shadow: 0 0 .5em @color-main-dark;
+		.box-shadow(0 0 .5em @color-main-dark);
 		outline: none;
 	}
 }
@@ -67,7 +67,7 @@
 		background-color: lighten(@color-gray-dark, 5%);
 		color: @color-gray-light;
 		border: none;
-		border-radius: 0;
+		.border-radius(0);
 	}
 }
 
@@ -104,19 +104,16 @@
 		margin: 0;
 		padding: .5em;
 		width: 2.5em;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
+		.appearance(none);
 		background-color: @color-main;
-		color: darkent(@color-white, 20%);
+		color: darken(@color-white, 20%);
 		border: none;
-		box-shadow: none;
+		.box-shadow(none);
 
 		&:hover, &:focus{
 			background-color: @color-main-dark;
 			color: @color-white;
-			box-shadow: 0 0 .5em @color-main-dark;
+			.box-shadow(0 0 .5em @color-main-dark);
 			outline: none;
 			cursor: pointer;
 		}

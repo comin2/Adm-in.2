@@ -10,11 +10,13 @@
 
 /* Draggable cards */
 .card[draggable="true"]{
+	-webkit-transition: -webkit-box-shadow .2s ease-in-out;
+	-moz-transition: -moz-box-shadow .2s ease-in-out;
 	transition: box-shadow .2s ease-in-out;
 }
 .card[draggable="true"]:hover{
-	box-shadow: 0 .25em .5em darken(@color-gray-light, 15%);
+	.box-shadow(0 .25em .5em darken(@color-gray-light, 15%));
 }
 .card.dragged[draggable="true"]{
-	box-shadow: 0 .5em 1em darken(@color-gray-light, 15%);
+	.box-shadow(0 .5em 1em darken(@color-gray-light, 15%));
 }

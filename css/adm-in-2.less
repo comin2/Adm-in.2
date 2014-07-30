@@ -1,4 +1,5 @@
 
+@import 'mixins-prefixes.less';
 @import 'variables.less';
 
 @import 'reset.less';
@@ -67,7 +68,7 @@ pre{
 }
 .block{
 	display: block;
-	box-sizing: border-box;
+	.box-sizing(border-box);
 	width: 100%;
 }
 
@@ -88,7 +89,7 @@ pre{
 /* Screen readers */
 .sr-only{
 	font: 0/0 a;
-	text-shadow: none;
+	.text-shadow(none);
 	color: transparent;
 }
 
@@ -120,7 +121,7 @@ pre{
 	padding: .125em .25em;
 	min-width: .7em;
 	text-align: center;
-	border-radius: .25em;
+	.border-radius(.25em);
 	background-color: @color-gray;
 	color: @color-white;
 }
@@ -159,7 +160,7 @@ pre{
 .alert-error, .alert-warning, .alert-success, .alert-info{
 	padding: 1em;
 	color: @color-white;
-	border-radius: .25em;
+	.border-radius(.25em);
 }
 .alert-error{
 	background-color: lighten(@color-error, 15%);

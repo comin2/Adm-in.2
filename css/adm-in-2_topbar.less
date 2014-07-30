@@ -9,13 +9,14 @@
 	background-color: @color-main;
 	color: @color-white;
 	user-select: none;
-	box-shadow: 0 0 2px @color-gray-dark;
+	.box-shadow(0 0 2px @color-gray-dark);
 }
 .has-sidebar #topbar{
 	margin-left: @size-sidebar-width;
 }
 .js-enabled #topbar{
 	-webkit-transition: -webkit-transform .2s ease-in-out, margin-left .2s ease-in-out;
+	-moz-transition: -moz-transform .2s ease-in-out, margin-left .2s ease-in-out;
 	transition: transform .2s ease-in-out, margin-left .2s ease-in-out;
 }
 .js-enabled.sidebar-hidden #topbar{
@@ -23,12 +24,12 @@
 }
 @media (max-width: @breakpoint-md){
 	.has-sidebar #topbar{
-		transform: translateX(@size-sidebar-width);
+		.transform(translateX(@size-sidebar-width));
 		margin-left: 0;
 		-webkit-overflow-scrolling: touch;
 	}
 	.js-enabled.sidebar-hidden #topbar{
-		transform: none;
+		.transform(none);
 	}
 }
 #logo{
@@ -41,7 +42,7 @@
 	&:hover, &:focus{
 		background-color: @color-main-dark;
 		color: @color-gray-light;
-		box-shadow: 0 0 .5em @color-main-dark;
+		.box-shadow(0 0 .5em @color-main-dark);
 		outline: none;
 	}
 	>span{
@@ -72,7 +73,7 @@
 
 		&:hover, &:focus{
 			background-color: @color-main-dark;
-			box-shadow: 0 0 .5em @color-main-dark;
+			.box-shadow(0 0 .5em @color-main-dark);
 			outline: none;
 
 			>span{
@@ -90,7 +91,7 @@
 			white-space: nowrap;
 			background-color: @color-gray-dark;
 			color: @color-white;
-			border-radius: .25em;
+			.border-radius(.25em);
 
 			&::before{
 				content: '';

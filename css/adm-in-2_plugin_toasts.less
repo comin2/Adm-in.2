@@ -9,11 +9,11 @@
 	padding: 1em;
 	background: @color-gray-dark;
 	color: @color-white;
-	box-shadow: 0 0 .25em @color-gray-dark;
-	animation: fadeIn .2s ease-in-out;
+	.box-shadow(0 0 .25em @color-gray-dark);
+	.animation(fadeIn .2s ease-in-out);
 }
 .toast.dismissed{
-	animation: fadeIn .2s ease-in-out reverse;
+	.animation(fadeIn .2s ease-in-out reverse);
 }
 @media (max-width: @breakpoint-sm){
 	#toasts-container{
@@ -25,6 +25,14 @@
 	}
 }
 
+@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
 @keyframes fadeIn {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
