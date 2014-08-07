@@ -160,7 +160,8 @@ pre{
 .alert-error, .alert-warning, .alert-success, .alert-info{
 	padding: 1em;
 	color: @color-white;
-	.border-radius(.25em);
+	// .border-radius(.25em);
+	.box-shadow(0 .125em .25em darken(@color-gray-light, 15%));
 }
 .alert-error{
 	background-color: lighten(@color-error, 15%);
