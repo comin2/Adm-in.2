@@ -32,6 +32,11 @@
 		.transform(none);
 	}
 }
+@media (max-width: @breakpoint-sm){
+	.has-sidebar #topbar{
+		.transform(translateX(calc(~"100% - "@size-topbar-height)));
+	}
+}
 #logo{
 	display: block;
 	float: left;

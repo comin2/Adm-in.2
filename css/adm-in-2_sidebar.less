@@ -44,6 +44,14 @@
 	left: 0;
 	background-image: data-uri('../img/icon-sidebar-open.svg');
 }
+@media (max-width: @breakpoint-sm){
+	#sidebar{
+		width: calc(~"100% - "@size-topbar-height);
+	}
+	.js-enabled #sidebar-toggle{
+		left: calc(~"100% - "@size-topbar-height);
+	}
+}
 #sidebar-toggle{
 	&:hover, &:focus{
 		background-color: @color-main-dark;
