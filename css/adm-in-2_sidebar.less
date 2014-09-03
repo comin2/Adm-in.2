@@ -12,6 +12,7 @@
 	color: @color-white;
 	user-select: none;
 	.box-shadow(0 0 2px @color-gray-dark);
+	.transform(translate3d(0,0,0));
 	-webkit-transition: -webkit-transform .2s ease-in-out;
 	-moz-transition: -moz-transform .2s ease-in-out;
 	transition: transform .2s ease-in-out;
@@ -19,7 +20,7 @@
 .js-enabled #sidebar[hidden]{
 	.box-shadow(none);
 	visibility: hidden;
-	.transform(translateX(-100%));
+	.transform(translate3d(-100%,0,0));
 	-webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out, visibility 0s .2s;
 	-moz-transition: -moz-transform .2s ease-in-out, -moz-box-shadow .2s ease-in-out, visibility 0s .2s;
 	transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, visibility 0s .2s;

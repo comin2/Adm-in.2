@@ -24,6 +24,11 @@ body{
 	min-height: 100%;
 	-webkit-tap-highlight-color: transparent;
 }
+@media (max-width: @breakpoint-sm){
+	html:not(.sidebar-hidden)>body{
+		overflow: hidden;
+	}
+}
 
 a{
 	text-decoration: underline;
