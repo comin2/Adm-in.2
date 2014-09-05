@@ -441,6 +441,29 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="card">
+				<div class="card-header"><h2>Tabs</h2></div>
+
+				<article class="card-content tabs-container">
+					<nav class="tabs-names">
+						<a href="#demo-tab-1">Tab 1</a>
+						<a href="#demo-tab-2">Tab 2</a>
+						<a href="#demo-tab-3">Tab 3</a>
+					</nav>
+					<section class="tab-content" id="demo-tab-1">
+						<p>Hi! I'm Tab 1<p>
+					</section>
+					<section class="tab-content" id="demo-tab-2">
+						<p>Good day, let me introduce myself, people call me Tab 2.<p>
+					</section>
+					<section class="tab-content" id="demo-tab-3">
+						<p>Howdy! My name is Tab 3.<p>
+						<p>I love you, do you love me?<p>
+					</section>
+				</article>
+			</div>
+		</div>
 		<div id="footer">
 			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
@@ -450,5 +473,6 @@
 	<script src="js/adm-in-2.js"></script>
 	<script src="js/adm-in-2_plugin_toasts.js"></script>
 	<script src="js/adm-in-2_plugin_draggables.js"></script>
+	<script src="js/adm-in-2_plugin_tabs.js"></script>
 </body>
 </html>
