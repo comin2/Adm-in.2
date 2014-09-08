@@ -311,8 +311,16 @@ input[type="checkbox"], input[type="radio"]{
 		}
 
 		&[disabled], &[readonly]{
-			background: @color-gray-light;
-			border-color: @color-gray;
+			cursor: not-allowed;
+
+			&:not(:checked){
+				background: @color-gray-light;
+				border-color: @color-gray;
+			}
+			&:checked{
+				background: desaturate(@color-success, 10%);
+				border-color: desaturate(@color-success, 10%);
+			}
 			&:active{
 				.animation(none);
 			}
