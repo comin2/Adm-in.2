@@ -3,7 +3,8 @@
 		margin-bottom: 1em;
 
 		&>a{
-			display: inline-block;
+			display: block;
+			float: left;
 			&:extend(.h4);
 			padding: .5em 1em;
 			margin: 0;
@@ -12,6 +13,10 @@
 		}
 		&>a.tab-active{
 			border-bottom-color: @color-main;
+		}
+
+		&:after{
+			&:extend(.row::after);
 		}
 	}
 	&>.tab-content{
