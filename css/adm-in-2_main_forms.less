@@ -163,6 +163,27 @@ select:not([multiple]):not([size]){
 		display: none;
 	}
 }
+_:-ms-input-placeholder, :root select::-ms-expand {
+	display: none;
+}
+_:-ms-input-placeholder, :root select:focus::-ms-value {
+	background: transparent;
+}
+_::-moz-progress-bar, body:last-child select {
+	-moz-appearance: window;
+	text-indent: 0.01px;
+	text-overflow: "";
+	padding-right: 2em;
+}
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+	_::-moz-progress-bar, body:last-child select {
+		width: 120%;
+	}
+}
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
 
 progress{
 	height: 1em;
