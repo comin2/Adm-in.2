@@ -1,14 +1,14 @@
 .breadcrumb{
 	&:extend(ol.list-unstyled);
 	&:extend(.card);
-	&:extend(.card-content);
+	&:extend(.card>.card-content);
 	margin-right: 0;
 	margin-left: 0;
+	margin-bottom: 1em;
 
 	&>li{
 		float: left;
-		margin: 0 .5em;
-		padding: .5em 0;
+		margin: 0;
 		color: @color-gray-dark;
 
 		&>a{
@@ -20,7 +20,7 @@
 		}
 	}
 	&>li+li{
-		margin-left: 0;
+		margin-left: .5em;
 
 		&::before{
 			content: '/';
