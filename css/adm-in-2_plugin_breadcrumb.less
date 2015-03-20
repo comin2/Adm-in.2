@@ -1,0 +1,37 @@
+.breadcrumb{
+	&:extend(ol.list-unstyled);
+	&:extend(.card);
+	&:extend(.card-content);
+	margin-right: 0;
+	margin-left: 0;
+
+	&>li{
+		float: left;
+		margin: 0 .5em;
+		padding: .5em 0;
+		color: @color-gray-dark;
+
+		&>a{
+			text-decoration: none;
+
+			&:hover, &:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+	&>li+li{
+		margin-left: 0;
+
+		&::before{
+			content: '/';
+			color: @color-gray;
+			margin-right: .5em;
+		}
+	}
+
+	&::after{
+		content: '';
+		display: block;
+		&:extend(.clearfix);
+	}
+}
