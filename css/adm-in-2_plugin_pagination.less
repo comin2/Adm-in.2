@@ -1,0 +1,19 @@
+.pagination-block{
+	&:extend(.text-center);
+
+	&>a{
+		&:extend(.button);
+		
+		&:hover{
+			&:extend(.button:hover);
+		}
+		&:focus{
+			&:extend(.button:focus);
+		}
+	}
+	&>strong{
+		&:extend(.button);
+		&:extend(.button-success);
+		&:extend(.button.button-success);
+	}
+}

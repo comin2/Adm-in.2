@@ -464,6 +464,21 @@
 				</article>
 			</div>
 		</div>
+		<div class="container">
+			<div class="card">
+				<div class="card-header"><h2>Pagination</h2></div>
+
+				<article class="card-content pagination-block">
+					<a href="#page=1">⇐</a>
+					<a href="#page=4">4</a>
+					<a href="#page=5">5</a>
+					<strong>6</strong>
+					<a href="#page=7">7</a>
+					<a href="#page=8">8</a>
+					<a href="#page=15">⇒</a>
+				</article>
+			</div>
+		</div>
 		<div id="footer">
 			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
