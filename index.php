@@ -197,9 +197,9 @@
 					<div class="card-content">
 						<div>
 							<label for="demo-input-range" class="full">Range input</label>
-							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full" id="demo-input-range">
+							<input type="range" name="custom-range" value="4" min="0" max="10" class="input-full" id="demo-input-range">
 							<label for="demo-input-range-disabled" class="full">Disabled range input</label>
-							<input type="range" name="custom-range" value="5" min="0" max="10" class="input-full" id="demo-input-range-disabled" disabled>
+							<input type="range" name="custom-range" value="7" min="0" max="10" class="input-full" id="demo-input-range-disabled" disabled>
 						</div>
 					</div>
 				</section>
