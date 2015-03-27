@@ -1,0 +1,30 @@
+{
+	"name": "adm-in-2",
+	"version": "1.1.0",
+	"description": "A modern administration interface",
+	"main": "index.php",
+	"dependencies": {},
+	"devDependencies": {
+		"gulp": "3.8.*",
+		"gulp-concat": "2.5.*",
+		"gulp-less": "3.0.*",
+		"gulp-uglify": "1.1.*"
+	},
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/comin2/Adm-in.2.git"
+	},
+	"keywords": [
+		"CSS",
+		"JS",
+		"interface",
+		"framework"
+	],
+	"author": "COM'in.2 <contact@comin2.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/comin2/Adm-in.2/issues"
+	},
+	"homepage": "http://dev.comin2.com/adm-in-2/"
+}

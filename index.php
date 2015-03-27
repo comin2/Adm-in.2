@@ -5,7 +5,7 @@
 	<title>Adm'in.2 — Demo</title>
 	
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" media="screen" href="css/adm-in-2.css" />
+	<link rel="stylesheet" media="screen" href="css/adm-in-2.min.css" />
 </head>
 <body>
 	<div role="banner" id="topbar">
@@ -485,9 +485,6 @@
 			<p id="admin2-copyright"><a href="https://github.com/comin2/Adm-in.2" target="_blank">Adm'in.2</a> interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
 	</main>
-	<script src="js/adm-in-2.js"></script>
-	<script src="js/adm-in-2_plugin_toasts.js"></script>
-	<script src="js/adm-in-2_plugin_draggables.js"></script>
-	<script src="js/adm-in-2_plugin_tabs.js"></script>
+	<script src="js/adm-in-2.min.js"></script>
 </body>
 </html>

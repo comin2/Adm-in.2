@@ -2,16 +2,10 @@
 	"build_systems":
 	[
 		{
-			"name": "Compile LESS",
-			"shell": true,
-			"working_dir": "${project_path:${folder}}",
-			"shell_cmd": "lessc css/adm-in-2.less > css/adm-in-2.css"
-		},
-		{
 			"name": "Compile & Compress LESS",
 			"shell": true,
 			"working_dir": "${project_path:${folder}}",
-			"shell_cmd": "lessc css/adm-in-2.less > css/adm-in-2.css --compress"
+			"shell_cmd": "lessc css/adm-in-2.less > css/adm-in-2.min.css --compress"
 		}
 	],
 	"folders":
