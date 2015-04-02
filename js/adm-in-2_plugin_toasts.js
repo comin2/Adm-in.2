@@ -20,7 +20,10 @@ Admin2.Toast = function(message, duration, options) {
 	this.options = options || {};
 
 	if (this.options.className) {
-		this._element.classList.add(options.className);
+		if (typeof options.className === 'string') {
+			options.className = options.className.split(' ');
+		}
+		this._element.classList.add.apply(this._element.classList, options.className);
 	}
 	if (this.options.style) {
 		if (typeof this.options.style === 'string') {
