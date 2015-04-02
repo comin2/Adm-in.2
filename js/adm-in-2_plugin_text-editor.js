@@ -152,5 +152,5 @@ if (Admin2.TextEditorReplacementURL) {
 }
 
 Array.prototype.forEach.call(document.querySelectorAll('textarea.text-editor'), function (area) {
-	var editor = new Admin2.TextEditor(area, { buttonsClassName: 'button-xs' });
+	var editor = new Admin2.TextEditor(area);
 });
