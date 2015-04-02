@@ -147,10 +147,6 @@ Admin2.TextEditor.prototype.buttons = [
 	}
 ];
 
-if (Admin2.TextEditorReplacementURL) {
-	Admin2.TextEditor.prototype.baseURL = Admin2.TextEditorReplacementURL + '/';
-}
-
 Array.prototype.forEach.call(document.querySelectorAll('textarea.text-editor'), function (area) {
 	var editor = new Admin2.TextEditor(area);
 });
