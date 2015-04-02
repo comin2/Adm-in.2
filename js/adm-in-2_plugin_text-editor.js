@@ -2,11 +2,11 @@ Admin2.TextEditor = function (textarea, options) {
 	if (typeof options === 'undefined') {
 		options = {};
 	}
-	if (typeof options.buttons === 'array') {
-		this.buttons = options.buttons;
-	}
 	if (typeof options.baseURL === 'string') {
 		this.baseURL = options.baseURL;
+	}
+	if (typeof options.buttons === 'array') {
+		this.buttons = options.buttons;
 	}
 	if (typeof options.buttonsClassName === 'string') {
 		this.buttonsClassName = options.buttonsClassName;
