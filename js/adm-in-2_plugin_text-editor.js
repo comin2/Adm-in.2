@@ -26,11 +26,11 @@ Admin2.TextEditor = function (textarea, options) {
 			var btn = document.createElement('button');
 
 			if (this.buttonsClassName) {
-				btn.classList.add(this.buttonsClassName);
+				btn.className = this.buttonsClassName;
 			}
 
 			if (button.className) {
-				btn.classList.add(button.className);
+				btn.classList.add.apply(btn.classList, button.className.split(' '));
 			}
 			if (button.title) {
 				btn.title = button.title;
