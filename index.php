@@ -441,39 +441,57 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="column-medium">
-					<div class="card">
-						<div class="card-header"><h2>Tabs</h2></div>
+		<div class="row">
+			<div class="column-medium">
+				<div class="card">
+					<div class="card-header"><h2>Tabs</h2></div>
 
-						<article class="card-content tabs-container">
-							<nav class="tabs-names">
-								<a href="#demo-tab-1">Tab 1</a>
-								<a href="#demo-tab-2">Tab 2</a>
-								<a href="#demo-tab-3">Tab 3</a>
-							</nav>
-							<section class="tab-content" id="demo-tab-1">
-								<p>Hi! I'm Tab 1<p>
-							</section>
-							<section class="tab-content" id="demo-tab-2">
-								<p>Good day, let me introduce myself, people call me Tab 2.<p>
-							</section>
-							<section class="tab-content" id="demo-tab-3">
-								<p>Howdy! My name is Tab 3.<p>
-								<p>I love you, do you love me?<p>
-							</section>
-						</article>
-					</div>
+					<article class="card-content tabs-container">
+						<nav class="tabs-names">
+							<a href="#demo-tab-1">Tab 1</a>
+							<a href="#demo-tab-2">Tab 2</a>
+							<a href="#demo-tab-3">Tab 3</a>
+						</nav>
+						<section class="tab-content" id="demo-tab-1">
+							<p>Hi! I'm Tab 1<p>
+						</section>
+						<section class="tab-content" id="demo-tab-2">
+							<p>Good day, let me introduce myself, people call me Tab 2.<p>
+						</section>
+						<section class="tab-content" id="demo-tab-3">
+							<p>Howdy! My name is Tab 3.<p>
+							<p>I love you, do you love me?<p>
+						</section>
+					</article>
 				</div>
-				<div class="column-medium">
-					<div class="card">
-						<div class="card-header"><h2>Text Editor</h2></div>
+			</div>
+			<div class="column-tiny">
+				<div class="card">
+					<div class="card-header"><h2>Text Editor</h2></div>
 
-						<article class="card-content tabs-container">
-							<textarea name="text-editor" id="text-editor-example" cols="30" rows="10" class="input-full text-editor">Some <b>bold text</b> and an <i>italic</i> word</textarea>
-						</article>
-					</div>
+					<article class="card-content tabs-container">
+						<textarea name="text-editor" id="text-editor-example" cols="30" rows="10" class="input-full text-editor">Some <b>bold text</b> and an <i>italic</i> word</textarea>
+					</article>
+				</div>
+			</div>
+			<div class="column-tiny">
+				<div class="card">
+					<div class="card-header"><h2>Sortable</h2></div>
+
+					<article class="card-content tabs-container">
+						<ul class="sortable">
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+							<li>Item 4</li>
+							<li>Item 5</li>
+							<li>Item 6</li>
+							<li>Item 7</li>
+							<li>Item 8</li>
+							<li>Item 9</li>
+							<li>Item 10</li>
+						</ul>
+					</article>
 				</div>
 			</div>
 		</div>
