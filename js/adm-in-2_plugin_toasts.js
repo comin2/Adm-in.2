@@ -90,7 +90,9 @@ Admin2.Toast = function(message, duration, options) {
 }
 
 /* Config */
-Admin2.Toast.TRANSITION_TIME = 200;
+if (typeof Admin2.Toast.TRANSITION_TIME !== "number") {
+	Admin2.Toast.TRANSITION_TIME = 200;
+}
 
 Admin2.Toast.DURATION_SHORT = 1000;
 Admin2.Toast.DURATION_MEDIUM = 3000;
