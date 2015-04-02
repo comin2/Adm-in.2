@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<title>{{ site.name }}{% if page.title %} — {{ page.title }}{% endif %}</title>
 	
-	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" media="screen" href="{{ site.baseurl }}/adm-in-2.min.css" />
+	<meta name="viewport" content="initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="screen" href="{{ site.baseurl }}/assets/css/adm-in-2.min.css">
+	<link rel="stylesheet" media="screen" href="{{ site.baseurl }}/assets/css/pygments.css" async defer>
 </head>
 <body>
 	{% include topbar.html %}
@@ -14,7 +15,7 @@
 		{{ content }}
 		{% include footer.html %}
 	</main>
-	<script src="{{ site.baseurl }}/adm-in-2.min.js"></script>
+	<script src="{{ site.baseurl }}/assets/js/adm-in-2.min.js"></script>
 	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

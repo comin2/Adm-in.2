@@ -1,0 +1,37 @@
+---
+layout: default
+title: Tutorial — Cards
+---
+<h1>Cards</h1>
+
+<div class="container">
+	<article class="card">
+		<header class="card-header">
+			<h2>Cards</h2>
+		</header>
+		<div class="card-content">
+			<p>Putting your content in separates boxes can be a great way to separate things, just like you can see it here, on this very page. For this, we use the <code>card</code> class.</p>
+
+			{% highlight html %}
+<div class="box">
+	<header class="card-title">
+		<h2>The card's title</h2>
+	</header>
+	<div class="card-content">
+		<p>Some content in your card</p>
+	</div>
+</div>
+			{% endhighlight %}
+
+			<p class="alert-info">You can ommit the <code>card-title</code> or <code>card-content</code> element: it will adapt just fine!</p>
+		</div>
+	</article>
+</div>
+
+<div class="container row">
+	<div class="card">
+		<p class="card-content pagination-block">
+			<a href="{{ site.baseurl }}/tutorial/columns-system.html" rel="prev" class="button-xl">← Columns system</a>
+		</p>
+	</div>
+</div>

@@ -1,24 +1,125 @@
 ---
 layout: default
-title: Getting started
+title: Tutorial — Getting started
 ---
 <h1>Getting started</h1>
 
 <div class="container">
 	<article class="card">
 		<header class="card-header">
-			<h2>Columns system</h2>
+			<h2>Basic HTML</h2>
 		</header>
 		<div class="card-content">
+			<p>To get a working page, you'll need some standard HTML:</p>
+
+			{% highlight html %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Your page's title</title>
+	</head>
+<body>
+	<!-- Most of your code will come here -->
+</body>
+</html>
+			{% endhighlight %}
+
+			<p>Then you will need to load the CSS (the <code>&lt;head&gt;</code> section is a good choice):</p>
+
+			{% highlight html %}
+<link rel="stylesheet" href="assets/css/adm-in-2.min.css">
+			{% endhighlight %}
+
+			<p>You may need to load the JS, especially if you use some plugins (just before the <code>&lt;/body&gt;</code> tag is great):</p>
+
+			{% highlight html %}
+<script src="assets/js/adm-in-2.min.js"></script>
+			{% endhighlight %}
+
+			<hr>
+
+			<p>Then you can setup the basic template</p>
+
+			<h3>The topbar</h3>
+
+			<p>The topbar appears on every page. It's code is pretty simple:</p>
+
+			{% highlight html %}
+<div role="banner" id="topbar">
+	<a href="{{ site.baseurl }}/" id="logo"><span>Adm'in.2</span></a>
+
+	<nav role="navigation" id="quick-links">
+		<a href="/logout"><span role="tooltip">Logout</span></a>
+	</nav>
+</div>
+			{% endhighlight %}
+
+			<p>This will show a bar on the complete width of the window, with your site's name on the left and some quick access links (for the user's convenience) on the right.</p>
+
+			<p class="alert-info">To use the quick links, you will need to specify the icons to use:</p>
+
+			{% highlight css %}
+#quick-links>a[href="/logout"]{
+	background-image: data-uri('../img/icon-lock.svg');
+}
+			{% endhighlight %}
+
+			<hr>
+
+			<h3>The sidebar</h3>
 			
+			<p class="alert-info">The sidebar is not required so if you don't need it, just don't put it in your code</p>
+
+			{% highlight html %}
+<nav role="navigation" id="sidebar">
+	<header id="sidebar-header"><h1>Menu</h1></header>
+	
+	<ul role="menu" aria-labelledby="sidebar-header" id="sidebar-content">
+		<li class="widget widget-search">
+			<h2 class="widget-title">Search</h2>
+			<form action="/search" method="get" class="widget-content" id="sidebar-search-form">
+				<input type="search" name="q" value="" placeholder="Search" id="sidebar-search-input">
+			</form>
+		</li>
+		<li role="menuitem" class="menu">
+			<h2 class="menu-title"><a href="#0">Menu title</a></h2>
+			<ul role="menu" class="menu-content">
+				<li role="menuitem" class="submenu"><a href="#0">Item 2</a></li>
+				<li role="menuitem" class="submenu"><a href="#0">Item 2</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+			{% endhighlight %}
+
+			<p>if you want to hide the content of a menu, simply use the following HTML code:</p>
+
+			{% highlight html %}
+			<ul role="menu" class="menu-content" hidden="true" aria-hidden="true">
+			{% endhighlight %}
+
+			<p class="alert-info">As you can see, there is a built-in search form. If don't want it, you can simply remove the HTML. Your sidebar may not look as pretty, but it won't break anything.</p>
+
+			<hr>
+
+			<h3>The main content</h3>
+
+			<p>To put your page's content in one place, it's pretty simple:</p>
+			
+			{% highlight html %}
+<main id="main" role="main">
+	<!-- Your content goes here -->
+</main>
+			{% endhighlight %}
 		</div>
 	</article>
-	<article class="card">
-		<header class="card-header">
-			<h2>Cards</h2>
-		</header>
-		<div class="card-content">
-			
-		</div>
-	</article>
+</div>
+
+<div class="container row">
+	<div class="card">
+		<p class="card-content pagination-block">
+			<a href="{{ site.baseurl }}/tutorial/containers.html" rel="next" class="button-xl">Containers →</a>
+		</p>
+	</div>
 </div>

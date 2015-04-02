@@ -1,0 +1,65 @@
+---
+layout: default
+title: Tutorial — Containers
+---
+
+<article>
+	<header>
+		<h1>Containers</h1>
+	</header>
+	<div class="container">
+		<div class="card">
+			<div class="card-content">
+				<p>If you need to center your content and restrict it's width, there are some containers built in</p>
+				
+				{% highlight html %}
+<div class="container" style="background-color: #80deea">
+	<p>This content will have a limited width</p>
+</div>
+				{% endhighlight %}
+
+				<div class="container">
+					<p>This content will have a limited width</p>
+				</div>
+
+				<p>Depending on your content, you can adjust the size of the container:</p>
+
+				{% highlight html %}
+<div class="container container-large" style="background-color: #ffe082">
+	<p>This content will have a <em>large</em> limited width</p>
+</div>
+<div class="container container-small" style="background-color: #80cbc4">
+	<p>This content will have a <em>small</em> limited width</p>
+</div>
+<div class="container container-tiny" style="background-color: #b0bec5">
+	<p>This content will have a <em>tiny</em> limited width</p>
+</div>
+				{% endhighlight %}
+
+				<p>The result should be like this (best viewed on desktop):</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="background-color: #80deea">
+		<p>This content will have a limited width</p>
+	</div>
+	<div class="container container-large" style="background-color: #ffe082">
+		<p>This content will have a <em>large</em> limited width</p>
+	</div>
+	<div class="container container-small" style="background-color: #80cbc4">
+		<p>This content will have a <em>small</em> limited width</p>
+	</div>
+	<div class="container container-tiny" style="background-color: #b0bec5">
+		<p>This content will have a <em>tiny</em> limited width</p>
+	</div>
+</article>
+
+<div class="container row">
+	<div class="card">
+		<p class="card-content pagination-block">
+			<a href="{{ site.baseurl }}/tutorial/index.html" rel="prev" class="button-xl">← Getting started</a>
+			<a href="{{ site.baseurl }}/tutorial/columns-system.html" rel="next" class="button-xl">Columns system →</a>
+		</p>
+	</div>
+</div>
