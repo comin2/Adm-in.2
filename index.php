@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Adm'in.2 — Demo</title>
 	
-	<meta name="viewport" content="initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" media="screen" href="css/adm-in-2.min.css" />
 </head>
 <body>
-	<div role="banner" id="topbar">
+	<div role="banner" id="tohpbar">
 		<a href="./" id="logo"><span>Adm'in.2</span></a>
 
 		<nav role="navigation" id="quick-links">
@@ -166,7 +166,13 @@
 						</div>
 						<div>
 							<label for="demo-form-select" class="full">Category</label>
-							<select name="category_id" class="input-full input-xs" id="demo-form-select"><?php for($i=1; $i<=5; $i++) {echo '<option value="'.$i.'">Category #'.$i.'</option>'; } ?></select>
+							<select name="category_id" class="input-full input-xs" id="demo-form-select">
+								<option value="1">Category #1</option>
+								<option value="2">Category #2</option>
+								<option value="3">Category #3</option>
+								<option value="4">Category #4</option>
+								<option value="5">Category #5</option>
+							</select>
 						</div>
 						<div class="text-right">
 							<button type="reset" class="button-error">Cancel</button>
@@ -372,23 +378,97 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-							$date = new DateTime();
-
-							for($i=0; $i<10; $i++) {
-								$date->sub(DateInterval::createFromDateString($i.' days, '.$i.' hours, '.$i.' minutes, '.$i.' seconds'));
-								echo '
+							
 							<tr>
 								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
-								<td>Post #'.$i.'</td>
-								<td><time datetime="'.$date->format('Y-m-d\TH:i:s').'"><strong>'.$date->format('F dS, Y').'</strong> <span class="sr-only">at</span> <em>'.$date->format('h:i').'</em></time></td>
+								<td>Post #0</td>
+								<td><time datetime="2015-04-02T14:53:34"><strong>April 02nd, 2015</strong> <span class="sr-only">at</span> <em>02:53</em></time></td>
 								<td class="text-center">
 									<a href="#0" class="button button-info">Edit</a>
 									<a href="#0" class="button button-error">Delete</a>
 								</td>
-							</tr>';
-							}
-							?>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #1</td>
+								<td><time datetime="2015-04-01T13:52:33"><strong>April 01st, 2015</strong> <span class="sr-only">at</span> <em>01:52</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #2</td>
+								<td><time datetime="2015-03-30T11:50:31"><strong>March 30th, 2015</strong> <span class="sr-only">at</span> <em>11:50</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #3</td>
+								<td><time datetime="2015-03-27T08:47:28"><strong>March 27th, 2015</strong> <span class="sr-only">at</span> <em>08:47</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #4</td>
+								<td><time datetime="2015-03-23T04:43:24"><strong>March 23rd, 2015</strong> <span class="sr-only">at</span> <em>04:43</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #5</td>
+								<td><time datetime="2015-03-17T23:38:19"><strong>March 17th, 2015</strong> <span class="sr-only">at</span> <em>11:38</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #6</td>
+								<td><time datetime="2015-03-11T17:32:13"><strong>March 11th, 2015</strong> <span class="sr-only">at</span> <em>05:32</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #7</td>
+								<td><time datetime="2015-03-04T10:25:06"><strong>March 04th, 2015</strong> <span class="sr-only">at</span> <em>10:25</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #8</td>
+								<td><time datetime="2015-02-24T02:16:58"><strong>February 24th, 2015</strong> <span class="sr-only">at</span> <em>02:16</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td>Post #9</td>
+								<td><time datetime="2015-02-14T17:07:49"><strong>February 14th, 2015</strong> <span class="sr-only">at</span> <em>05:07</em></time></td>
+								<td class="text-center">
+									<a href="#0" class="button button-info">Edit</a>
+									<a href="#0" class="button button-error">Delete</a>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 					<p class="text-right"><button type="button" onclick="document.getElementById('demo-table').classList.toggle('striped');">Toggle table stripes</button></p>
@@ -511,7 +591,7 @@
 			</div>
 		</div>
 		<div id="footer">
-			<p>Your website name — <?php echo date('Y'); ?> — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
+			<p>Your website name — <a href="https://github.com/comin2/Adm-in.2" target="_blank">View sources on GitHub</a></p>
 			<!-- You may not delete the following phrase if you want to respect the license. Translating is allowed if you keep the meaning intact. -->
 			<p id="admin2-copyright"><a href="https://github.com/comin2/Adm-in.2" target="_blank">Adm'in.2</a> interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
