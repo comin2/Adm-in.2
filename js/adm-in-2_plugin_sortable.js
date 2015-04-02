@@ -73,11 +73,7 @@ Admin2.Sortable.prototype.onChildDragLeave = function (child, event) {
 Array.prototype.forEach.call(document.querySelectorAll('ul.sortable'), function (list) {
 	new Admin2.Sortable(list, 'li', function (children) {
 		Array.prototype.forEach.call(children, function (item, index) {
-			var order_input = item.querySelector('input[type="hidden"]');
-			if (!order_input) {
-				return;
-			}
-			order_input.value = index;
+			item.dataset.order = index;
 		});
 	});
 });
