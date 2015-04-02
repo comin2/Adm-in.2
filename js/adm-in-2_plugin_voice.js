@@ -10,7 +10,7 @@ else {
 
 	recognition.onstart = function(event) {
 		// console.log(event);
-		console.log('Je vous écoute…');
+		console.log('I am listening…');
 
 		recognition.onresult = function(event) {
 			// console.log(event);
@@ -20,7 +20,7 @@ else {
 			for (var i = event.resultIndex, nb = event.results.length; i < nb; ++i) {
 				interim_transcript += event.results[i][0].transcript;
 				if (event.results[i] && event.results[i].isFinal) {
-					console.log('Final');
+					console.log('Final word');
 					processSpeech(interim_transcript);
 				}
 			}
@@ -31,7 +31,7 @@ else {
 	}
 	recognition.onend = function(event) {
 		console.log(event);
-		console.log('Au revoir');
+		console.log('Goodbye');
 		// recognition.start();
 	}
 
@@ -45,7 +45,7 @@ if(typeof SPEECH_PROCESSES !== "object") {
 	Admin2.SPEECH_PROCESSES = {};
 }
 
-Admin2.SPEECH_KEYWORDS.search = new RegExp(/^(je )?(re)?cherche /gi);
+Admin2.SPEECH_KEYWORDS.search = new RegExp(/^(search(ing)?|looking for) /gi);
 
 Admin2.SPEECH_PROCESSES.search = function(searchStr, keyword, regexp) {
 	console.log('Search: "'+searchStr+'"');
