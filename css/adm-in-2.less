@@ -74,6 +74,14 @@ hr{
 hr.spaced{
 	margin: 2em 0;
 }
+code{
+	font-family: monospace;
+	padding: .25em;
+	background-color: fade(@color-gray-light, 20%);
+	border: 1px solid fade(@color-white, 20%);
+	border-radius: .5em;
+	vertical-align: middle;
+}
 pre{
 	font-family: monospace;
 	padding: 1em;
@@ -82,6 +90,13 @@ pre{
 	background-color: @color-white;
 	border: 1px solid @color-gray-light;
 	overflow: auto;
+
+	&>code{
+		padding: 0;
+		background: inherit;
+		border: none;
+		border-radius: 0;
+	}
 }
 .block{
 	display: block;
