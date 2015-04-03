@@ -5,11 +5,12 @@ title: Tutorial — Getting started
 
 <h1 class="text-center">Getting started</h1>
 
-<div class="container">
-	<article class="card">
-		<div class="card-content">
+<article class="container">
+	<section class="card">
+		<header class="card-header">
 			<h2>Basic HTML</h2>
-
+		</header>
+		<div class="card-content">
 			<p>To get a working page, you'll need some standard HTML:</p>
 
 			{% highlight html %}
@@ -25,7 +26,7 @@ title: Tutorial — Getting started
 </html>
 			{% endhighlight %}
 
-			<p>Then you will need to load the CSS (the <code>&lt;head&gt;</code> section is a good choice):</p>
+			<p>Then you will need to load the CSS (somewhere in the <code>&lt;head&gt;</code> tag is a good choice):</p>
 
 			{% highlight html %}
 <link rel="stylesheet" href="assets/css/adm-in-2.min.css">
@@ -36,13 +37,16 @@ title: Tutorial — Getting started
 			{% highlight html %}
 <script src="assets/js/adm-in-2.min.js"></script>
 			{% endhighlight %}
-
-			<hr>
-
+			
 			<p>Then you can setup the basic template</p>
+		</div>
+	</section>
 
+	<section class="card">
+		<header class="card-header">
 			<h2>Setting up the topbar</h2>
-
+		</header>
+		<div class="card-content">
 			<p>The topbar appears on every page. It's code is pretty simple:</p>
 
 			{% highlight html %}
@@ -64,11 +68,14 @@ title: Tutorial — Getting started
 	background-image: data-uri('../img/icon-lock.svg');
 }
 			{% endhighlight %}
+		</div>
+	</section>
 
-			<hr>
-
+	<section class="card">
+		<header class="card-header">
 			<h2>Adding a sidebar</h2>
-			
+		</header>
+		<div class="card-content">
 			<p class="alert-info">The sidebar is not required so if you don't need it, just don't put it in your code</p>
 
 			{% highlight html %}
@@ -100,11 +107,14 @@ title: Tutorial — Getting started
 			{% endhighlight %}
 
 			<p class="alert-info">As you can see, there is a built-in search form. If don't want it, you can simply remove the HTML. Your sidebar may not look as pretty, but it won't break anything.</p>
+		</div>
+	</section>
 
-			<hr>
-
-			<h2>Putting our content</h2>
-
+	<section class="card">
+		<header class="card-header">
+			<h2>Putting your content</h2>
+		</header>
+		<div class="card-content">
 			<p>To put your page's main content in one place, it's pretty simple:</p>
 			
 			{% highlight html %}
@@ -113,13 +123,13 @@ title: Tutorial — Getting started
 </main>
 			{% endhighlight %}
 		</div>
-	</article>
-</div>
+	</section>
+</article>
 
 <div class="container row">
 	<div class="card">
-		<p class="card-content pagination-block">
+		<nav class="card-content pagination-block">
 			<a href="{{ site.baseurl }}/tutorial/containers.html" rel="next" class="button button-xl">Containers →</a>
-		</p>
+		</nav>
 	</div>
 </div>
