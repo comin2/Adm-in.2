@@ -9,20 +9,11 @@ Currently under development. All suggestions welcome!
 
 Live demo: <http://dev.comin2.com/adm-in-2/> (used for development and testing, bugs may happen)
 
-Wiki & Documentation: <https://github.com/comin2/Adm-in.2/wiki>
-
-# Plugins documentations
-
-* [Toasts](https://github.com/comin2/Adm-in.2/wiki/Plugin:-Toasts)
-* [Sortable](https://github.com/comin2/Adm-in.2/wiki/Plugin:-Sortable)
-* [Text editor](https://github.com/comin2/Adm-in.2/wiki/Plugin:-Text-Editor) (WYSIWYM)
-
-*[WYSIWYM]: Whay You See Is What You Mean
-
+Online Documentation: <http://comin2.github.io/Adm-in.2/>
 
 # Who uses Adm'in.2?
 
-Please refer to the [dedicated wiki page](https://github.com/comin2/Adm-in.2/wiki/Who-uses-Adm'in.2%3F) for more information
+Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/users.html) for more information
 
 # Need more?
 
