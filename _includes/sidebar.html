@@ -21,7 +21,7 @@
 				</ul>
 			</li>
 			<li role="menuitem" class="menu">
-				<h2 class="menu-title"><a href="#0">Plugins <span class="badge">3</span></a></h2>
+				<h2 class="menu-title"><a href="{{ site.baseurl }}/plugins/">Plugins <span class="badge">3</span></a></h2>
 				<ul role="menu" class="menu-content"{% unless page.url contains '/plugins/' or page.url == '/index.html' %} hidden="true" aria-hidden="true"{% endunless %}>
 					<li role="menuitem" class="submenu">
 						<a href="{{ site.baseurl }}/plugins/toasts.html">Toasts</a>
@@ -35,7 +35,7 @@
 				</ul>
 			</li>
 			<li role="menuitem" class="menu">
-				<h2 class="menu-title"><a href="#0">Contributing</a></h2>
+				<h2 class="menu-title"><a href="{{ site.baseurl }}/contribute/">Contributing</a></h2>
 				<ul role="menu" class="menu-content"{% unless page.url contains '/contributing/' or page.url == '/index.html' %} hidden="true" aria-hidden="true"{% endunless %}>
 					<li role="menuitem" class="submenu">
 						<a href="{{ site.baseurl }}/contribute/debugging.html">Debugging</a>
