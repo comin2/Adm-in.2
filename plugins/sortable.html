@@ -5,14 +5,14 @@ title: Plugin — Sortable
 
 <h1 class="text-center">Sortable</h1>
 
-<div class="container">
-	<article class="card">
+<article class="container">
+	<section class="card">
 		<div class="card-content">
 			<p>If you need to sort some elements dynamically with drag'n'drop, you can use the <code>Admin2.Sortable</code> plugin.</p>
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Basic setup</h2>
 		</header>
@@ -24,9 +24,9 @@ new Admin2.Sortable(list, 'li');
 
 			<p>The first parameter is the parent (typically a list). The second one if the children selector (the items to sort).</p>
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Order changes</h2>
 		</header>
@@ -43,9 +43,9 @@ new Admin2.Sortable(list, 'li', function (children) {
 
 			<p>This code shows how to put the value of <code>data-order</code> attribute. You can also put this value into a hidden input, which could then be retrieved by the server.</p>
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Setup callback</h2>
 		</header>
@@ -60,5 +60,5 @@ new Admin2.Sortable(list, 'li', null, function (children) {
 
 			<p>The function currently receives only one parameter: the items to sort.</p>
 		</div>
-	</article>
-</div>
+	</section>
+</article>

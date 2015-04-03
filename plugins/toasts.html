@@ -5,16 +5,16 @@ title: Plugin — Toasts
 
 <h1 class="text-center">Toasts</h1>
 
-<div class="container">
-	<article class="card">
+<article class="container">
+	<section class="card">
 		<div class="card-content">
 			<p>If you want to show quick notifications in the corner of the screen (or at the bottom on mobile), you can create <code>Admin2.Toast</code> objects.</p>
 
 			<p>The toasts all appear in a container (<code>#toasts-container</code>) created when the plugin is loaded.</p>
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Creating a toast</h2>
 		</header>
@@ -25,9 +25,9 @@ title: Plugin — Toasts
 new Admin2.Toast('I am a toast');
 			{% endhighlight %}
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Duration</h2>
 		</header>
@@ -62,9 +62,9 @@ Admin2.Toast.TRANSITION_TIME = 300; // Transition will last 300 milliseconds
 
 			<p>If you can to remove this delay, you can just set it to zero.</p>
 		</div>
-	</article>
+	</section>
 
-	<article class="card">
+	<section class="card">
 		<header class="card-header">
 			<h2>Other options</h2>
 		</header>
@@ -105,5 +105,5 @@ new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
 });
 			{% endhighlight %}
 		</div>
-	</article>
-</div>
+	</section>
+</article>
