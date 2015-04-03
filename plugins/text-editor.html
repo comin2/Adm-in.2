@@ -1,0 +1,98 @@
+---
+layout: default
+title: Plugin — Text Editor
+---
+
+<h1 class="text-center">Text Editor</h1>
+
+<div class="container">
+	<article class="card">
+		<header class="card-header">
+			<h2>Basic usage</h2>
+		</header>
+		<div class="card-content">
+			{% highlight javascript %}
+var area = document.getElementById('my-textarea');
+new Admin2.TextEditor(area);
+			{% endhighlight %}
+
+			<p>Or you can simply use the appropriate `class` in you HTML : </p>
+
+			{% highlight html %}
+<textarea class="text-editor"></textarea>
+			{% endhighlight %}
+
+			<p class="alert-info">The plugin automatically changes the <code>textarea</code>s with the <code>text-editor</code> class into a text editor.</p>
+		</div>
+	</article>
+
+	<article class="card">
+		<header class="card-header">
+			<h2>Customization</h2>
+		</header>
+		<div class="card-content">
+			<p>You can override some configuration if you like : </p>
+
+			{% highlight javascript %}
+new Admin2.TextEditor(area, config);
+			{% endhighlight %}
+
+			<h3>Overriding URLs <code>baseURL</code></h3>
+
+			<p>If you need to override the URLs used in your editor. For example if you want to use a specific directory as the origin for relative URLs, just do so:</p>
+
+			{% highlight javascript %}
+var config = {
+	baseURL = './your/specific/dir';
+}
+			{% endhighlight %}
+
+			<p>This will update the URLs in the preview element but keep the original ones in the result sent to your server. Pretty simple, isn't it?</p>
+
+			<h3>Buttons <code>className</code></h3>
+
+			<p>If you want to add some custom class to the editor's buttons, just use this option:</p>
+			
+			{% highlight javascript %}
+var config = {
+	buttonsClassName = 'my-custom-class';
+}
+			{% endhighlight %}
+
+			<p>Or you can use an Array:</p>
+
+			{% highlight javascript %}
+var config = {
+	buttonsClassName = ['my-custom-class', 'an-other-class'];
+}
+			{% endhighlight %}
+
+			<h3>Tailor-made buttons</h3>
+
+			<p>If you want to use your own buttons, here's how to do it:</p>
+
+			{% highlight javascript %}
+var config = {
+	buttons = [
+		{
+			content: 'B', // The content of the button: can be any HTML you want (but you may want to keep it simple),
+			command: 'bold', // The parameter used for `execCommand`
+		}
+	];
+}
+			{% endhighlight %}
+
+			<h4>Options available</h4>
+
+			<ul>
+				<li><code>content</code> (<strong>required</strong>) : The content of the button. Can be any HTML string you want (but you may want to keep it simple)</li>
+				<li><code>command</code> (<em>optional</em>) : The parameter to use with <code>execCommand</code>. Should be part of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand#Commands" target="_blank">the following list</a></li>
+				<li><code>customCommand</code> (<em>optional</em>) : Your custom command to execute when the button is clicked. <code>this</code> will be the <code>TextEditor</code> object and the first and only argument will be the <code>button</code> object you're editing</li>
+				<li><code>className</code> (<em>optional</em>) : The HTML <code>class</code> attribute to apply to the button element</li>
+				<li><code>title</code> (<em>optional</em>) : The HTML <code>title</code> attribute to apply to the button element (may be useful to describe what it does)</li>
+			</ul>
+
+			<p class="alert-info">Note that you should provide at least one the <code>command</code> or <code>customCommand</code> key to make the button do something. If you don't, pressing it will only refresh the content of the <code>textarea</code>, which is already done automatically when typing into the replacement <code>div</code>.</p>
+		</div>
+	</article>
+</div>

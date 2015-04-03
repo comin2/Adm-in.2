@@ -1,0 +1,109 @@
+---
+layout: default
+title: Plugin — Toasts
+---
+
+<h1 class="text-center">Toasts</h1>
+
+<div class="container">
+	<article class="card">
+		<div class="card-content">
+			<p>If you want to show quick notifications in the corner of the screen (or at the bottom on mobile), you can create <code>Admin2.Toast</code> objects.</p>
+
+			<p>The toasts all appear in a container (<code>#toasts-container</code>) created when the plugin is loaded.</p>
+		</div>
+	</article>
+
+	<article class="card">
+		<header class="card-header">
+			<h2>Creating a toast</h2>
+		</header>
+		<div class="card-content">
+			<p>Showing a toast to the user is pretty straight-forward:</p>
+
+			{% highlight javascript %}
+new Admin2.Toast('I am a toast');
+			{% endhighlight %}
+		</div>
+	</article>
+
+	<article class="card">
+		<header class="card-header">
+			<h2>Duration</h2>
+		</header>
+		<div class="card-content">
+			<p>If you want to make the toast a little longer or make it disappear more quickly, you can use the second parameter:</p>
+
+			{% highlight javascript %}
+new Admin2.Toast('I am a loooooong toast', 10000); // The toasts will appear for 10 seconds
+			{% endhighlight %}
+
+			<h3>Default values</h3>
+
+			<p>3 values are defined by default</p>
+
+			{% highlight javascript %}
+Admin2.Toast.DURATION_SHORT = 1000;
+Admin2.Toast.DURATION_MEDIUM = 3000;
+Admin2.Toast.DURATION_LONG = 5000;
+			{% endhighlight %}
+
+			<p>Feel free to use these constants if you need. You can also override them if you need.</p>
+
+			<p>Note: <code>Admin2.Toast.DURATION_MEDIUM</code> is used by default when you don't manually set a duration for the toast.</p>
+
+			<h3>Transition time</h3>
+
+			<p>The script allows for a transition before deleting the toasts when it is dismissed. You can define or override the duration of this transition</p>
+
+			{% highlight javascript %}
+Admin2.Toast.TRANSITION_TIME = 300; // Transition will last 300 milliseconds
+			{% endhighlight %}
+
+			<p>If you can to remove this delay, you can just set it to zero.</p>
+		</div>
+	</article>
+
+	<article class="card">
+		<header class="card-header">
+			<h2>Other options</h2>
+		</header>
+		<div class="card-content">
+			<p>The <code>Admin2.Toast</code> constructor admits a third parameter to pass some other options as an object.</p>
+
+			<h3>Adding some styles</h3>
+
+			<p>If you need to customize some toasts, you can either set a <code>class</code> of apply some hard-coded CSS:</p>
+
+			{% highlight javascript %}
+// Applying a single class
+new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
+	className: 'some-class'
+});
+
+// Applying several classes
+new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
+	className: ['some-class', 'an-other-class']
+});
+new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
+	className: 'some-class an-other-class' // Strings work too!
+});
+			{% endhighlight %}
+
+			{% highlight javascript %}
+// Applying some style using a string
+new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
+	style: 'color: magenta; font-variant: uppercase;'
+});
+
+// Applying then using an object
+new Admin.Toast('Howdy!', Admin.Toast.DURATION_LONG, {
+	style: {
+		color: 'magenta',
+		fontVariant: 'uppercase'
+	}
+});
+			{% endhighlight %}
+		</div>
+	</article>
+</div>
