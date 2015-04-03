@@ -13,7 +13,7 @@ Online Documentation: <http://comin2.github.io/Adm-in.2/>
 
 # Who uses Adm'in.2?
 
-Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/users.html) for more information
+Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/tutorial/users.html) for more information
 
 # Need more?
 
