@@ -1,0 +1,57 @@
+---
+layout: default
+title: Tutorial
+---
+
+<h1 class="text-center">Tutorial</h1>
+
+<article class="container">
+	<section class="card">
+		<div class="card-content">
+			<p class="alert-warning">Before you start using Adm'in.2, here is a quick summary of how to use it</p>
+		</div>
+	</section>
+	
+	<section class="card">
+		<header class="card-header">
+			<h2>About LESS</h2>
+		</header>
+		<div class="card-content">
+			<p>Most of the CSS used to build Adm'in.2 is base on the LESS pre-processor.</p>
+
+			<p>This allows us to keep the code well organized. And it is also a way for you to only use the code you need: if you want to remove a plugin, you can just remove the <code>@import</code> rule in the <em>adm-in-2.less</em> file.</p>
+
+			<p class="alert-info">If you want to use your own pre-processor, feel free to fork the project to adapt it!</p>
+		</div>
+	</section>
+	
+	<section class="card">
+		<header class="card-header">
+			<h2>About Sublime Text</h2>
+		</header>
+		<div class="card-content">
+			<p>As we use Sublime Text every day, it has become simple to offer you the project file, which contains some Build Systems so that you can easily compile the LESS files.</p>
+
+			<p>If you feel like using it with an other editor, feel free to do so! And if you share the tool you use to build it, that's even better!</p>
+		</div>
+	</section>
+	
+	<section class="card">
+		<header class="card-header">
+			<h2>About Gulp</h2>
+		</header>
+		<div class="card-content">
+			<p>Gulp is a great tool (based on Node.js) to compile and minify all the files. It also watches them so that when you make a change in a LESS or JS file it re-builds (e.g. compile and/or minify) what's necessary.</p>
+
+			<p class="alert-info">If you use Gulp, you won't need to use the Sublime Text build system, as Gulp also minifies the JS files and watches any changes in the LESS and JS files.</p>
+		</div>
+	</section>
+</article>
+
+<div class="container row">
+	<div class="card">
+		<nav class="card-content pagination-block">
+			<a href="{{ site.baseurl }}/tutorial/getting-started.html" rel="next" class="button button-xl">Getting started →</a>
+		</nav>
+	</div>
+</div>
