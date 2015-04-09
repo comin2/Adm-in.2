@@ -156,6 +156,12 @@ button, .button, input[type="submit"], input[type="reset"], input[type="button"]
 			background-color: darken(@color-warning, 5%);
 		}
 	}
+
+	&[disabled], &.button-inactive {
+		pointer-events: none;
+		cursor: default;
+		background-color: darken(@color-gray-light, 15%);
+	}
 }
 
 select:not([multiple]):not([size]){
