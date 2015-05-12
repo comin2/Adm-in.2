@@ -3,7 +3,7 @@
 		<header id="sidebar-header"><h1>Menu</h1></header>
 
 		<ul role="menu" aria-labelledby="sidebar-header" id="sidebar-content">
-			<li class="widget widget-search">
+			<li role="menuitem" class="widget widget-search">
 				<h2 class="widget-title">Search</h2>
 				<form action="#0" method="get" class="widget-content show" id="sidebar-search-form">
 					<input type="search" name="q" value="{% if page.title %}{{ page.title }}{% endif %}" placeholder="Search" id="sidebar-search-input">
@@ -13,7 +13,7 @@
 				<h2 class="menu-title"><a href="{{ site.baseurl }}/tutorial/">Tutorial</a></h2>
 				<ul role="menu" class="menu-content"{% unless page.url contains '/tutorial/' or page.url == '/index.html' %} hidden="true" aria-hidden="true"{% endunless %}>
 					<li role="menuitem" class="submenu">
-						<a href="{{ site.baseurl }}/tutorial/index.html">Getting started</a>
+						<a href="{{ site.baseurl }}/tutorial/getting-started.html">Getting started</a>
 						<a href="{{ site.baseurl }}/tutorial/users.html">Who uses Adm'in.2?</a>
 						<a href="{{ site.baseurl }}/tutorial/containers.html">Containers</a>
 						<a href="{{ site.baseurl }}/tutorial/columns-system.html">Columns system</a>
