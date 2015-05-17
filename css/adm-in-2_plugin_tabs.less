@@ -10,9 +10,18 @@
 			margin: 0;
 			text-decoration: none;
 			border-bottom: 3px solid darken(@color-gray-light, 15%);
-		}
-		&>a.tab-active{
-			border-bottom-color: @color-main;
+
+			&:hover, &:focus{
+				border-bottom-color: darken(@color-gray-light, 30%);
+			}
+
+			&.tab-active{
+				border-bottom-color: @color-main;
+
+				&:hover, &:focus{
+					border-bottom-color: darken(@color-main, 15%);
+				}
+			}
 		}
 
 		&:after{
