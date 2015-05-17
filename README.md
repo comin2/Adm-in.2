@@ -7,14 +7,22 @@ A simple — yet powerful — administration interface
 
 Currently under development. All suggestions welcome!
 
-Live demo: <http://dev.comin2.com/adm-in-2/> (used for development and testing, bugs may happen)
+## Demo or it didn't happen
 
-Online Documentation: <http://comin2.github.io/Adm-in.2/>
+There is a [live demo](http://dev.comin2.com/adm-in-2/) on our server if you want to check it out. **Warning**: it is also used for development and testing, so bugs may happen.
 
-# Who uses Adm'in.2?
+## Docs and examples
 
-Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/tutorial/users.html) for more information
+The full documentation can be found [here](http://comin2.github.io/Adm-in.2/).
 
-# Need more?
+There is even [a tutorial to get you started](http://comin2.github.io/Adm-in.2/tutorial/).
 
-Feel free to [open a new issue](https://github.com/comin2/Adm-in.2/issues) if you need something else
+If you are looking for the docs to use the plugins, takke a look [around here](http://comin2.github.io/Adm-in.2/plugins/).
+
+## Who uses Adm'in.2?
+
+Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/tutorial/users.html) for more information.
+
+## Need more?
+
+Feel free to [open a new issue](https://github.com/comin2/Adm-in.2/issues) if you need something else.
