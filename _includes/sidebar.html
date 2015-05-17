@@ -5,7 +5,7 @@
 		<ul role="menu" aria-labelledby="sidebar-header" id="sidebar-content">
 			<li role="menuitem" class="widget widget-search">
 				<h2 class="widget-title">Search</h2>
-				<form action="https://www.google.com/" method="get" class="widget-content show" id="sidebar-search-form">
+				<form action="https://www.google.com/search" method="get" class="widget-content show" id="sidebar-search-form">
 					<input type="hidden" name="sitesearch" value="{{ site.domain }}">
 					<input type="search" name="q" value="{% if page.title %}{{ page.title }}{% endif %}" placeholder="Search" id="sidebar-search-input">
 				</form>
