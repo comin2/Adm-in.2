@@ -1,0 +1,77 @@
+---
+layout: default
+title: Plugin — Tabs
+---
+
+<h1 class="text-center">Tabs</h1>
+
+<article class="container">
+	<section class="card">
+		<div class="card-content">
+			<p>If you want to display some tabs, you may use the <code>Admin2.Tabs</code> plugin.</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Automatic setup</h2>
+		</header>
+		<div class="card-content">
+			{% highlight html %}
+<div class="tabs-container" id="my-tabs-container">
+	<nav class="tabs-names">
+		<a href="#tab-1">Tab 1</a>
+		<a href="#tab-2">Tab 2</a>
+		<a href="#tab-3">Tab 3</a>
+	</nav>
+	<article class="tab-content" id="tab-1">
+		<p>Tab 1<p>
+	</article>
+	<article class="tab-content" id="tab-2">
+		<p>Tab 2<p>
+	</article>
+	<article class="tab-content" id="tab-3">
+		<p>Tab 3<p>
+	</article>
+</div>
+			{% endhighlight %}
+
+			<p>The HTML pretty much looks like it. The <code>tabs-container</code> allows the plugin to automatically start when the page is loaded.</p>
+
+			<p>By default the first tab of the container is shown.</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Manual setup</h2>
+		</header>
+		<div class="card-content">
+			<p>If you need to manually create a <code>tab</code> functionnality, you can use this function:</p>
+
+			{% highlight javascript %}
+var container = document.getElementById('#my-tabs-container');
+Admin2.Tabs.setSingleTabs(container);
+			{% endhighlight %}
+
+			<p>The (first and only) parameter is the container. And that's it.</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Show a specific tab</h2>
+		</header>
+		<div class="card-content">
+			<p>You may need to show a specific tab manually.</p>
+
+			{% highlight javascript %}
+Admin2.Tabs.showTab('#my-tab');
+			{% endhighlight %}
+
+			<p>The first (required) parameter is the selector to the tab. The function automatically finds the container the everything (as long as the HTML is properly formatted).</p>
+
+			<p>As a second (optional) parameter you can pass an event that would be stopped. Simple as that!</p>
+		</div>
+	</section>
+</article>
