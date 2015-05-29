@@ -358,8 +358,8 @@ input[type="checkbox"], input[type="radio"]{
 				border-color: @color-gray;
 			}
 			&:checked{
-				background: desaturate(@color-success, 10%);
-				border-color: desaturate(@color-success, 10%);
+				background: desaturate(@color-secondary, 10%);
+				border-color: desaturate(@color-secondary, 10%);
 			}
 			&:active{
 				.animation(none);
@@ -368,11 +368,11 @@ input[type="checkbox"], input[type="radio"]{
 	}
 
 	&:checked{
-		background: @color-success;
-		border-color: @color-success;
+		background: @color-secondary;
+		border-color: @color-secondary;
 
 		&:focus{
-			.box-shadow(0 0 .5em darken(@color-success, 15%));
+			.box-shadow(0 0 .5em darken(@color-secondary, 15%));
 		}
 	}
 	&:not(:checked){
