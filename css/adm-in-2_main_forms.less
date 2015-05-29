@@ -160,6 +160,8 @@ button, .button, input[type="submit"], input[type="reset"], input[type="button"]
 
 	&[disabled], &.button-inactive {
 		pointer-events: none;
+		mouse-events: none;
+		cursor: not-allowed;
 		cursor: default;
 		background-color: darken(@color-gray-light, 15%);
 	}
@@ -296,7 +298,9 @@ input[type="range"][max]::after {
 input[type="range"]{
 	&[disabled], &[readonly]{
 		background-color: @color-gray-light;
+		pointer-events: none;
 		mouse-events: none;
+		cursor: not-allowed;
 
 		&::-moz-range-track{
 			background-color: @color-gray-light;
@@ -345,6 +349,8 @@ input[type="checkbox"], input[type="radio"]{
 		}
 
 		&[disabled], &[readonly]{
+			pointer-events: none;
+			mouse-events: none;
 			cursor: not-allowed;
 
 			&:not(:checked){

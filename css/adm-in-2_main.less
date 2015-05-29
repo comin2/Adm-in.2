@@ -39,7 +39,8 @@
 		-webkit-transition: opacity .2s ease-in-out, left .2s ease-in-out;
 		-moz-transition: opacity .2s ease-in-out, left .2s ease-in-out;
 		transition: opacity .2s ease-in-out, left .2s ease-in-out;
-		touch-action: none;
+		pointer-events: none;
+		mouse-events: none;
 	}
 	.js-enabled #sidebar[hidden]+#main+#main-overlay{
 		visibility: hidden;
@@ -52,10 +53,10 @@
 }
 @media (max-width: @breakpoint-sm){
 	#sidebar+#main{
-		.transform(translateX(calc(~"100% - "@size-topbar-height)));
+		.transform(translateX(calc(~"100% -"@size-topbar-height)));
 	}
 	.js-enabled #sidebar+#main+#main-overlay{
-		left: calc(~"100% - "@size-topbar-height);
+		left: calc(~"100% -"@size-topbar-height);
 	}
 }
 
