@@ -64,9 +64,15 @@ title: Tutorial — Getting started
 			<p class="alert-info">To use the quick links, you will need to specify the icons to use:</p>
 
 			{% highlight css %}
+/* With some good ol' CSS */
 #quick-links>a[href="/logout"]{
 	background-image: data-uri('../img/icon-lock.svg');
 }
+			{% endhighlight %}
+
+			{% highlight html %}
+/* With a bit of HTML, using the icons plugin */
+<a href="/logout" data-icon="lock_outline"><span role="tooltip">Logout</span></a>
 			{% endhighlight %}
 		</div>
 	</section>
