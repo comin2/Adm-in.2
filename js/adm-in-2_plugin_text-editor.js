@@ -35,7 +35,12 @@ Admin2.TextEditor = function (textarea, options) {
 			if (button.title) {
 				btn.title = button.title;
 			}
-			btn.innerHTML = button.content;
+			if (button.icon) {
+				btn.dataset.icon = button.icon;
+			}
+			if (button.content) {
+				btn.innerHTML = button.content;
+			}
 
 			btn.addEventListener('click', (function (btn, button, e) {
 				e.preventDefault();
@@ -98,13 +103,13 @@ Admin2.TextEditor = function (textarea, options) {
 
 Admin2.TextEditor.prototype.buttons = [
 	{
-		content: 'B',
+		icon: 'format_bold',
 		className: 'bold',
 		title: 'Toggle bold',
 		command: 'bold'
 	},
 	{
-		content: 'I',
+		icon: 'format_italic',
 		className: 'italic',
 		title: 'Toggle italic',
 		command: 'italic'
@@ -122,7 +127,7 @@ Admin2.TextEditor.prototype.buttons = [
 		command: 'subscript'
 	},
 	{
-		content: 'img',
+		icon: 'image',
 		className: 'img',
 		title: 'Insert an image',
 		customCommand: function (btn) {
@@ -140,7 +145,7 @@ Admin2.TextEditor.prototype.buttons = [
 		}
 	},
 	{
-		content: '×',
+		icon: 'format_clear',
 		className: 'removeFormat',
 		title: 'Remove all formatting',
 		command: 'removeFormat'
