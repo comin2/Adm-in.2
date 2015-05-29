@@ -1,0 +1,71 @@
+---
+layout: default
+title: Plugin — Icons
+---
+
+<h1 class="text-center">Icons</h1>
+
+<article class="container">
+	<section class="card">
+		<div class="card-content">
+			<p>Displaying icons is an easy way to make your interface fancy and more friendly. Google just released an open-source icon font for Material Design called <a href="https://www.google.com/design/icons/" target="_blank">Material Icons</a></p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Setup</h2>
+		</header>
+		<div class="card-content">
+			<p class="alert-info">The <code>css/materialicons/</code> directory and its content is required for the icon to work.</p>
+
+			<p>Using icons is pretty simple. There are even two ways of doing it!</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>With specific markup</h2>
+		</header>
+		<div class="card-content">
+			<p>The first way to use the icons is by using the <code>icon</code> class:</p>
+
+			{% highlight html %}
+<i class="icon">favorite</i>
+			{% endhighlight %}
+
+			<p>The downside is that this will create not-so-semantic markup in your page, especially if there is already an alternative text.</p>
+
+			<p>Note: you may also go the old-fashioned way if your browser doesn't support ligatures (see <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web" target="_blank">this page</a> for more information)</p>
+
+			{% highlight html %}
+<i class="icon">&#xE87D;</i>
+			{% endhighlight %}
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>With data-attributes</h2>
+		</header>
+		<div class="card-content">
+			<p>The second (and easiest) way to display an icon is by using the <code>data-icon</code> attribute:</p>
+
+			{% highlight javascript %}
+<button data-icon="favorite">I love it!</button>
+			{% endhighlight %}
+
+			<p>See? It's that easy!</p>
+		</div>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>What are the available icons?</h2>
+		</header>
+		<div class="card-content">
+			<p>All the available icons are listed on <a href="https://www.google.com/design/icons/" target="_blank">the Google Design page</a>.</p>
+
+			<p>Just click on the icon you want to use and on <em>icon font</em> (at the bottom of your window) to see its code.</p>
+		</div>
+	</section>
+</article>
