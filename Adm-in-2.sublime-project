@@ -2,6 +2,12 @@
 	"build_systems":
 	[
 		{
+			"name": "GULP LESS & JS",
+			"shell": true,
+			"working_dir": "${project_path:${folder}}",
+			"shell_cmd": "gulp less && gulp js"
+		},
+		{
 			"name": "Compile & Compress LESS",
 			"shell": true,
 			"working_dir": "${project_path:${folder}}",
