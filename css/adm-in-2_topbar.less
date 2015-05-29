@@ -1,3 +1,6 @@
+@size-topbar-padding: @size-topbar-height / (3*2);
+@size-topbar-content-height: @size-topbar-height - (@size-topbar-padding * 2);
+
 
 #topbar{
 	position: fixed;
@@ -41,6 +44,7 @@
 	display: block;
 	float: left;
 	height: @size-topbar-height;
+	padding: @size-topbar-padding;
 	text-decoration: none;
 	text-align: center;
 
@@ -50,10 +54,8 @@
 		.box-shadow(0 0 .5em @color-main-dark);
 		outline: none;
 	}
-	>span{
-		display: block;
-		font-size: @size-topbar-height/2;
-		padding: @size-topbar-height/6;
+	&>span{
+		font-size: @size-topbar-content-height;
 	}
 }
 .js-enabled.has-sidebar #logo{
@@ -69,12 +71,13 @@
 #quick-links{
 	float: right;
 
-	>a{
+	&>a{
 		display: block;
 		position: relative;
 		float: left;
 		width: @size-topbar-height;
 		height: @size-topbar-height;
+		padding: @size-topbar-padding;
 
 		&:hover, &:focus{
 			background-color: @color-main-dark;
@@ -86,7 +89,12 @@
 			}
 		}
 
-		>span{
+		&[data-icon]::before{
+			font-size: @size-topbar-content-height;
+			margin: 0;
+		}
+		
+		&>span{
 			display: inline-block;
 			visibility: hidden;
 			position: absolute;
