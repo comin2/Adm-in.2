@@ -1,0 +1,19 @@
+table.has-selector{
+	table-layout: auto;
+
+	.table-selection-col{
+		width: 2em;
+		max-width: 2em;
+		&:extend(.text-center);
+		vertical-align: middle;
+	}
+	.table-options-col{
+		&:extend(.text-center);
+		&:extend(.single-line);
+		vertical-align: middle;
+	}
+	td:not(.table-selection-col):not(.table-options-col){
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+}
