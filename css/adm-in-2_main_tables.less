@@ -1,5 +1,6 @@
 table{
 	width: 100%;
+	max-width: 100%;
 	margin-bottom: 2em;
 	border-collapse: collapse;
 	table-layout: fixed;
@@ -21,7 +22,7 @@ caption{
 	text-align: center;
 }
 th{
-	&:extend(h4);
+	&:extend(.single-line);
 	margin-bottom: 0;
 	padding: 1em .5em;
 	text-align: left;
@@ -31,13 +32,11 @@ td{
 	padding: .5em;
 }
 td, tfoot th{
-	border-top: 2px solid @color-gray-light;
+	border-top: 2px solid @color-table-border;
 }
 table{
 	&>tbody{
 		&>tr{
-			border-top: 2px solid @color-table-border;
-
 			&:hover{
 				&>td{
 					background-color: @color-table-hover;
