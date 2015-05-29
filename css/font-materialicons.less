@@ -30,6 +30,10 @@
 	&::before{
 		content: attr(data-icon);
 		&:extend(.icon);
-		margin-right: .5em;
+	}
+	&:not(:empty){
+		::before{
+			margin-right: .5em;
+		}
 	}
 }
