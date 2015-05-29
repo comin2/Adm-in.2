@@ -17,13 +17,22 @@ th{
 	margin-bottom: 0;
 	padding: 1em .5em;
 	text-align: left;
-	background-color: @color-gray-light;
+	color: @color-table-header;
 }
 td{
 	padding: .5em;
 }
 td, tfoot th{
 	border-top: 2px solid @color-gray-light;
+}
+tbody{
+	tr{
+		border-top: 2px solid @color-table-border;
+
+		&:hover{
+			background-color: @color-table-hover;
+		}
+	}
 }
 table.striped>tbody>tr:nth-child(2n)>td{
 	background-color: @color-gray-light;
