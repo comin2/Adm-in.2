@@ -1,0 +1,155 @@
+---
+layout: default
+title: Plugin — Table selector
+---
+
+<h1 class="text-center">Table selector</h1>
+
+<article class="container">
+	<section class="card">
+		<div class="card-content">
+			<p>Your tables are getting big? You want the users to be able to select more easily the lines? This plugin is ready for you!</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Automatic setup</h2>
+		</header>
+		<div class="card-content">
+			{% highlight html %}
+<table class="has-selector">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Some title</td>
+			<td>01/01/1970</td>
+		</tr>
+		<tr>
+			<td>Some other title</td>
+			<td>21/10/2015</td>
+		</tr>
+	</tbody>
+</table>
+			{% endhighlight %}
+
+			<p>The HTML is pretty simple: you don't need to add anything if don't want to. But you can also add the appropriate columns if needed:</p>
+
+			{% highlight html %}
+<table class="has-selector">
+	<thead>
+		<tr>
+			<th class="table-selection-col"><input type="checkbox" checked="checked"></th>
+			<th>Title</th>
+			<th>Date</th>
+			<th class="table-options-col"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="table-selection-col"><input type="checkbox" name="posts[]" value="42" checked="checked"></th>
+			<td>Some title</td>
+			<td>01/01/1970</td>
+			<th class="table-options-col"><!-- Some link maybe? --></th>
+		</tr>
+		<tr>
+			<th class="table-selection-col"><input type="checkbox" name="posts[]" value="7" checked="checked"></th>
+			<td>Some other title</td>
+			<td>21/10/2015</td>
+			<th class="table-options-col"><!-- Or whatever you want, really… --></th>
+		</tr>
+	</tbody>
+</table>
+			{% endhighlight %}
+
+			<p>By default the first tab of the container is shown.</p>
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Manual setup</h2>
+		</header>
+		<div class="card-content">
+			<p>The manual setup allows you to customize the behavior of the plugin, but also to apply it on a table that would not be created (or not have the appropriate <code>class</code> when the JavaScript is executed.</p>
+
+			{% highlight html %}
+<table id="my-table">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Some title</td>
+			<td>01/01/1970</td>
+		</tr>
+		<tr>
+			<td>Some other title</td>
+			<td>21/10/2015</td>
+		</tr>
+	</tbody>
+</table>
+			{% endhighlight %}
+
+			{% highlight javascript %}
+var table = document.getElementById('my-table');
+
+var selector = new Admin2.TableSelector(table);
+			{% endhighlight %}
+		</div>
+	</section>
+
+	<section class="card">
+		<header class="card-header">
+			<h2>Custom callback</h2>
+		</header>
+		<div class="card-content">
+			<p>Whenever the list of selected lines changes, the second parameter (a <code>function</code>) is called:</p>
+
+			{% highlight javascript %}
+var table = document.getElementById('my-table');
+
+var selector = new Admin2.TableSelector(table, function () {
+	if (selector.checked_lines) {
+		selector.options_all.innerText = selector.checked_lines + '/' + selector.lines.length;
+	}
+	else {
+		selector.options_all.innerText = '';
+	}
+});
+			{% endhighlight %}
+
+			<p>The callback showed here is the one used by default.</p>
+
+			<p>Here are some of the available properties and what they look like:</p>
+
+			{% highlight javascript %}
+{
+	checked_lines: 1, // An integer that contains the number of selected lines
+	lines: [ // An array containing all the rows in the table (header not included)
+		{
+			elem: HTMLElement, // The <tr> element (will be first in row if created by the plugin)
+			checkbox: HTMLElement, // The checkbox in this row
+			checked: true, // A boolean to check of thi sline has been selected
+			options_col: HTMLElement // The `.table-options-col` cell that contains the options (will be last in row if created by the plugin)
+		}
+		/* … */
+	],
+	checkbox_all: HTMLElement, // The `.table-selection-col` cell (will be first if created by the plugin) in the header
+	options_all: HTMLElement, // The `.table-options-col` cell (will be last if created by the plugin) in the header
+	table: HTMLElement, // The `<table>` passed as first parameter
+	header: HTMLElement, // The first `<tr>` in the `<thead>`
+	onSelectionChange: Function // The callback to call when the list of selected lines changes
+});
+			{% endhighlight %}
+		</div>
+	</section>
+</article>
