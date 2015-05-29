@@ -35,15 +35,21 @@
 	padding: .5em;
 	width: @size-topbar-height;
 	height: @size-topbar-height;
-	background: data-uri('../img/icon-sidebar-close.svg') no-repeat center;
-	background-size: contain;
+	background: none;
 	cursor: pointer;
 	.box-shadow(none);
 	.transition(left .2s ease-in-out);
+
+	&::before{
+		content: 'close';
+	}
 }
 .js-enabled.sidebar-hidden #sidebar-toggle{
 	left: 0;
-	background-image: data-uri('../img/icon-sidebar-open.svg');
+
+	&::before{
+		content: 'menu';
+	}
 }
 @media (max-width: @breakpoint-sm){
 	#sidebar{
@@ -54,6 +60,11 @@
 	}
 }
 #sidebar-toggle{
+	&::before{
+		&:extend(.icon);
+		font-size: @size-topbar-content-height;
+	}
+
 	&:hover, &:focus{
 		background-color: @color-main-dark;
 		.box-shadow(0 0 .5em @color-main-dark);
