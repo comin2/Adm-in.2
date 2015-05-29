@@ -87,9 +87,10 @@ Admin2.onDocumentClick = function (event){
 			Admin2.sidebar_toogle_btn.title = 'Show the sidebar';
 			Admin2.html.classList.add('sidebar-hidden');
 		}
-
-		if(event.x || event.y) {
+		
+		if (event.x || event.y) { /* If click/touch event (do not lose focus on keyboard action) */
 			event.target.blur();
+			document.body.focus();
 		}
 
 		return true;
