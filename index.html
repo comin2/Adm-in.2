@@ -363,108 +363,125 @@
 		<div class="container">
 			<div class="card">
 				<div class="card-content">
-					<table id="demo-table">
+					<table id="demo-table" class="has-selector">
 						<caption>Here's a table</caption>
 						<thead>
 							<tr>
-								<th width="10%" class="text-center">
-									<input type="checkbox" class="check-all" title="Check all lines" onchange="var check_all=this.checked; [].forEach.call(this.parentNode.parentNode.parentNode.parentNode.tBodies[0].querySelectorAll('input[type=checkbox]'), function(c){ c.checked = check_all;});">
-								</th>
-								<th width="50%">Title</th>
-								<th width="20%">Date</th>
-								<th width="20%" class="text-center"><span class="sr-only">Options</span></th>
+								<th width="60%">Title</th>
+								<th width="25%">Date</th>
+								<th class="table-options-col"><span class="sr-only">Options</span></th>
 							</tr>
 						</thead>
 						<tbody>
 							
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="0" title="Check this line">
+								</td>
 								<td>Post #0</td>
 								<td><time datetime="2015-04-02T14:53:34"><strong>April 02nd, 2015</strong> <span class="sr-only">at</span> <em>02:53</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="1" title="Check this line">
+								</td>
 								<td>Post #1</td>
 								<td><time datetime="2015-04-01T13:52:33"><strong>April 01st, 2015</strong> <span class="sr-only">at</span> <em>01:52</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="2" title="Check this line">
+								</td>
 								<td>Post #2</td>
 								<td><time datetime="2015-03-30T11:50:31"><strong>March 30th, 2015</strong> <span class="sr-only">at</span> <em>11:50</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="3" title="Check this line">
+								</td>
 								<td>Post #3</td>
 								<td><time datetime="2015-03-27T08:47:28"><strong>March 27th, 2015</strong> <span class="sr-only">at</span> <em>08:47</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="4" title="Check this line">
+								</td>
 								<td>Post #4</td>
 								<td><time datetime="2015-03-23T04:43:24"><strong>March 23rd, 2015</strong> <span class="sr-only">at</span> <em>04:43</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="5" title="Check this line">
+								</td>
 								<td>Post #5</td>
 								<td><time datetime="2015-03-17T23:38:19"><strong>March 17th, 2015</strong> <span class="sr-only">at</span> <em>11:38</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="6" title="Check this line">
+								</td>
 								<td>Post #6</td>
 								<td><time datetime="2015-03-11T17:32:13"><strong>March 11th, 2015</strong> <span class="sr-only">at</span> <em>05:32</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="7" title="Check this line">
+								</td>
 								<td>Post #7</td>
 								<td><time datetime="2015-03-04T10:25:06"><strong>March 04th, 2015</strong> <span class="sr-only">at</span> <em>10:25</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="8" title="Check this line">
+								</td>
 								<td>Post #8</td>
 								<td><time datetime="2015-02-24T02:16:58"><strong>February 24th, 2015</strong> <span class="sr-only">at</span> <em>02:16</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 							<tr>
-								<td class="text-center"><input type="checkbox" class="check-all" title="Check all lines"></td>
+								<td class="table-selection-col">
+									<input type="checkbox" name="post[]" value="9" title="Check this line">
+								</td>
 								<td>Post #9</td>
 								<td><time datetime="2015-02-14T17:07:49"><strong>February 14th, 2015</strong> <span class="sr-only">at</span> <em>05:07</em></time></td>
-								<td class="text-center">
-									<a href="#0" class="button button-info">Edit</a>
-									<a href="#0" class="button button-error">Delete</a>
+								<td class="table-options-col">
+									<a href="#0" class="button button-info" data-icon="edit_mode" title="Edit"></a>
+									<a href="#0" class="button button-error" data-icon="delete" title="Delete"></a>
 								</td>
 							</tr>
 						</tbody>
