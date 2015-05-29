@@ -3,6 +3,14 @@ table{
 	margin-bottom: 2em;
 	border-collapse: collapse;
 	table-layout: fixed;
+
+	&.striped{
+		&>tbody{
+			&>tr:nth-child(2n){
+				background-color: @color-gray-light;
+			}
+		}
+	}
 }
 *+table{
 	margin-top: 2em;
@@ -25,17 +33,18 @@ td{
 td, tfoot th{
 	border-top: 2px solid @color-gray-light;
 }
-tbody{
-	tr{
-		border-top: 2px solid @color-table-border;
+table{
+	&>tbody{
+		&>tr{
+			border-top: 2px solid @color-table-border;
 
-		&:hover{
-			background-color: @color-table-hover;
+			&:hover{
+				&>td{
+					background-color: @color-table-hover;
+				}
+			}
 		}
 	}
-}
-table.striped>tbody>tr:nth-child(2n)>td{
-	background-color: @color-gray-light;
 }
 
 tr, td{
