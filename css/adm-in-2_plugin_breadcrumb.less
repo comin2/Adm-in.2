@@ -22,14 +22,14 @@
 	&>li+li{
 		margin-left: .5em;
 
-		&::before{
+		&:before{
 			content: '>';
 			color: @color-gray;
 			margin-right: .5em;
 		}
 	}
 
-	&::after{
+	&:after{
 		content: '';
 		display: block;
 		&:extend(.clearfix);

@@ -281,17 +281,17 @@ input[type="range"]{
 		}
 	}
 }
-input[type="range"][min]::before,
-input[type="range"][max]::after {
+input[type="range"][min]:before,
+input[type="range"][max]:after {
 	position: absolute;
 	top: 1.25em;
 	color: @color-gray;
 }
-input[type="range"][min]::before {
+input[type="range"][min]:before {
 	left: .5em;
 	content: attr(min);
 }
-input[type="range"][max]::after {
+input[type="range"][max]:after {
 	right: .5em;
 	content: attr(max);
 }

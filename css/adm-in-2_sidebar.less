@@ -40,14 +40,14 @@
 	.box-shadow(none);
 	.transition(left .2s ease-in-out);
 
-	&::before{
+	&:before{
 		content: 'close';
 	}
 }
 .js-enabled.sidebar-hidden #sidebar-toggle{
 	left: 0;
 
-	&::before{
+	&:before{
 		content: 'menu';
 	}
 }
@@ -60,7 +60,7 @@
 	}
 }
 #sidebar-toggle{
-	&::before{
+	&:before{
 		&:extend(.icon);
 		font-size: @size-topbar-content-height;
 	}

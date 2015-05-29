@@ -27,12 +27,12 @@
 	font-feature-settings: 'liga';
 }
 [data-icon]{
-	&::before{
+	&:before{
 		content: attr(data-icon);
 		&:extend(.icon);
 	}
 	&:not(:empty){
-		&::before{
+		&:before{
 			margin-right: .5em;
 		}
 	}
