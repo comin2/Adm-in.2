@@ -19,7 +19,7 @@ The full documentation can be found [here](http://comin2.github.io/Adm-in.2/).
 
 There is even [a tutorial to get you started](http://comin2.github.io/Adm-in.2/tutorial/).
 
-If you are looking for the docs to use the plugins, takke a look [around here](http://comin2.github.io/Adm-in.2/plugins/).
+If you are looking for the docs to use the plugins, take a look [around here](http://comin2.github.io/Adm-in.2/plugins/).
 
 ## Who uses Adm'in.2?
 
