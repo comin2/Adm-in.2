@@ -5,7 +5,7 @@
 	"main": "index.php",
 	"dependencies": {},
 	"devDependencies": {
-		"gulp": "3.8.*",
+		"gulp": "3.9.*",
 		"gulp-concat": "2.5.*",
 		"gulp-less": "3.0.*",
 		"gulp-uglify": "1.2.*"
