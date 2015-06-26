@@ -9,6 +9,8 @@ Currently under development. All suggestions welcome!
 
 [![Dependency Status](https://www.versioneye.com/user/projects/55643d766361300021010000/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55643d766361300021010000)
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/comin2/Adm-in.2)
+
 ## Demo or it didn't happen
 
 There is a [live demo](http://dev.comin2.com/adm-in-2/) on our server if you want to check it out. **Warning**: it is also used for development and testing, so bugs may happen.
