@@ -27,6 +27,10 @@ If you are looking for the docs to use the plugins, take a look [around here](ht
 
 Please refer to the [dedicated documentation page](http://comin2.github.io/Adm-in.2/tutorial/users.html) for more information.
 
+## Wanna talk about it?
+
+Join us [on Gitter](https://gitter.im/comin2/Adm-in.2)
+
 ## Need more?
 
 Feel free to [open a new issue](https://github.com/comin2/Adm-in.2/issues) if you need something else.
