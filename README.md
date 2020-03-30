@@ -13,7 +13,7 @@ Currently under development. All suggestions welcome!
 
 ## Demo or it didn't happen
 
-There is a [live demo](https://comin2.github.io/Adm-in.2/) on our server if you want to check it out. **Warning**: it is also used for development and testing, so bugs may happen.
+There is a [live demo](https://comin2.github.io/Adm-in.2/demo/) on our Documentation website if you want to check it out.
 
 ## Docs and examples
 

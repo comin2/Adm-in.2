@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +7,11 @@
 	<title>Adm'in.2 — Demo</title>
 	
 	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" media="screen" href="css/adm-in-2.min.css" />
+	<link rel="stylesheet" media="screen" href="{{ "/css/adm-in-2.min.css" | prepend:site.github.url }}" />
 </head>
 <body>
 	<div role="banner" id="topbar">
-		<a href="./" id="logo"><span>Adm'in.2</span></a>
+		<a href="{{ "/" | prepend:site.github.url }}" id="logo"><span>Adm'in.2</span></a>
 
 		<nav role="navigation" id="quick-links">
 			<a href="#0" data-icon="account_circle"><span role="tooltip">My profile</span></a>
@@ -611,6 +613,6 @@
 			<p id="admin2-copyright"><a href="https://github.com/comin2/Adm-in.2" target="_blank">Adm'in.2</a> interface by <a href="http://www.comin2.com" target="_blank">COM'in.2</a></p>
 		</div>
 	</main>
-	<script src="js/adm-in-2.min.js"></script>
+	<script src="{{ "/js/adm-in-2.min.js" | prepend:site.github.url }}"></script>
 </body>
 </html>
