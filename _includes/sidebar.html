@@ -11,6 +11,19 @@
 				</form>
 			</li>
 			<li role="menuitem" class="menu">
+				<h2 class="menu-title"><a href="{{ site.baseurl }}/demo/">Demo page</a></h2>
+				<ul role="menu" class="menu-content" {% unless page.url contains '/tutorial/' or page.url == '/index.html' %} hidden="true" aria-hidden="true" {% endunless %}>
+					<li role="menuitem" class="submenu">
+						<a href="{{ site.baseurl }}/demo/#demo-alerts">Alerts</a>
+						<a href="{{ site.baseurl }}/demo/#demo-card-form">Form</a>
+						<a href="{{ site.baseurl }}/demo/#demo-toasts">Toasts</a>
+						<a href="{{ site.baseurl }}/demo/#demo-table">Table</a>
+						<a href="{{ site.baseurl }}/demo/#demo-tabs">Tabs</a>
+						<a href="{{ site.baseurl }}/demo/#demo-text-editor">Text editor</a>
+					</li>
+				</ul>
+			</li>
+			<li role="menuitem" class="menu">
 				<h2 class="menu-title"><a href="{{ site.baseurl }}/tutorial/">Tutorial</a></h2>
 				<ul role="menu" class="menu-content"{% unless page.url contains '/tutorial/' or page.url == '/index.html' %} hidden="true" aria-hidden="true"{% endunless %}>
 					<li role="menuitem" class="submenu">
