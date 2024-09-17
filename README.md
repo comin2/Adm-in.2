@@ -9,8 +9,6 @@ Currently under development. All suggestions welcome!
 
 [![Dependency Status](https://www.versioneye.com/user/projects/55643d766361300021010000/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55643d766361300021010000)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/comin2/Adm-in.2)
-
 ## Demo or it didn't happen
 
 There is a [live demo](https://comin2.github.io/Adm-in.2/demo/) on our Documentation website if you want to check it out.
@@ -29,7 +27,7 @@ Please refer to the [dedicated documentation page](https://comin2.github.io/Adm-
 
 ## Wanna talk about it?
 
-Join us [on Gitter](https://gitter.im/comin2/Adm-in.2)
+Hit me up [on Twitter](https://twitter.com/viki53)!
 
 ## Need more?
 
